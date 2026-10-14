@@ -1,0 +1,115 @@
+{
+  "metaop_to_skills": {
+    "M0001": [
+      "datasets/skillsets/alfworld/SKILL.md"
+    ],
+    "M0002": [
+      "datasets/skillsets/alfworld/SKILL.md"
+    ],
+    "M0003": [
+      "datasets/skillsets/alfworld/SKILL.md"
+    ],
+    "M0004": [
+      "datasets/skillsets/alfworld/SKILL.md"
+    ],
+    "M0005": [
+      "datasets/skillsets/alfworld/SKILL.md"
+    ],
+    "M0006": [
+      "datasets/skillsets/alfworld/SKILL.md"
+    ],
+    "M0007": [
+      "datasets/skillsets/alfworld/SKILL.md"
+    ],
+    "M0008": [
+      "datasets/skillsets/alfworld/SKILL.md"
+    ],
+    "M0009": [
+      "datasets/skillsets/alfworld/SKILL.md"
+    ],
+    "M0010": [
+      "datasets/skillsets/alfworld/SKILL.md"
+    ],
+    "M0011": [
+      "datasets/skillsets/alfworld/SKILL.md"
+    ],
+    "M0012": [
+      "datasets/skillsets/alfworld/SKILL.md"
+    ],
+    "M0013": [
+      "datasets/skillsets/alfworld/SKILL.md"
+    ],
+    "M0014": [
+      "datasets/skillsets/alfworld/SKILL.md"
+    ],
+    "M0015": [
+      "datasets/skillsets/alfworld/SKILL.md"
+    ],
+    "M0016": [
+      "datasets/skillsets/alfworld/SKILL.md"
+    ],
+    "M0017": [
+      "datasets/skillsets/alfworld/SKILL.md"
+    ],
+    "M0018": [
+      "datasets/skillsets/alfworld/SKILL.md"
+    ],
+    "M0019": [
+      "datasets/skillsets/alfworld/SKILL.md"
+    ],
+    "M0020": [
+      "datasets/skillsets/alfworld/SKILL.md"
+    ],
+    "M0021": [
+      "datasets/skillsets/alfworld/SKILL.md"
+    ],
+    "M0022": [
+      "datasets/skillsets/alfworld/SKILL.md"
+    ],
+    "M0023": [
+      "datasets/skillsets/alfworld/SKILL.md"
+    ],
+    "M0024": [
+      "datasets/skillsets/alfworld/SKILL.md"
+    ],
+    "M0025": [
+      "datasets/skillsets/alfworld/SKILL.md"
+    ],
+    "M0026": [
+      "datasets/skillsets/alfworld/SKILL.md"
+    ],
+    "M0027": [
+      "datasets/skillsets/alfworld/SKILL.md"
+    ],
+    "M0028": [
+      "datasets/skillsets/alfworld/SKILL.md"
+    ],
+    "M0029": [
+      "datasets/skillsets/alfworld/SKILL.md"
+    ],
+    "M0030": [
+      "datasets/skillsets/alfworld/SKILL.md"
+    ],
+    "M0031": [
+      "datasets/skillsets/alfworld/SKILL.md"
+    ],
+    "M0032": [
+      "datasets/skillsets/alfworld/SKILL.md"
+    ],
+    "M0033": [
+      "datasets/skillsets/alfworld/SKILL.md"
+    ],
+    "M0034": [
+      "datasets/skillsets/alfworld/SKILL.md"
+    ],
+    "M0035": [
+      "datasets/skillsets/alfworld/SKILL.md"
+    ]
+  },
+  "skill_to_metaops": {
+    "datasets/skillsets/alfworld/SKILL.md": [
+      "M0034",
+      "M0035"
+    ]
+  }
+}

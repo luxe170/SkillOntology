@@ -1,0 +1,741 @@
+{
+  "schema_version": 1,
+  "domain": "alfworld",
+  "source_domain_ontology_path": "assets/alfworld/domain_ontology.json",
+  "source_domain_ontology_sha256": "0865233a308cf76f4a7c2bbaae67e743dbdd8717279379e09a83fd6bd232c842",
+  "compiler_version": "domain-ontology-extraction-policy-v1",
+  "canonical_actions_and_aliases": {
+    "canonical_actions": [
+      "clean",
+      "cool",
+      "go to",
+      "heat",
+      "move",
+      "open",
+      "take",
+      "use"
+    ],
+    "aliases": {
+      "clean x with sinkbasin y": "clean",
+      "heat": "heat",
+      "move": "move",
+      "move <object> to <location>": "move",
+      "move x to y": "move",
+      "take": "take",
+      "take <object> from <surface>": "take",
+      "take from": "take",
+      "use desklamp": "use"
+    }
+  },
+  "object_roles": {
+    "desklamp_as_light_source": [
+      "A desklamp is a light source that can be turned on."
+    ],
+    "desklamp_location": [
+      "A desklamp can be found on a sidetable."
+    ],
+    "fridge_cools": [
+      "A fridge can be used to cool a held object."
+    ],
+    "portable_objects": [
+      "Objects such as creditcards, glassbottles, cds, and vases can be picked up from surfaces."
+    ],
+    "receptacles": [
+      "Containers and surfaces such as safes, shelves, and drawers can receive moved objects."
+    ],
+    "sinkbasin_cleaning_station": [
+      "A sinkbasin is a receptacle used for cleaning objects."
+    ]
+  },
+  "state_predicates": {
+    "bed_can_hold_pillow": [
+      "A bed can contain a pillow."
+    ],
+    "closed_container_blocks_contents": [
+      "A closed container does not reveal its contents when you arrive."
+    ],
+    "closed_receptacle": [
+      "A closed receptacle must be opened before its contents can be seen or accessed."
+    ],
+    "closed_receptacle_blocks_contents": [
+      "A closed receptacle does not reveal its contents; feedback only states it is closed."
+    ],
+    "container_open_state": [
+      "A container can be in an open state, allowing visibility of its contents."
+    ],
+    "cooled_state": [
+      "After cooling, the object is considered cool."
+    ],
+    "desklamp_on_state": [
+      "After using a desklamp, it is on."
+    ],
+    "empty_receptacle_observation": [
+      "A receptacle may be observed as empty."
+    ],
+    "object_visible_on_surface": [
+      "Objects present on a surface are listed in the arrival feedback for that surface."
+    ],
+    "open_state": [
+      "An object can be in an open or closed state, and opening it changes its state to open."
+    ],
+    "open_state_visible": [
+      "When a container is open, its contents are listed in the feedback."
+    ]
+  },
+  "transition_schemas": {
+    "cleaning_makes_object_clean": [
+      "Cleaning an object with a sinkbasin makes it clean."
+    ],
+    "heat_object": [
+      "Heating an object with a microwave makes it hot."
+    ],
+    "move_object_to_location": [
+      "Moving an object to a location places it there."
+    ],
+    "move_to_container": [
+      "Moving an object to a container places it inside that container."
+    ],
+    "move_to_receptacle_places_object": [
+      "Moving a held object to a receptacle places it there."
+    ],
+    "open_reveals_contents": [
+      "Opening a closed container makes it open and reveals its contents.",
+      "Opening a closed receptacle reveals its contents.",
+      "Opening a closed container makes it open and reveals its contents."
+    ],
+    "take_from_surface": [
+      "Taking an object from a surface removes it from that surface."
+    ],
+    "take_object_from_surface": [
+      "Taking an object from a surface succeeds when the agent is at that surface and not already holding an object."
+    ]
+  },
+  "conditional_prerequisites": [
+    {
+      "after": "",
+      "before_any_of": [
+        "use"
+      ],
+      "condition": "object is in inventory",
+      "insert": "take",
+      "name": "need_object_in_inventory_before_examine",
+      "support_count": 3,
+      "type": "conditional_insertion"
+    },
+    {
+      "after": "",
+      "before_any_of": [
+        "move"
+      ],
+      "condition": "object is in inventory",
+      "insert": "take",
+      "name": "must_hold_object_to_move",
+      "support_count": 2,
+      "type": "conditional_insertion"
+    },
+    {
+      "after": "",
+      "before_any_of": [
+        "use"
+      ],
+      "condition": "object is at the same location as the light",
+      "insert": "move",
+      "name": "object_must_be_at_light_location",
+      "support_count": 2,
+      "type": "conditional_insertion"
+    },
+    {
+      "after": "",
+      "before_any_of": [
+        "move"
+      ],
+      "condition": "agent is holding the object",
+      "insert": "take",
+      "name": "must_hold_object_to_move",
+      "support_count": 7,
+      "type": "conditional_insertion"
+    },
+    {
+      "after": "",
+      "before_any_of": [
+        "take",
+        "move"
+      ],
+      "condition": "container is closed",
+      "insert": "open",
+      "name": "open_closed_container",
+      "support_count": 4,
+      "type": "conditional_insertion"
+    },
+    {
+      "after": "",
+      "before_any_of": [
+        "take",
+        "move"
+      ],
+      "condition": "receptacle is closed",
+      "insert": "open",
+      "name": "open_closed_receptacle",
+      "support_count": 5,
+      "type": "conditional_insertion"
+    },
+    {
+      "after": "",
+      "before_any_of": [
+        "clean"
+      ],
+      "condition": "object is not held",
+      "insert": "take",
+      "name": "hold_object_to_clean",
+      "support_count": 2,
+      "type": "conditional_insertion"
+    },
+    {
+      "after": "",
+      "before_any_of": [
+        "move"
+      ],
+      "condition": "object is not clean",
+      "insert": "clean",
+      "name": "clean_before_placing",
+      "support_count": 2,
+      "type": "conditional_insertion"
+    },
+    {
+      "after": "",
+      "before_any_of": [
+        "cool"
+      ],
+      "condition": "fridge is closed",
+      "insert": "open",
+      "name": "open_fridge_before_cooling",
+      "support_count": 11,
+      "type": "conditional_insertion"
+    },
+    {
+      "after": "",
+      "before_any_of": [
+        "cool"
+      ],
+      "condition": "object is not held",
+      "insert": "take",
+      "name": "cooling_requires_holding_object",
+      "support_count": 2,
+      "type": "conditional_insertion"
+    },
+    {
+      "after": "",
+      "before_any_of": [
+        "go to"
+      ],
+      "condition": "container is closed",
+      "insert": "open",
+      "name": "open_container_before_searching",
+      "support_count": 2,
+      "type": "conditional_insertion"
+    },
+    {
+      "after": "",
+      "before_any_of": [
+        "heat"
+      ],
+      "condition": "microwave is closed",
+      "insert": "open",
+      "name": "open_microwave_before_heating",
+      "support_count": 7,
+      "type": "conditional_insertion"
+    },
+    {
+      "after": "",
+      "before_any_of": [
+        "move"
+      ],
+      "condition": "fridge is closed",
+      "insert": "open",
+      "name": "open_fridge_before_placing",
+      "support_count": 3,
+      "type": "conditional_insertion"
+    },
+    {
+      "after": "",
+      "before_any_of": [
+        "move"
+      ],
+      "condition": "cabinet is closed",
+      "insert": "open",
+      "name": "open_cabinet_before_placing",
+      "support_count": 2,
+      "type": "conditional_insertion"
+    },
+    {
+      "after": "",
+      "before_any_of": [
+        "take"
+      ],
+      "condition": "container is closed",
+      "insert": "open",
+      "name": "open_container_before_take",
+      "support_count": 2,
+      "type": "conditional_insertion"
+    },
+    {
+      "after": "",
+      "before_any_of": [
+        "move"
+      ],
+      "condition": "container is closed",
+      "insert": "open",
+      "name": "open_container_before_placing",
+      "support_count": 4,
+      "type": "conditional_insertion"
+    },
+    {
+      "after": "",
+      "before_any_of": [
+        "take"
+      ],
+      "condition": "container is closed",
+      "insert": "open",
+      "name": "open_container_before_taking",
+      "support_count": 3,
+      "type": "conditional_insertion"
+    },
+    {
+      "after": "",
+      "before_any_of": [
+        "take"
+      ],
+      "condition": "agent is holding an object",
+      "insert": "move",
+      "name": "hand_empty_for_pickup",
+      "support_count": 3,
+      "type": "conditional_insertion"
+    },
+    {
+      "after": "",
+      "before_any_of": [
+        "move"
+      ],
+      "condition": "agent is not holding the object",
+      "insert": "take",
+      "name": "must_hold_before_move",
+      "support_count": 2,
+      "type": "conditional_insertion"
+    }
+  ],
+  "workflow_templates": {
+    "cool_then_place": [
+      "cool",
+      "move"
+    ],
+    "heat_then_place": [
+      "heat",
+      "move"
+    ],
+    "locate_then_take_then_light": [
+      "go to",
+      "take",
+      "use"
+    ],
+    "pick_and_place_sequence": [
+      "go to",
+      "take",
+      "move"
+    ],
+    "pick_clean_then_place": [
+      "take",
+      "clean",
+      "move"
+    ],
+    "pickup_then_place": [
+      "take",
+      "move"
+    ],
+    "repeat_pick_and_place_for_multiple_objects": [
+      "take",
+      "move"
+    ],
+    "search_containers_for_target": [
+      "go to",
+      "open"
+    ],
+    "search_receptacles_for_object": [
+      "go to",
+      "open"
+    ]
+  },
+  "recovery_policies": [
+    {
+      "name": "search_multiple_locations",
+      "policy": "If the target object is not at one location, check other plausible locations.",
+      "support_count": 2
+    },
+    {
+      "name": "repeated_go_to_same_location_fails",
+      "policy": "Going to the current location again produces no effect.",
+      "support_count": 2
+    },
+    {
+      "name": "invalid_location_no_effect",
+      "policy": "Attempting to go to a non-existent location results in no change.",
+      "support_count": 3
+    },
+    {
+      "name": "navigate_to_known_location",
+      "policy": "If an object is not at the current location, navigate to another known location to find it.",
+      "support_count": 2
+    },
+    {
+      "name": "failed_take_after_open",
+      "policy": "If taking an object from a microwave fails, the object may not be present or the microwave may not be open.",
+      "support_count": 2
+    },
+    {
+      "name": "invalid_location_no_arrival",
+      "policy": "Attempting to go to a non-existent location yields 'Nothing happens' and does not change state.",
+      "support_count": 2
+    },
+    {
+      "name": "invalid_location_no_effect",
+      "policy": "Attempting to go to a non-existent location results in no change.",
+      "support_count": 2
+    },
+    {
+      "name": "retry_failed_take_after_revisiting",
+      "policy": "If taking an object fails, revisiting the location and attempting again can succeed.",
+      "support_count": 2
+    },
+    {
+      "name": "retry_take_after_placing",
+      "policy": "After a failed take due to full hands, placing the held object allows the same take action to succeed.",
+      "support_count": 2
+    },
+    {
+      "name": "reopen_after_close",
+      "policy": "If a container is closed, it can be reopened to access its contents.",
+      "support_count": 2
+    }
+  ],
+  "evidence_policies": [
+    "Only public training interactions induce domain rules; a Skill text must independently support every MetaOp field."
+  ],
+  "rule_catalog": {
+    "canonical_action:clean": {
+      "section": "canonical_action",
+      "key": "clean"
+    },
+    "canonical_action:cool": {
+      "section": "canonical_action",
+      "key": "cool"
+    },
+    "canonical_action:go_to": {
+      "section": "canonical_action",
+      "key": "go to"
+    },
+    "canonical_action:heat": {
+      "section": "canonical_action",
+      "key": "heat"
+    },
+    "canonical_action:move": {
+      "section": "canonical_action",
+      "key": "move"
+    },
+    "canonical_action:open": {
+      "section": "canonical_action",
+      "key": "open"
+    },
+    "canonical_action:take": {
+      "section": "canonical_action",
+      "key": "take"
+    },
+    "canonical_action:use": {
+      "section": "canonical_action",
+      "key": "use"
+    },
+    "action_alias:clean_x_with_sinkbasin_y": {
+      "section": "action_alias",
+      "key": "clean x with sinkbasin y"
+    },
+    "action_alias:heat": {
+      "section": "action_alias",
+      "key": "heat"
+    },
+    "action_alias:move": {
+      "section": "action_alias",
+      "key": "move"
+    },
+    "action_alias:move_object_to_location": {
+      "section": "action_alias",
+      "key": "move <object> to <location>"
+    },
+    "action_alias:move_x_to_y": {
+      "section": "action_alias",
+      "key": "move x to y"
+    },
+    "action_alias:take": {
+      "section": "action_alias",
+      "key": "take"
+    },
+    "action_alias:take_object_from_surface": {
+      "section": "action_alias",
+      "key": "take <object> from <surface>"
+    },
+    "action_alias:take_from": {
+      "section": "action_alias",
+      "key": "take from"
+    },
+    "action_alias:use_desklamp": {
+      "section": "action_alias",
+      "key": "use desklamp"
+    },
+    "object_role:desklamp_as_light_source": {
+      "section": "object_role",
+      "key": "desklamp_as_light_source"
+    },
+    "object_role:desklamp_location": {
+      "section": "object_role",
+      "key": "desklamp_location"
+    },
+    "object_role:fridge_cools": {
+      "section": "object_role",
+      "key": "fridge_cools"
+    },
+    "object_role:portable_objects": {
+      "section": "object_role",
+      "key": "portable_objects"
+    },
+    "object_role:receptacles": {
+      "section": "object_role",
+      "key": "receptacles"
+    },
+    "object_role:sinkbasin_cleaning_station": {
+      "section": "object_role",
+      "key": "sinkbasin_cleaning_station"
+    },
+    "state_predicate:bed_can_hold_pillow": {
+      "section": "state_predicate",
+      "key": "bed_can_hold_pillow"
+    },
+    "state_predicate:closed_container_blocks_contents": {
+      "section": "state_predicate",
+      "key": "closed_container_blocks_contents"
+    },
+    "state_predicate:closed_receptacle": {
+      "section": "state_predicate",
+      "key": "closed_receptacle"
+    },
+    "state_predicate:closed_receptacle_blocks_contents": {
+      "section": "state_predicate",
+      "key": "closed_receptacle_blocks_contents"
+    },
+    "state_predicate:container_open_state": {
+      "section": "state_predicate",
+      "key": "container_open_state"
+    },
+    "state_predicate:cooled_state": {
+      "section": "state_predicate",
+      "key": "cooled_state"
+    },
+    "state_predicate:desklamp_on_state": {
+      "section": "state_predicate",
+      "key": "desklamp_on_state"
+    },
+    "state_predicate:empty_receptacle_observation": {
+      "section": "state_predicate",
+      "key": "empty_receptacle_observation"
+    },
+    "state_predicate:object_visible_on_surface": {
+      "section": "state_predicate",
+      "key": "object_visible_on_surface"
+    },
+    "state_predicate:open_state": {
+      "section": "state_predicate",
+      "key": "open_state"
+    },
+    "state_predicate:open_state_visible": {
+      "section": "state_predicate",
+      "key": "open_state_visible"
+    },
+    "transition_schema:cleaning_makes_object_clean": {
+      "section": "transition_schema",
+      "key": "cleaning_makes_object_clean"
+    },
+    "transition_schema:heat_object": {
+      "section": "transition_schema",
+      "key": "heat_object"
+    },
+    "transition_schema:move_object_to_location": {
+      "section": "transition_schema",
+      "key": "move_object_to_location"
+    },
+    "transition_schema:move_to_container": {
+      "section": "transition_schema",
+      "key": "move_to_container"
+    },
+    "transition_schema:move_to_receptacle_places_object": {
+      "section": "transition_schema",
+      "key": "move_to_receptacle_places_object"
+    },
+    "transition_schema:open_reveals_contents": {
+      "section": "transition_schema",
+      "key": "open_reveals_contents"
+    },
+    "transition_schema:take_from_surface": {
+      "section": "transition_schema",
+      "key": "take_from_surface"
+    },
+    "transition_schema:take_object_from_surface": {
+      "section": "transition_schema",
+      "key": "take_object_from_surface"
+    },
+    "workflow_template:cool_then_place": {
+      "section": "workflow_template",
+      "key": "cool_then_place"
+    },
+    "workflow_template:heat_then_place": {
+      "section": "workflow_template",
+      "key": "heat_then_place"
+    },
+    "workflow_template:locate_then_take_then_light": {
+      "section": "workflow_template",
+      "key": "locate_then_take_then_light"
+    },
+    "workflow_template:pick_and_place_sequence": {
+      "section": "workflow_template",
+      "key": "pick_and_place_sequence"
+    },
+    "workflow_template:pick_clean_then_place": {
+      "section": "workflow_template",
+      "key": "pick_clean_then_place"
+    },
+    "workflow_template:pickup_then_place": {
+      "section": "workflow_template",
+      "key": "pickup_then_place"
+    },
+    "workflow_template:repeat_pick_and_place_for_multiple_objects": {
+      "section": "workflow_template",
+      "key": "repeat_pick_and_place_for_multiple_objects"
+    },
+    "workflow_template:search_containers_for_target": {
+      "section": "workflow_template",
+      "key": "search_containers_for_target"
+    },
+    "workflow_template:search_receptacles_for_object": {
+      "section": "workflow_template",
+      "key": "search_receptacles_for_object"
+    },
+    "conditional_prerequisite:clean_before_placing": {
+      "section": "conditional_prerequisite",
+      "key": "clean_before_placing"
+    },
+    "conditional_prerequisite:cooling_requires_holding_object": {
+      "section": "conditional_prerequisite",
+      "key": "cooling_requires_holding_object"
+    },
+    "conditional_prerequisite:hand_empty_for_pickup": {
+      "section": "conditional_prerequisite",
+      "key": "hand_empty_for_pickup"
+    },
+    "conditional_prerequisite:hold_object_to_clean": {
+      "section": "conditional_prerequisite",
+      "key": "hold_object_to_clean"
+    },
+    "conditional_prerequisite:must_hold_before_move": {
+      "section": "conditional_prerequisite",
+      "key": "must_hold_before_move"
+    },
+    "conditional_prerequisite:must_hold_object_to_move": {
+      "section": "conditional_prerequisite",
+      "key": "must_hold_object_to_move"
+    },
+    "conditional_prerequisite:need_object_in_inventory_before_examine": {
+      "section": "conditional_prerequisite",
+      "key": "need_object_in_inventory_before_examine"
+    },
+    "conditional_prerequisite:object_must_be_at_light_location": {
+      "section": "conditional_prerequisite",
+      "key": "object_must_be_at_light_location"
+    },
+    "conditional_prerequisite:open_cabinet_before_placing": {
+      "section": "conditional_prerequisite",
+      "key": "open_cabinet_before_placing"
+    },
+    "conditional_prerequisite:open_closed_container": {
+      "section": "conditional_prerequisite",
+      "key": "open_closed_container"
+    },
+    "conditional_prerequisite:open_closed_receptacle": {
+      "section": "conditional_prerequisite",
+      "key": "open_closed_receptacle"
+    },
+    "conditional_prerequisite:open_container_before_placing": {
+      "section": "conditional_prerequisite",
+      "key": "open_container_before_placing"
+    },
+    "conditional_prerequisite:open_container_before_searching": {
+      "section": "conditional_prerequisite",
+      "key": "open_container_before_searching"
+    },
+    "conditional_prerequisite:open_container_before_take": {
+      "section": "conditional_prerequisite",
+      "key": "open_container_before_take"
+    },
+    "conditional_prerequisite:open_container_before_taking": {
+      "section": "conditional_prerequisite",
+      "key": "open_container_before_taking"
+    },
+    "conditional_prerequisite:open_fridge_before_cooling": {
+      "section": "conditional_prerequisite",
+      "key": "open_fridge_before_cooling"
+    },
+    "conditional_prerequisite:open_fridge_before_placing": {
+      "section": "conditional_prerequisite",
+      "key": "open_fridge_before_placing"
+    },
+    "conditional_prerequisite:open_microwave_before_heating": {
+      "section": "conditional_prerequisite",
+      "key": "open_microwave_before_heating"
+    },
+    "recovery_policy:failed_take_after_open": {
+      "section": "recovery_policy",
+      "key": "failed_take_after_open"
+    },
+    "recovery_policy:invalid_location_no_arrival": {
+      "section": "recovery_policy",
+      "key": "invalid_location_no_arrival"
+    },
+    "recovery_policy:invalid_location_no_effect": {
+      "section": "recovery_policy",
+      "key": "invalid_location_no_effect"
+    },
+    "recovery_policy:navigate_to_known_location": {
+      "section": "recovery_policy",
+      "key": "navigate_to_known_location"
+    },
+    "recovery_policy:reopen_after_close": {
+      "section": "recovery_policy",
+      "key": "reopen_after_close"
+    },
+    "recovery_policy:repeated_go_to_same_location_fails": {
+      "section": "recovery_policy",
+      "key": "repeated_go_to_same_location_fails"
+    },
+    "recovery_policy:retry_failed_take_after_revisiting": {
+      "section": "recovery_policy",
+      "key": "retry_failed_take_after_revisiting"
+    },
+    "recovery_policy:retry_take_after_placing": {
+      "section": "recovery_policy",
+      "key": "retry_take_after_placing"
+    },
+    "recovery_policy:search_multiple_locations": {
+      "section": "recovery_policy",
+      "key": "search_multiple_locations"
+    },
+    "evidence_policy:1": {
+      "section": "evidence_policy",
+      "key": "1"
+    }
+  },
+  "policy_sha256": "4a71999a6ccdb613712577902cee959fedd4ed74cbcf070bf7983544c335470b"
+}

@@ -1,0 +1,1014 @@
+{
+  "schema_version": 1,
+  "name": "webshop_random200_seed233_excluding_dev_test_memory",
+  "source": "official WebShop human_goals task ids sampled from indices 440..12086, excluding existing dev/test/memory_train ranges 0..439",
+  "random_seed": 233,
+  "population_min_task_id": 440,
+  "population_max_task_id": 12086,
+  "population_size": 11647,
+  "sample_size": 200,
+  "task_ids": [
+    11621,
+    10734,
+    3296,
+    9044,
+    4221,
+    8371,
+    9464,
+    3788,
+    1804,
+    2116,
+    4841,
+    4272,
+    11800,
+    675,
+    1700,
+    11526,
+    4342,
+    10361,
+    11980,
+    12048,
+    4163,
+    5103,
+    2357,
+    8329,
+    5709,
+    4018,
+    1869,
+    5231,
+    8387,
+    9061,
+    10782,
+    2893,
+    10427,
+    12006,
+    5927,
+    5556,
+    2082,
+    8668,
+    7836,
+    4885,
+    7180,
+    1030,
+    7010,
+    3407,
+    1343,
+    1487,
+    2337,
+    3929,
+    3069,
+    6237,
+    5678,
+    8903,
+    8951,
+    7791,
+    2612,
+    870,
+    8068,
+    2369,
+    11938,
+    6122,
+    11274,
+    2086,
+    11860,
+    1768,
+    9707,
+    6351,
+    1458,
+    6857,
+    5337,
+    9325,
+    1088,
+    10421,
+    8682,
+    8012,
+    7036,
+    549,
+    1631,
+    8320,
+    6323,
+    6658,
+    2539,
+    10713,
+    7768,
+    6170,
+    5319,
+    10348,
+    2653,
+    3807,
+    8474,
+    9151,
+    11462,
+    2619,
+    7005,
+    11853,
+    2625,
+    3586,
+    11728,
+    10095,
+    8698,
+    2177,
+    1365,
+    5841,
+    7403,
+    8098,
+    3718,
+    10592,
+    5665,
+    10106,
+    6365,
+    2632,
+    11485,
+    5411,
+    8747,
+    10385,
+    4286,
+    1852,
+    9097,
+    1983,
+    1047,
+    3332,
+    10752,
+    9847,
+    7250,
+    11713,
+    10203,
+    4708,
+    4066,
+    2107,
+    1281,
+    9240,
+    6523,
+    5778,
+    7376,
+    11228,
+    3530,
+    6785,
+    11351,
+    1029,
+    6693,
+    7191,
+    10804,
+    3772,
+    5208,
+    4829,
+    2275,
+    10328,
+    10463,
+    8321,
+    9628,
+    5372,
+    6907,
+    7262,
+    7369,
+    4477,
+    2131,
+    2294,
+    4301,
+    10999,
+    1952,
+    11872,
+    6752,
+    11619,
+    8699,
+    10045,
+    6934,
+    3899,
+    10266,
+    7009,
+    9364,
+    7733,
+    9322,
+    3300,
+    883,
+    2225,
+    12019,
+    4378,
+    9762,
+    4352,
+    5435,
+    2355,
+    11795,
+    9676,
+    7454,
+    8991,
+    3643,
+    5341,
+    7792,
+    2591,
+    6026,
+    8270,
+    1269,
+    10327,
+    5931,
+    9057,
+    3292,
+    11659,
+    539,
+    9378,
+    7084,
+    4671
+  ],
+  "records": [
+    {
+      "task_id": 11621,
+      "instruction": "Instruction: i'm looking for a tea bags which is sugar free and gluten free and also of good quality ingredients. also choose a pack of 1 weights 1.32 ounce, coconut with green tea flavored one, and price lower than 40.00 dollars"
+    },
+    {
+      "task_id": 10734,
+      "instruction": "Instruction: i am looking for birthday cake in black 40, and price lower than 20.00 dollars"
+    },
+    {
+      "task_id": 3296,
+      "instruction": "Instruction: i am looking for non slip shoes in 10 size, and price lower than 140.00 dollars"
+    },
+    {
+      "task_id": 9044,
+      "instruction": "Instruction: i want to find a pound of chocolate covered peach hearts, and price lower than 130.00 dollars"
+    },
+    {
+      "task_id": 4221,
+      "instruction": "Instruction: i need a nail polish carrying case, and price lower than 60.00 dollars"
+    },
+    {
+      "task_id": 8371,
+      "instruction": "Instruction: i am looking for  6'7\" round size area rug for my living room, and price lower than 330.00 dollars"
+    },
+    {
+      "task_id": 9464,
+      "instruction": "Instruction: i am looking for a pair of easy to use stainless steel monitoring headphones, and price lower than 30.00 dollars"
+    },
+    {
+      "task_id": 3788,
+      "instruction": "Instruction: i am looking for low fat jalapeno jerky that is 4 ounces, and price lower than 60.00 dollars"
+    },
+    {
+      "task_id": 1804,
+      "instruction": "Instruction: i'm looking for easy apply for hair removal in natural ingredients. it can easily apply, and price lower than 100.00 dollars"
+    },
+    {
+      "task_id": 2116,
+      "instruction": "Instruction: i would like a 40 w by 28 l grill pant with a elastic waist, and price lower than 130.00 dollars"
+    },
+    {
+      "task_id": 4841,
+      "instruction": "Instruction: i would like a 4g lte tablet with a high resolution, and price lower than 230.00 dollars"
+    },
+    {
+      "task_id": 4272,
+      "instruction": "Instruction: i would like a 2x poolside sebastion plaid shirt that is easy to take care of, and price lower than 120.00 dollars"
+    },
+    {
+      "task_id": 11800,
+      "instruction": "Instruction: i am looking for an ultra thin gold plated mini c hdmi cable, and price lower than 50.00 dollars"
+    },
+    {
+      "task_id": 675,
+      "instruction": "Instruction: i am looking for a steel framed brown 5 tier bookcase, and price lower than 480.00 dollars"
+    },
+    {
+      "task_id": 1700,
+      "instruction": "Instruction: i want a baieyu mini computer with intel core i7-8550u ddr4, and price lower than 820.00 dollars"
+    },
+    {
+      "task_id": 11526,
+      "instruction": "Instruction: looking for long-wear eyeliner that is easy to apply also choose barrow street, and price lower than 50.00 dollars"
+    },
+    {
+      "task_id": 4342,
+      "instruction": "Instruction: i want a light weight 6x9 ft octopus vinyl photography backdrop, and price lower than 140.00 dollars"
+    },
+    {
+      "task_id": 10361,
+      "instruction": "Instruction: i need a 3.4 fl oz glass bottle of toothgel that is plant based and made of fennel & baking soda, and price lower than 40.00 dollars"
+    },
+    {
+      "task_id": 11980,
+      "instruction": "Instruction: i am looking for high performance refurbished hp laserjet m3035xs m3035 cc477a laser printer, and price lower than 830.00 dollars"
+    },
+    {
+      "task_id": 12048,
+      "instruction": "Instruction: i need jane grey pink vanity fair women's nylon spandex hi cut panties in plus size 5, and price lower than 50.00 dollars"
+    },
+    {
+      "task_id": 4163,
+      "instruction": "Instruction: earphone earbuds comfortable ear noise cancelling with mic, and price lower than 60.00 dollars"
+    },
+    {
+      "task_id": 5103,
+      "instruction": "Instruction: find my-lady silk base top , updated 120% density remy human hair clip in fringe-free topper. it has to be this one and i will for sure cover up a friend's hair loss. register the color : #18p613 so that the order is correct, and price lower than 90.00 dollars"
+    },
+    {
+      "task_id": 2357,
+      "instruction": "Instruction: i need a high density area rug that is white, and price lower than 60.00 dollars"
+    },
+    {
+      "task_id": 8329,
+      "instruction": "Instruction: i want pink buipokd women's sports shoes with arch support, and price lower than 40.00 dollars"
+    },
+    {
+      "task_id": 5709,
+      "instruction": "Instruction: i would like a chrome bath sconce that is a vanity light, and price lower than 170.00 dollars"
+    },
+    {
+      "task_id": 4018,
+      "instruction": "Instruction: i'm looking for a coral velvet microfiber hair towel wrap for women, and price lower than 40.00 dollars"
+    },
+    {
+      "task_id": 1869,
+      "instruction": "Instruction: i want black chloe women's arch support clogs, and price lower than 170.00 dollars"
+    },
+    {
+      "task_id": 5231,
+      "instruction": "Instruction: i would like a pair of size six fossil boots that are machine washable, and price lower than 120.00 dollars"
+    },
+    {
+      "task_id": 8387,
+      "instruction": "Instruction: i am looking for a fabric dresser of brown color for my living room, and price lower than 130.00 dollars"
+    },
+    {
+      "task_id": 9061,
+      "instruction": "Instruction: i need a chocolate colored hair dye, and price lower than 50.00 dollars"
+    },
+    {
+      "task_id": 10782,
+      "instruction": "Instruction: i'm looking for a nightstand with tempered glass for living room, size 19.7x11.8x23\" in retro brown color, and price lower than 160.00 dollars"
+    },
+    {
+      "task_id": 2893,
+      "instruction": "Instruction: i would like a single 25 foot hdmi 2.1 cable for my blu ray player, and price lower than 120.00 dollars"
+    },
+    {
+      "task_id": 10427,
+      "instruction": "Instruction: looking for moisturizing and nourishing cream with multi-vitamin anti-crack foot with argan oil, and price lower than 40.00 dollars"
+    },
+    {
+      "task_id": 12006,
+      "instruction": "Instruction: i need an argan oil moisturizer that is 8 ounces and is the scent desert date, and price lower than 50.00 dollars"
+    },
+    {
+      "task_id": 5927,
+      "instruction": "Instruction: i need a 2 pack of lemon cookie mini bars that have high protein, and price lower than 30.00 dollars"
+    },
+    {
+      "task_id": 5556,
+      "instruction": "Instruction: i'm looking for a regular fit men's sneakers with rubber sole. also choose 6.5 size black colored one, and price lower than 90.00 dollars"
+    },
+    {
+      "task_id": 2082,
+      "instruction": "Instruction: i looking a solid wood home furnishing  2 drawer nightstand, and price lower than 550.00 dollars"
+    },
+    {
+      "task_id": 8668,
+      "instruction": "Instruction: i am interested in a white dinnerware set that has a contemporary design, and price lower than 80.00 dollars"
+    },
+    {
+      "task_id": 7836,
+      "instruction": "Instruction: i'm looking for a high density gaming chair with lumbar support which is made of pu leather. also, choose cool blue colored one, and price lower than 140.00 dollars"
+    },
+    {
+      "task_id": 4885,
+      "instruction": "Instruction: i'm looking for high-waisted lace women's lingerie in red. choose the x-large size, and price lower than 40.00 dollars"
+    },
+    {
+      "task_id": 7180,
+      "instruction": "Instruction: i am looing for a fog color hair drying towels which is easy to use, and price lower than 60.00 dollars"
+    },
+    {
+      "task_id": 1030,
+      "instruction": "Instruction: i'm looking for pink cruelty free himalayan salt water mouth rinse, and price lower than 40.00 dollars"
+    },
+    {
+      "task_id": 7010,
+      "instruction": "Instruction: i want blueberry hemp organic super food energy bites, and price lower than 50.00 dollars"
+    },
+    {
+      "task_id": 3407,
+      "instruction": "Instruction: i am looking for some long lasting ruby colored lip gloss , and price lower than 30.00 dollars"
+    },
+    {
+      "task_id": 1343,
+      "instruction": "Instruction: the glitter mascara wands make me look pretty, pink is the one to go with, and price lower than 40.00 dollars"
+    },
+    {
+      "task_id": 1487,
+      "instruction": "Instruction: i am looking for qazpl clip in hair extensions for hair loss, and price lower than 70.00 dollars"
+    },
+    {
+      "task_id": 2337,
+      "instruction": "Instruction: i am looking for a box of chocolate covered caramels and nuts, and price lower than 50.00 dollars"
+    },
+    {
+      "task_id": 3929,
+      "instruction": "Instruction: i am looking for 16''x24'' size sky canvas wall art home decor for living room, and price lower than 80.00 dollars"
+    },
+    {
+      "task_id": 3069,
+      "instruction": "Instruction: buy a pair of sneakers with rubber soles in a size seven and a half. order them in silver, and price lower than 70.00 dollars"
+    },
+    {
+      "task_id": 6237,
+      "instruction": "Instruction: i chose as a gift a black adidas originals men's ultraboost 12.5 with rubber sole. notify me so i can purchase today, and price lower than 340.00 dollars"
+    },
+    {
+      "task_id": 5678,
+      "instruction": "Instruction: i am looking for fresh baked valentine cookies i would like m&m and sugar cookies, and price lower than 70.00 dollars"
+    },
+    {
+      "task_id": 8903,
+      "instruction": "Instruction: i would like some gnocchi that is easy to prepare, and price lower than 40.00 dollars"
+    },
+    {
+      "task_id": 8951,
+      "instruction": "Instruction: i am looking for a lip plumper with cruelty free, also long lasting, and price lower than 50.00 dollars"
+    },
+    {
+      "task_id": 7791,
+      "instruction": "Instruction: i would like to buy computer desk which has steel frame and is in black color while it's size is large, and price lower than 140.00 dollars"
+    },
+    {
+      "task_id": 2612,
+      "instruction": "Instruction: can i get a green women short sleeve dandelion printed blouse thats is loose fit and desirable for day comfort?, and price lower than 30.00 dollars"
+    },
+    {
+      "task_id": 870,
+      "instruction": "Instruction: i am looking for medium sized women knee high over calf, and price lower than 50.00 dollars"
+    },
+    {
+      "task_id": 8068,
+      "instruction": "Instruction: i'm looking for plant based zero sugar energy drinks in a four flavor variety pack, and price lower than 60.00 dollars"
+    },
+    {
+      "task_id": 2369,
+      "instruction": "Instruction: i would like a 6 pack of 5.5 ounce non gmo sundried tomatoes, and price lower than 60.00 dollars"
+    },
+    {
+      "task_id": 11938,
+      "instruction": "Instruction: i am interested in a remote control that has batteries included, and price lower than 50.00 dollars"
+    },
+    {
+      "task_id": 6122,
+      "instruction": "Instruction: i want a black mini wireless bluetooth headset, and price lower than 20.00 dollars"
+    },
+    {
+      "task_id": 11274,
+      "instruction": "Instruction: i want a set of 2 mesh laundry bags with green leaves design, and price lower than 50.00 dollars"
+    },
+    {
+      "task_id": 2086,
+      "instruction": "Instruction: i am looking for a keto friendly vegetables with low carb also rich source of vitamins, and price lower than 140.00 dollars"
+    },
+    {
+      "task_id": 11860,
+      "instruction": "Instruction: i'm looking for a blue wall-mounted, spacing-saving console shelf for the living room, and price lower than 100.00 dollars"
+    },
+    {
+      "task_id": 1768,
+      "instruction": "Instruction: i'm looking for high speed accessories and three product of packaging, and price lower than 60.00 dollars"
+    },
+    {
+      "task_id": 9707,
+      "instruction": "Instruction: i am lookig for a light weight clover color womens pullover, and price lower than 70.00 dollars"
+    },
+    {
+      "task_id": 6351,
+      "instruction": "Instruction: i'm hoping to find a stainless steel set of wireless headphones that comes with a carrying case. ideally the metal on the headphones should be black and the leather should be olive colored, and price lower than 180.00 dollars"
+    },
+    {
+      "task_id": 1458,
+      "instruction": "Instruction: i am looking for a light blue mini dress that is machine washable, and price lower than 60.00 dollars"
+    },
+    {
+      "task_id": 6857,
+      "instruction": "Instruction: i am looking for black color loop bands that are light weight, and price lower than 40.00 dollars"
+    },
+    {
+      "task_id": 5337,
+      "instruction": "Instruction: i would like a small short signal green track pant with a elastic waist, and price lower than 70.00 dollars"
+    },
+    {
+      "task_id": 9325,
+      "instruction": "Instruction: i am looking for a hands free z-floral color flip cases, and price lower than 40.00 dollars"
+    },
+    {
+      "task_id": 1088,
+      "instruction": "Instruction: i am in search of a black printed heavy duty toiletry bags which will be able to resist the water damage, and price lower than 50.00 dollars"
+    },
+    {
+      "task_id": 10421,
+      "instruction": "Instruction: i am looking for a yellow short sleeve men's hawaiian shirt, and price lower than 50.00 dollars"
+    },
+    {
+      "task_id": 8682,
+      "instruction": "Instruction: i'm locking for a clinical strength anti-perspirant deodorant, and price lower than 130.00 dollars"
+    },
+    {
+      "task_id": 8012,
+      "instruction": "Instruction: please order for me a black pure leather ottoman stool size 100x40x43 cm for my living room, and price lower than 560.00 dollars"
+    },
+    {
+      "task_id": 7036,
+      "instruction": "Instruction: i am looking for a local gold hands free wireless earpiece with mic, and price lower than 90.00 dollars"
+    },
+    {
+      "task_id": 549,
+      "instruction": "Instruction: i'm looking for blankets the color was boho colorful geometric pattern decor, and price lower than 50.00 dollars"
+    },
+    {
+      "task_id": 1631,
+      "instruction": "Instruction: i need a highly pigment lip tint. pick a 0.14 fl oz bottle, and price lower than 40.00 dollars"
+    },
+    {
+      "task_id": 8320,
+      "instruction": "Instruction: i need a vanity light that is a satin nickel color, and price lower than 80.00 dollars"
+    },
+    {
+      "task_id": 6323,
+      "instruction": "Instruction: i am looking for a xx-large casual print shirt for women for gifting purpose. also choose wine color, and price lower than 20.00 dollars"
+    },
+    {
+      "task_id": 6658,
+      "instruction": "Instruction: i want to find a desktop computer that features ryz 5 pro 3400ge, 32 gigabytes of storage space and 500 gigabytes on the ssd card. it needs to have a quad core processor, and price lower than 830.00 dollars"
+    },
+    {
+      "task_id": 2539,
+      "instruction": "Instruction: i'm looking for white item make my room look so nice, and price lower than 410.00 dollars"
+    },
+    {
+      "task_id": 10713,
+      "instruction": "Instruction: i need a hyaluronic acid lotion that is unscented, and price lower than 50.00 dollars"
+    },
+    {
+      "task_id": 7768,
+      "instruction": "Instruction: i am looking for a small slim fit nightgowns & sleepshirts, and price lower than 40.00 dollars"
+    },
+    {
+      "task_id": 6170,
+      "instruction": "Instruction: i'm looking for birthday cakes with superhero theme that is perfect for kids' birthday party, and price lower than 40.00 dollars"
+    },
+    {
+      "task_id": 5319,
+      "instruction": "Instruction: i want a brown mens shawl collar long-sleeved cardigans sweater, and price lower than 50.00 dollars"
+    },
+    {
+      "task_id": 10348,
+      "instruction": "Instruction: i need a classic fit pastel goth black girl lolita princess court dress with lemon color, and price lower than 50.00 dollars"
+    },
+    {
+      "task_id": 2653,
+      "instruction": "Instruction: i am looking for an intel i5 core desktop computer that has 4gb ram and 64gb ssd, and price lower than 500.00 dollars"
+    },
+    {
+      "task_id": 3807,
+      "instruction": "Instruction: i'm looking for a high performance desktop computer with intel core processor, and price lower than 630.00 dollars"
+    },
+    {
+      "task_id": 8474,
+      "instruction": "Instruction: i am looking for a curtain for living room which is washable in machine. also choose 52\" wide by 90\" length in size, and price lower than 50.00 dollars"
+    },
+    {
+      "task_id": 9151,
+      "instruction": "Instruction: i am looking for yellow and flat ankle booties for women for daily wear, and i would like them to come in size 8.5, and price lower than 30.00 dollars"
+    },
+    {
+      "task_id": 11462,
+      "instruction": "Instruction: i'm looking for a laundry bag that is designed for delicate blouses and hosiery, and price lower than 50.00 dollars"
+    },
+    {
+      "task_id": 2619,
+      "instruction": "Instruction: i need jade johnny mbj women's casual comfy wide leg pants in size medium, and price lower than 60.00 dollars"
+    },
+    {
+      "task_id": 7005,
+      "instruction": "Instruction: i would like a 16 ounce bag of sweet potato gluten free flower, and price lower than 40.00 dollars"
+    },
+    {
+      "task_id": 11853,
+      "instruction": "Instruction: i'm looking for some machine washable window coverings with a 31 and a half inch width. they should come in color \"b006c14.\", and price lower than 100.00 dollars"
+    },
+    {
+      "task_id": 2625,
+      "instruction": "Instruction: i want to get a 9-pack of veggie lasagna entrees that are easy to prepare and high in protein, and price lower than 80.00 dollars"
+    },
+    {
+      "task_id": 3586,
+      "instruction": "Instruction: i would like a pair of grey size 6 sneakers with a rubber sole, and price lower than 110.00 dollars"
+    },
+    {
+      "task_id": 11728,
+      "instruction": "Instruction: i want a bexley mission tiffany style table lamp for my living room, and price lower than 250.00 dollars"
+    },
+    {
+      "task_id": 10095,
+      "instruction": "Instruction: i'm trying to find a laundry bag for women, and price lower than 50.00 dollars"
+    },
+    {
+      "task_id": 8698,
+      "instruction": "Instruction: i need to buy some permanent hair dye. it should be deep ash brown and contain argan oil, and price lower than 30.00 dollars"
+    },
+    {
+      "task_id": 2177,
+      "instruction": "Instruction: i want to find machine washable curtains for my living room in the color 5, and price lower than 50.00 dollars"
+    },
+    {
+      "task_id": 1365,
+      "instruction": "Instruction: i'm looking for hair care for hair extenions its for permanent hair, and price lower than 50.00 dollars"
+    },
+    {
+      "task_id": 5841,
+      "instruction": "Instruction: i want to buy 1 dagostino handmade pasta pack of 3 12oz old fashioned rotini from the pasta and noodles for dinner tonight, and price lower than 60.00 dollars"
+    },
+    {
+      "task_id": 7403,
+      "instruction": "Instruction: i am looking for a freeze dried pear chips and should contain real fruit, and price lower than 40.00 dollars"
+    },
+    {
+      "task_id": 8098,
+      "instruction": "Instruction: i am looking for a 200ft coaxial cable black in color. indoor/outdoor use, and price lower than 60.00 dollars"
+    },
+    {
+      "task_id": 3718,
+      "instruction": "Instruction: i would like a 66 inch matte black lamp floor lamp for my living room. i would also like a remote for the lamp, and price lower than 100.00 dollars"
+    },
+    {
+      "task_id": 10592,
+      "instruction": "Instruction: i have 4x-large size short sleeve, and price lower than 50.00 dollars"
+    },
+    {
+      "task_id": 5665,
+      "instruction": "Instruction: i am looking for a classic fit army green color shirts, and price lower than 40.00 dollars"
+    },
+    {
+      "task_id": 10106,
+      "instruction": "Instruction: i want a solid wood sunset trading shades of sand console table, and price lower than 630.00 dollars"
+    },
+    {
+      "task_id": 6365,
+      "instruction": "Instruction: i am looking for medium size tank tops for women that can be washed through hands, and price lower than 50.00 dollars"
+    },
+    {
+      "task_id": 2632,
+      "instruction": "Instruction: i need six feet of hdmi high performance cables in a ten pack, and price lower than 30.00 dollars"
+    },
+    {
+      "task_id": 11485,
+      "instruction": "Instruction: i am looking for 2000 feet of ultra hd coaxial cable, and price lower than 130.00 dollars"
+    },
+    {
+      "task_id": 5411,
+      "instruction": "Instruction: i am looking for a memory foam bed, one that does not need a box spring i would like queen size, and price lower than 190.00 dollars"
+    },
+    {
+      "task_id": 8747,
+      "instruction": "Instruction: i am looking for  cherry red softy t color boots that are light weight, and price lower than 150.00 dollars"
+    },
+    {
+      "task_id": 10385,
+      "instruction": "Instruction: i want to find a two-pack of white coaxial cables that are plated with gold, and price lower than 50.00 dollars"
+    },
+    {
+      "task_id": 4286,
+      "instruction": "Instruction: in hand creams & lotion aisle of the beauty & personal care department, i want a white long lasting, fragrance free hand lotion for dry, rough or sensitive skin that soothes and comforts. comes in a 3 ounce 4 pack, and price lower than 50.00 dollars"
+    },
+    {
+      "task_id": 1852,
+      "instruction": "Instruction: i need some black ankle strap flats that are in a size 9 wide, and price lower than 50.00 dollars"
+    },
+    {
+      "task_id": 9097,
+      "instruction": "Instruction: i'm looking for a wooden upholstered  daybed twin with trundle and backrest, and price lower than 360.00 dollars"
+    },
+    {
+      "task_id": 1983,
+      "instruction": "Instruction: i need a certified refurbished nikon d750"
+    },
+    {
+      "task_id": 1047,
+      "instruction": "Instruction: i need some white vinyl flip flops in size 8 for women, and price lower than 100.00 dollars"
+    },
+    {
+      "task_id": 3332,
+      "instruction": "Instruction: i would like a #6 nail whitener for nail art, and price lower than 140.00 dollars"
+    },
+    {
+      "task_id": 10752,
+      "instruction": "Instruction: i need a powerlite 1785w projector that projects 1080p hd"
+    },
+    {
+      "task_id": 9847,
+      "instruction": "Instruction: pink lemonade flavored juice drink mix, please. it needs to be sugar-free and caffeine-free, and price lower than 30.00 dollars"
+    },
+    {
+      "task_id": 7250,
+      "instruction": "Instruction: i am looking for a stainless steel watch bands for my smart watch. and i choose the 18mm size with black color, and price lower than 50.00 dollars"
+    },
+    {
+      "task_id": 11713,
+      "instruction": "Instruction: i am looking for modern mid century droplet accent table lamp for living room, and price lower than 120.00 dollars"
+    },
+    {
+      "task_id": 10203,
+      "instruction": "Instruction: i would like a pack of 3 herbal teas that are immune boosting, and price lower than 50.00 dollars"
+    },
+    {
+      "task_id": 4708,
+      "instruction": "Instruction: look for an eay to use android cell phone that has 128 gb"
+    },
+    {
+      "task_id": 4066,
+      "instruction": "Instruction: i am looking for blue scrub bottoms that are made of polyester cotton and are a size 3x tall, and price lower than 50.00 dollars"
+    },
+    {
+      "task_id": 2107,
+      "instruction": "Instruction: i am looking for a background for photography that is easy to carry, and price lower than 50.00 dollars"
+    },
+    {
+      "task_id": 1281,
+      "instruction": "Instruction: i am looking for a 1.6 ounce (pack of 6) of  cookies which is low carb, high protein, low sugar and gluten free, and price lower than 90.00 dollars"
+    },
+    {
+      "task_id": 9240,
+      "instruction": "Instruction: i am looking for a ac adapters for wireless bluetooth, and price lower than 50.00 dollars"
+    },
+    {
+      "task_id": 6523,
+      "instruction": "Instruction: i'm looking for a ultimate hand care cream for dry skin, and price lower than 50.00 dollars"
+    },
+    {
+      "task_id": 5778,
+      "instruction": "Instruction: i saw the women's shoe in a store and i need you to find it on amazon in brown and size 7, with rubber sole. the brand is jambu and the model is mule, and price lower than 110.00 dollars"
+    },
+    {
+      "task_id": 7376,
+      "instruction": "Instruction: i would like a high quality blue face kit to help with fine lines and wrinkles, and price lower than 30.00 dollars"
+    },
+    {
+      "task_id": 11228,
+      "instruction": "Instruction: i would like a conditioner that is made with all natural ingredients, and price lower than 50.00 dollars"
+    },
+    {
+      "task_id": 3530,
+      "instruction": "Instruction: i need an easy to assemble coat rack, and price lower than 140.00 dollars"
+    },
+    {
+      "task_id": 6785,
+      "instruction": "Instruction: buy me a machine washable button down shirt in 3x large, and price lower than 60.00 dollars"
+    },
+    {
+      "task_id": 11351,
+      "instruction": "Instruction: i need a bpa and gmo free pack of moringia leaf ground, and price lower than 40.00 dollars"
+    },
+    {
+      "task_id": 1029,
+      "instruction": "Instruction: i need an 8ft round contemporary area rug that is silver and ivory, and price lower than 320.00 dollars"
+    },
+    {
+      "task_id": 6693,
+      "instruction": "Instruction: i am looking for some pink cupcake toppers for a birthday cake, and price lower than 30.00 dollars"
+    },
+    {
+      "task_id": 7191,
+      "instruction": "Instruction: mini pc with intel core i7 processor, and price lower than 130.00 dollars"
+    },
+    {
+      "task_id": 10804,
+      "instruction": "Instruction: i am looking for a stainless steel compact pocket makeup mirror, and price lower than 50.00 dollars"
+    },
+    {
+      "task_id": 3772,
+      "instruction": "Instruction: i am looking for high quality 22 inch hair extensions, and price lower than 50.00 dollars"
+    },
+    {
+      "task_id": 5208,
+      "instruction": "Instruction: i would like a remote control that has batteries included, and price lower than 40.00 dollars"
+    },
+    {
+      "task_id": 4829,
+      "instruction": "Instruction: i would like a rose gold cupcake topper for a birthday cake, and price lower than 40.00 dollars"
+    },
+    {
+      "task_id": 2275,
+      "instruction": "Instruction: i would like to purchase teriyaki flavored jerky that is made from grass fed beef and comes in a 10 ounce package, and price lower than 40.00 dollars"
+    },
+    {
+      "task_id": 10328,
+      "instruction": "Instruction: i am looking for a light brown color hair dye, and price lower than 40.00 dollars"
+    },
+    {
+      "task_id": 10463,
+      "instruction": "Instruction: i want some low carb and keto friendly snacks. it should be almond espresso flavored and diary free, and price lower than 40.00 dollars"
+    },
+    {
+      "task_id": 8321,
+      "instruction": "Instruction: i'm looking for star wars for clothing for navy white colored, and price lower than 60.00 dollars"
+    },
+    {
+      "task_id": 9628,
+      "instruction": "Instruction: i'm looking for furniture was in living room  the color was crystal gray furniture was so good, and price lower than 20.00 dollars"
+    },
+    {
+      "task_id": 5372,
+      "instruction": "Instruction: hello ! i need paleo everyday seasonings powder which is gluten free and has low sodium, and price lower than 20.00 dollars"
+    },
+    {
+      "task_id": 6907,
+      "instruction": "Instruction: i would like high power amplifier, and price lower than 190.00 dollars"
+    },
+    {
+      "task_id": 7262,
+      "instruction": "Instruction: i would like 72 pieces of a variety of sugar free bubblegum, and price lower than 20.00 dollars"
+    },
+    {
+      "task_id": 7369,
+      "instruction": "Instruction: i am looking for s96 pro black android 10  octa-core ip68 fast charging phone, and price lower than 380.00 dollars"
+    },
+    {
+      "task_id": 4477,
+      "instruction": "Instruction: i want a red and easy to assemble gaming chair, and price lower than 130.00 dollars"
+    },
+    {
+      "task_id": 2131,
+      "instruction": "Instruction: i need cupcake toppers for a birthday party, and price lower than 20.00 dollars"
+    },
+    {
+      "task_id": 2294,
+      "instruction": "Instruction: i am looking  super soft speed sports car fleece throw blanket for boys girls extreme sports theme plush blanket cool tie dye decor fuzzy blanket for sofa bed couch  for living room, and price lower than 70.00 dollars"
+    },
+    {
+      "task_id": 4301,
+      "instruction": "Instruction: i am looking for venice color lip gloss containing natural ingredients, and price lower than 40.00 dollars"
+    },
+    {
+      "task_id": 10999,
+      "instruction": "Instruction: i'm looking fo a large faux leather even path that's effective for dark circles also.choose the blue one, and price lower than 410.00 dollars"
+    },
+    {
+      "task_id": 1952,
+      "instruction": "Instruction: i want low sodium popcorn salt that is frosted sugar cookie and comes in a pack of six, and price lower than 50.00 dollars"
+    },
+    {
+      "task_id": 11872,
+      "instruction": "Instruction: i am looking for black-1029 coaxial cable for smart tv, and price lower than 60.00 dollars"
+    },
+    {
+      "task_id": 6752,
+      "instruction": "Instruction: i need 5ft power cord cable for blu ray player and  home theater system, and price lower than 50.00 dollars"
+    },
+    {
+      "task_id": 11619,
+      "instruction": "Instruction: i need dog cupcake toppers for a dog party, and price lower than 30.00 dollars"
+    },
+    {
+      "task_id": 8699,
+      "instruction": "Instruction: i am looking for a black curtain rod that is 54\"-90\" in size and easy to install, and price lower than 30.00 dollars"
+    },
+    {
+      "task_id": 10045,
+      "instruction": "Instruction: i need water resistant flip flops that are a size 10 little kid, and price lower than 60.00 dollars"
+    },
+    {
+      "task_id": 6934,
+      "instruction": "Instruction: i need some relaxed fit pants that are gray and are a size 3x, and price lower than 40.00 dollars"
+    },
+    {
+      "task_id": 3899,
+      "instruction": "Instruction: i'm looking for  black color 1080p hd male to female converter adapter cable for laptop hdtv dvd, and price lower than 20.00 dollars"
+    },
+    {
+      "task_id": 10266,
+      "instruction": "Instruction: i would like 10 sweet and savory variety packs of gluten free potato sticks, and price lower than 90.00 dollars"
+    },
+    {
+      "task_id": 7009,
+      "instruction": "Instruction: i'm looking for a high performance hdmi to displayport adapter cable that's easy to use, and price lower than 60.00 dollars"
+    },
+    {
+      "task_id": 9364,
+      "instruction": "Instruction: i would like a black file cabinets what are fully assembled, and price lower than 300.00 dollars"
+    },
+    {
+      "task_id": 7733,
+      "instruction": "Instruction: i am looking for rectangular shaped dark grey color entryway plush thick area rug of size 2 ft 3 in x 6 ft for living room, and price lower than 300.00 dollars"
+    },
+    {
+      "task_id": 9322,
+      "instruction": "Instruction: i would like some non gmo pretzels that are 10 ounces, and price lower than 40.00 dollars"
+    },
+    {
+      "task_id": 3300,
+      "instruction": "Instruction: i am looking for a chrome sputnik chandelier for my dining room, and price lower than 70.00 dollars"
+    },
+    {
+      "task_id": 883,
+      "instruction": "Instruction: i would like some black high heels that are a size 6.5, and price lower than 180.00 dollars"
+    },
+    {
+      "task_id": 2225,
+      "instruction": "Instruction: i would like a #4 bath sponge that is non toxic and easy to keep clean, and price lower than 30.00 dollars"
+    },
+    {
+      "task_id": 12019,
+      "instruction": "Instruction: i need a pair of black eyebrow trimmers, and price lower than 40.00 dollars"
+    },
+    {
+      "task_id": 4378,
+      "instruction": "Instruction: i need  pink color valentine day cake toppers, and price lower than 40.00 dollars"
+    },
+    {
+      "task_id": 9762,
+      "instruction": "Instruction: i am looking for a green home office chair that is height adjustable, and price lower than 470.00 dollars"
+    },
+    {
+      "task_id": 4352,
+      "instruction": "Instruction: i am looking for sensodyne toothpaste in sensitive teeth, and price lower than 40.00 dollars"
+    },
+    {
+      "task_id": 5435,
+      "instruction": "Instruction: i am looking for a gluten free white grape raspberry flavored drink, and price lower than 80.00 dollars"
+    },
+    {
+      "task_id": 2355,
+      "instruction": "Instruction: i am interested in black and white fashion sneakers for everyday wear that come in a 6.5 size for women, and price lower than 130.00 dollars"
+    },
+    {
+      "task_id": 11795,
+      "instruction": "Instruction: i want to update my digital camera. i'm looking for a canon powershot sx620 w/ optical zoom 25x black color, 64gb memory card. i hope it's the best choice for my need, and price lower than 340.00 dollars"
+    },
+    {
+      "task_id": 9676,
+      "instruction": "Instruction: i am looking for a pair of long lasting men's wrangler cowboy cut jeans that are machine washable, and price lower than 60.00 dollars"
+    },
+    {
+      "task_id": 7454,
+      "instruction": "Instruction: i'm looking for twin sized furniture for bedroom furniture, and price lower than 140.00 dollars"
+    },
+    {
+      "task_id": 8991,
+      "instruction": "Instruction: i'm looking for a everyday wear chukka with rubber outsole. also choose 11.5-d with 11 wide bomber colored one, and price lower than 120.00 dollars"
+    },
+    {
+      "task_id": 3643,
+      "instruction": "Instruction: i am looking for extra strength exfoliator that handles dead skin, and price lower than 70.00 dollars"
+    },
+    {
+      "task_id": 5341,
+      "instruction": "Instruction: i'm looking for a easy install protective band strap in gray color, and price lower than 50.00 dollars"
+    },
+    {
+      "task_id": 7792,
+      "instruction": "Instruction: i would like a king sized bed with a 8 inch mattress and storage space, and price lower than 190.00 dollars"
+    },
+    {
+      "task_id": 2591,
+      "instruction": "Instruction: buy me a pair of machine washable jeans in maria, and price lower than 110.00 dollars"
+    },
+    {
+      "task_id": 6026,
+      "instruction": "Instruction: i am looking for a floor lamp that has a bronze finish, and price lower than 380.00 dollars"
+    },
+    {
+      "task_id": 8270,
+      "instruction": "Instruction: i am looking ac adapters with good output production, and price lower than 50.00 dollars"
+    },
+    {
+      "task_id": 1269,
+      "instruction": "Instruction: i'm looking for moisturizes the skin the green tea gives skin care goodness, and price lower than 70.00 dollars"
+    },
+    {
+      "task_id": 10327,
+      "instruction": "Instruction: find me a women's 3 piece brazilian thong bikini set that is machine washable and size large.  i need it in color a01#purple, and price lower than 60.00 dollars"
+    },
+    {
+      "task_id": 5931,
+      "instruction": "Instruction: i need an intel core i7 mini computer, and price lower than 710.00 dollars"
+    },
+    {
+      "task_id": 9057,
+      "instruction": "Instruction: i am looking for a 50 ml leak proof bags & cases, and price lower than 50.00 dollars"
+    },
+    {
+      "task_id": 3292,
+      "instruction": "Instruction: i want to find a natural-colored twin-sized kids' bed that's easy to assemble, and price lower than 140.00 dollars"
+    },
+    {
+      "task_id": 11659,
+      "instruction": "Instruction: i would like to buy some unsweetened hazelnut dairy and gluten free milk, and price lower than 60.00 dollars"
+    },
+    {
+      "task_id": 539,
+      "instruction": "Instruction: i would like a wirefree pink amethyst 36c bra that is machine washable, and price lower than 90.00 dollars"
+    },
+    {
+      "task_id": 9378,
+      "instruction": "Instruction: i am looking for a low carbohydrates protein bar with package of 12 counts, and price lower than 60.00 dollars"
+    },
+    {
+      "task_id": 7084,
+      "instruction": "Instruction: find me some highly pigmented eye shadow in color b, and price lower than 40.00 dollars"
+    },
+    {
+      "task_id": 4671,
+      "instruction": "Instruction: i am looking for high speed  vr headset  of size 10ft, and price lower than 40.00 dollars"
+    }
+  ]
+}

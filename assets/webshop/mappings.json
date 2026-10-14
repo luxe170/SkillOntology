@@ -1,0 +1,123 @@
+{
+  "metaop_to_skills": {
+    "M0001": [
+      "datasets/skillsets/webshop/SKILL.md"
+    ],
+    "M0002": [
+      "datasets/skillsets/webshop/SKILL.md"
+    ],
+    "M0003": [
+      "datasets/skillsets/webshop/SKILL.md"
+    ],
+    "M0004": [
+      "datasets/skillsets/webshop/SKILL.md"
+    ],
+    "M0005": [
+      "datasets/skillsets/webshop/SKILL.md"
+    ],
+    "M0006": [
+      "datasets/skillsets/webshop/SKILL.md"
+    ],
+    "M0007": [
+      "datasets/skillsets/webshop/SKILL.md"
+    ],
+    "M0008": [
+      "datasets/skillsets/webshop/SKILL.md"
+    ],
+    "M0009": [
+      "datasets/skillsets/webshop/SKILL.md"
+    ],
+    "M0010": [
+      "datasets/skillsets/webshop/SKILL.md"
+    ],
+    "M0011": [
+      "datasets/skillsets/webshop/SKILL.md"
+    ],
+    "M0012": [
+      "datasets/skillsets/webshop/SKILL.md"
+    ],
+    "M0013": [
+      "datasets/skillsets/webshop/SKILL.md"
+    ],
+    "M0014": [
+      "datasets/skillsets/webshop/SKILL.md"
+    ],
+    "M0015": [
+      "datasets/skillsets/webshop/SKILL.md"
+    ],
+    "M0016": [
+      "datasets/skillsets/webshop/SKILL.md"
+    ],
+    "M0017": [
+      "datasets/skillsets/webshop/SKILL.md"
+    ],
+    "M0018": [
+      "datasets/skillsets/webshop/SKILL.md"
+    ],
+    "M0019": [
+      "datasets/skillsets/webshop/SKILL.md"
+    ],
+    "M0020": [
+      "datasets/skillsets/webshop/SKILL.md"
+    ],
+    "M0021": [
+      "datasets/skillsets/webshop/SKILL.md"
+    ],
+    "M0022": [
+      "datasets/skillsets/webshop/SKILL.md"
+    ],
+    "M0023": [
+      "datasets/skillsets/webshop/SKILL.md"
+    ],
+    "M0024": [
+      "datasets/skillsets/webshop/SKILL.md"
+    ],
+    "M0025": [
+      "datasets/skillsets/webshop/SKILL.md"
+    ],
+    "M0026": [
+      "datasets/skillsets/webshop/SKILL.md"
+    ],
+    "M0027": [
+      "datasets/skillsets/webshop/SKILL.md"
+    ],
+    "M0028": [
+      "datasets/skillsets/webshop/SKILL.md"
+    ],
+    "M0029": [
+      "datasets/skillsets/webshop/SKILL.md"
+    ],
+    "M0030": [
+      "datasets/skillsets/webshop/SKILL.md"
+    ],
+    "M0031": [
+      "datasets/skillsets/webshop/SKILL.md"
+    ],
+    "M0032": [
+      "datasets/skillsets/webshop/SKILL.md"
+    ],
+    "M0033": [
+      "datasets/skillsets/webshop/SKILL.md"
+    ],
+    "M0034": [
+      "datasets/skillsets/webshop/SKILL.md"
+    ],
+    "M0035": [
+      "datasets/skillsets/webshop/SKILL.md"
+    ],
+    "M0036": [
+      "datasets/skillsets/webshop/SKILL.md"
+    ],
+    "M0037": [
+      "datasets/skillsets/webshop/SKILL.md"
+    ],
+    "M0038": [
+      "datasets/skillsets/webshop/SKILL.md"
+    ]
+  },
+  "skill_to_metaops": {
+    "datasets/skillsets/webshop/SKILL.md": [
+      "M0038"
+    ]
+  }
+}

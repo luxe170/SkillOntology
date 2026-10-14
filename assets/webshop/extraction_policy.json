@@ -1,0 +1,275 @@
+{
+  "schema_version": 1,
+  "domain": "webshop",
+  "source_domain_ontology_path": "assets/webshop/domain_ontology.json",
+  "source_domain_ontology_sha256": "67b8bc127a33559e2f70dc7413b7b38587e1d34d9e1e8534e3316f5e8c08b6f3",
+  "compiler_version": "domain-ontology-extraction-policy-v1",
+  "canonical_actions_and_aliases": {
+    "canonical_actions": [
+      "click_buy_now",
+      "click_information",
+      "click_navigation",
+      "click_option",
+      "click_product_link",
+      "search"
+    ],
+    "aliases": {
+      "click[back to search]": "click_navigation",
+      "click[buy now]": "click_buy_now",
+      "click[features]": "click_information",
+      "you have clicked": "click_option"
+    }
+  },
+  "object_roles": {
+    "product_link": [
+      "A clickable element in search results that leads to a product detail page."
+    ],
+    "product_link_identifier": [
+      "A short alphanumeric identifier used as a click target for a product link in search results."
+    ],
+    "variant_selector_button": [
+      "A clickable button on a product detail page that selects a product variant (e.g., color, size, flavor)."
+    ]
+  },
+  "state_predicates": {
+    "option_selected_feedback": [
+      "After clicking an option button, the interface provides feedback confirming the selection and the button appears in a clicked state."
+    ],
+    "product_detail_shows_color_options": [
+      "A product detail page displays multiple color options as clickable buttons."
+    ],
+    "product_detail_shows_price": [
+      "A product detail page displays the product's price as a dollar amount."
+    ],
+    "product_detail_shows_rating": [
+      "A product detail page displays the product's rating."
+    ],
+    "product_detail_shows_size_options": [
+      "A product detail page displays multiple size options as clickable buttons."
+    ],
+    "search_results_show_product_links_and_prices": [
+      "A search results page displays product links with titles and prices."
+    ],
+    "search_results_show_total_count": [
+      "A search results page displays the current page number and total result count in the format 'Page X (Total results: Y)'."
+    ]
+  },
+  "transition_schemas": {
+    "back_to_search": [
+      "Clicking 'Back to Search' returns to the search interface with the original instruction and a search button."
+    ],
+    "color_selection_feedback": [
+      "Clicking a color option button produces feedback confirming the selection, e.g., 'You have clicked [color].'"
+    ],
+    "size_selection_feedback": [
+      "Clicking a size option button produces feedback confirming the selection, e.g., 'You have clicked [size].'"
+    ]
+  },
+  "conditional_prerequisites": [],
+  "workflow_templates": {
+    "back_to_search_then_refine": [
+      "click_navigation",
+      "search"
+    ],
+    "click_features_then_click_prev": [
+      "click_information",
+      "click_navigation"
+    ],
+    "click_product_link_then_select_option": [
+      "click_product_link",
+      "click_option"
+    ],
+    "pagination_navigation": [
+      "click_navigation"
+    ],
+    "search_refinement": [
+      "search",
+      "click_navigation"
+    ],
+    "search_then_click_product_link": [
+      "search",
+      "click_product_link"
+    ],
+    "search_then_paginate": [
+      "search",
+      "click_navigation"
+    ],
+    "search_to_purchase_flow": [
+      "search",
+      "click_product_link",
+      "click_option",
+      "click_buy_now"
+    ],
+    "select_option_then_buy_now": [
+      "click_option",
+      "click_buy_now"
+    ]
+  },
+  "recovery_policies": [
+    {
+      "name": "back_to_search_from_product_detail",
+      "policy": "From a product detail page, clicking 'Back to Search' returns to the search interface, allowing a new search query.",
+      "support_count": 45
+    },
+    {
+      "name": "prev_returns_to_previous_view",
+      "policy": "Clicking '< Prev' returns to the previous view, such as from a features view to product detail or from product detail to search results.",
+      "support_count": 17
+    },
+    {
+      "name": "refine_search_after_unsuccessful_browsing",
+      "policy": "After browsing product details and pages without finding a match, returning to search and using a more specific query yields new results.",
+      "support_count": 3
+    }
+  ],
+  "evidence_policies": [
+    "Domain rules require literal public train evidence from at least two episodes; each MetaOp field requires independent literal Skill evidence."
+  ],
+  "rule_catalog": {
+    "canonical_action:click_buy_now": {
+      "section": "canonical_action",
+      "key": "click_buy_now"
+    },
+    "canonical_action:click_information": {
+      "section": "canonical_action",
+      "key": "click_information"
+    },
+    "canonical_action:click_navigation": {
+      "section": "canonical_action",
+      "key": "click_navigation"
+    },
+    "canonical_action:click_option": {
+      "section": "canonical_action",
+      "key": "click_option"
+    },
+    "canonical_action:click_product_link": {
+      "section": "canonical_action",
+      "key": "click_product_link"
+    },
+    "canonical_action:search": {
+      "section": "canonical_action",
+      "key": "search"
+    },
+    "action_alias:click_back_to_search": {
+      "section": "action_alias",
+      "key": "click[back to search]"
+    },
+    "action_alias:click_buy_now": {
+      "section": "action_alias",
+      "key": "click[buy now]"
+    },
+    "action_alias:click_features": {
+      "section": "action_alias",
+      "key": "click[features]"
+    },
+    "action_alias:you_have_clicked": {
+      "section": "action_alias",
+      "key": "you have clicked"
+    },
+    "object_role:product_link": {
+      "section": "object_role",
+      "key": "product_link"
+    },
+    "object_role:product_link_identifier": {
+      "section": "object_role",
+      "key": "product_link_identifier"
+    },
+    "object_role:variant_selector_button": {
+      "section": "object_role",
+      "key": "variant_selector_button"
+    },
+    "state_predicate:option_selected_feedback": {
+      "section": "state_predicate",
+      "key": "option_selected_feedback"
+    },
+    "state_predicate:product_detail_shows_color_options": {
+      "section": "state_predicate",
+      "key": "product_detail_shows_color_options"
+    },
+    "state_predicate:product_detail_shows_price": {
+      "section": "state_predicate",
+      "key": "product_detail_shows_price"
+    },
+    "state_predicate:product_detail_shows_rating": {
+      "section": "state_predicate",
+      "key": "product_detail_shows_rating"
+    },
+    "state_predicate:product_detail_shows_size_options": {
+      "section": "state_predicate",
+      "key": "product_detail_shows_size_options"
+    },
+    "state_predicate:search_results_show_product_links_and_prices": {
+      "section": "state_predicate",
+      "key": "search_results_show_product_links_and_prices"
+    },
+    "state_predicate:search_results_show_total_count": {
+      "section": "state_predicate",
+      "key": "search_results_show_total_count"
+    },
+    "transition_schema:back_to_search": {
+      "section": "transition_schema",
+      "key": "back_to_search"
+    },
+    "transition_schema:color_selection_feedback": {
+      "section": "transition_schema",
+      "key": "color_selection_feedback"
+    },
+    "transition_schema:size_selection_feedback": {
+      "section": "transition_schema",
+      "key": "size_selection_feedback"
+    },
+    "workflow_template:back_to_search_then_refine": {
+      "section": "workflow_template",
+      "key": "back_to_search_then_refine"
+    },
+    "workflow_template:click_features_then_click_prev": {
+      "section": "workflow_template",
+      "key": "click_features_then_click_prev"
+    },
+    "workflow_template:click_product_link_then_select_option": {
+      "section": "workflow_template",
+      "key": "click_product_link_then_select_option"
+    },
+    "workflow_template:pagination_navigation": {
+      "section": "workflow_template",
+      "key": "pagination_navigation"
+    },
+    "workflow_template:search_refinement": {
+      "section": "workflow_template",
+      "key": "search_refinement"
+    },
+    "workflow_template:search_then_click_product_link": {
+      "section": "workflow_template",
+      "key": "search_then_click_product_link"
+    },
+    "workflow_template:search_then_paginate": {
+      "section": "workflow_template",
+      "key": "search_then_paginate"
+    },
+    "workflow_template:search_to_purchase_flow": {
+      "section": "workflow_template",
+      "key": "search_to_purchase_flow"
+    },
+    "workflow_template:select_option_then_buy_now": {
+      "section": "workflow_template",
+      "key": "select_option_then_buy_now"
+    },
+    "recovery_policy:back_to_search_from_product_detail": {
+      "section": "recovery_policy",
+      "key": "back_to_search_from_product_detail"
+    },
+    "recovery_policy:prev_returns_to_previous_view": {
+      "section": "recovery_policy",
+      "key": "prev_returns_to_previous_view"
+    },
+    "recovery_policy:refine_search_after_unsuccessful_browsing": {
+      "section": "recovery_policy",
+      "key": "refine_search_after_unsuccessful_browsing"
+    },
+    "evidence_policy:1": {
+      "section": "evidence_policy",
+      "key": "1"
+    }
+  },
+  "policy_sha256": "5fd1085b82b769f6311a1895c177787eed8baa5c3d56a3b25fa6f7ad98a5e13e"
+}

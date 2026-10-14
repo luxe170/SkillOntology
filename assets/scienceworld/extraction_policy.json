@@ -1,0 +1,293 @@
+{
+  "schema_version": 1,
+  "domain": "scienceworld",
+  "source_domain_ontology_path": "assets/scienceworld/domain_ontology.json",
+  "source_domain_ontology_sha256": "d12ed378193ca1eb346db963850c488641bece454f9aacefd1fd00f85f5b4747",
+  "compiler_version": "domain-ontology-extraction-policy-v1",
+  "canonical_actions_and_aliases": {
+    "canonical_actions": [
+      "activate",
+      "connect",
+      "examine",
+      "focus",
+      "move",
+      "pick",
+      "pour",
+      "teleport",
+      "use"
+    ],
+    "aliases": {
+      "activate": "activate",
+      "connect": "connect",
+      "examine": "examine",
+      "focus on": "focus",
+      "move": "move",
+      "pick up": "pick",
+      "pour": "pour",
+      "teleport to": "teleport",
+      "use": "use"
+    }
+  },
+  "object_roles": {
+    "block_as_test_object_on_inclined_plane": [
+      "A block is an object that can be moved onto an inclined plane to test friction."
+    ],
+    "inclined_plane_has_surface_material": [
+      "An inclined plane has a surface material that can be known or unknown."
+    ],
+    "polarized_component_has_anode_cathode": [
+      "A polarized electrical component has an anode and a cathode that can be connected to wires."
+    ],
+    "wire_has_two_terminals": [
+      "A wire is an electrical component with terminal 1 and terminal 2 that can be connected to other components."
+    ]
+  },
+  "state_predicates": {
+    "already_connected_prevents_reconnection": [
+      "Attempting to connect an already connected terminal fails with a message that it must be disconnected first."
+    ],
+    "broken_device_not_activatable": [
+      "A device that is broken cannot be activated or deactivated; attempts to do so fail with a message that it is broken."
+    ],
+    "component_not_directly_activatable": [
+      "A component that is not directly activatable cannot be activated; attempts to activate it fail with a message that it is not something that can be activated."
+    ],
+    "container_open_state": [
+      "After opening a container, the feedback explicitly states that the container is now open; subsequent attempts to open it yield that it is already open."
+    ],
+    "object_position_on_inclined_plane": [
+      "An object on an inclined plane has a position described as a percentage down the plane or at the top of the plane."
+    ]
+  },
+  "transition_schemas": {
+    "connect_components": [
+      "Connecting two components updates their connection state."
+    ],
+    "focus_on_object": [
+      "Focusing on an object produces feedback confirming the focus."
+    ],
+    "measure_temperature": [
+      "Using a thermometer on a substance yields a temperature reading."
+    ],
+    "mix_ingredients_produces_target": [
+      "Mixing the required ingredients in a container produces the target substance."
+    ],
+    "move_object_to_appliance": [
+      "Moving an object to an appliance places it on or in that appliance."
+    ],
+    "move_object_to_container": [
+      "Moving an object to a container places the object inside that container."
+    ],
+    "open_container": [
+      "Opening a closed container changes its state to open."
+    ],
+    "pick_up_to_inventory": [
+      "Picking up an object moves it to the inventory."
+    ],
+    "pour_transfers_contents": [
+      "Pouring the contents of one container into another transfers the contents."
+    ],
+    "seed_grows_after_watering_and_waiting": [
+      "After planting a seed in a flower pot and pouring water, waiting results in a plant in a later growth stage."
+    ],
+    "wait_causes_slide_down_plane": [
+      "Waiting after placing an object on an inclined plane causes the object to slide further down the plane."
+    ]
+  },
+  "conditional_prerequisites": [
+    {
+      "condition": "When the public task specifies above/below temperature destinations and a public thermometer reading is observed, choose the destination matching that reading and task threshold.",
+      "decision_action": "move {object} to {task-specified box}",
+      "measurement_action": "use thermometer on {object}",
+      "name": "measured_temperature_selects_public_task_destination",
+      "support_count": 3,
+      "type": "public_task_branch_obligation"
+    }
+  ],
+  "workflow_templates": {
+    "focus_thermometer_then_substance": [
+      "focus"
+    ]
+  },
+  "recovery_policies": [
+    {
+      "name": "ambiguous_request_numbered_selection",
+      "policy": "When a command is ambiguous because multiple objects match, the system prompts with numbered options; entering the number selects the intended action.",
+      "support_count": 26
+    }
+  ],
+  "evidence_policies": [
+    "Domain rules require literal public train evidence from at least two episodes; each MetaOp field requires independent literal Skill evidence."
+  ],
+  "rule_catalog": {
+    "canonical_action:activate": {
+      "section": "canonical_action",
+      "key": "activate"
+    },
+    "canonical_action:connect": {
+      "section": "canonical_action",
+      "key": "connect"
+    },
+    "canonical_action:examine": {
+      "section": "canonical_action",
+      "key": "examine"
+    },
+    "canonical_action:focus": {
+      "section": "canonical_action",
+      "key": "focus"
+    },
+    "canonical_action:move": {
+      "section": "canonical_action",
+      "key": "move"
+    },
+    "canonical_action:pick": {
+      "section": "canonical_action",
+      "key": "pick"
+    },
+    "canonical_action:pour": {
+      "section": "canonical_action",
+      "key": "pour"
+    },
+    "canonical_action:teleport": {
+      "section": "canonical_action",
+      "key": "teleport"
+    },
+    "canonical_action:use": {
+      "section": "canonical_action",
+      "key": "use"
+    },
+    "action_alias:activate": {
+      "section": "action_alias",
+      "key": "activate"
+    },
+    "action_alias:connect": {
+      "section": "action_alias",
+      "key": "connect"
+    },
+    "action_alias:examine": {
+      "section": "action_alias",
+      "key": "examine"
+    },
+    "action_alias:focus_on": {
+      "section": "action_alias",
+      "key": "focus on"
+    },
+    "action_alias:move": {
+      "section": "action_alias",
+      "key": "move"
+    },
+    "action_alias:pick_up": {
+      "section": "action_alias",
+      "key": "pick up"
+    },
+    "action_alias:pour": {
+      "section": "action_alias",
+      "key": "pour"
+    },
+    "action_alias:teleport_to": {
+      "section": "action_alias",
+      "key": "teleport to"
+    },
+    "action_alias:use": {
+      "section": "action_alias",
+      "key": "use"
+    },
+    "object_role:block_as_test_object_on_inclined_plane": {
+      "section": "object_role",
+      "key": "block_as_test_object_on_inclined_plane"
+    },
+    "object_role:inclined_plane_has_surface_material": {
+      "section": "object_role",
+      "key": "inclined_plane_has_surface_material"
+    },
+    "object_role:polarized_component_has_anode_cathode": {
+      "section": "object_role",
+      "key": "polarized_component_has_anode_cathode"
+    },
+    "object_role:wire_has_two_terminals": {
+      "section": "object_role",
+      "key": "wire_has_two_terminals"
+    },
+    "state_predicate:already_connected_prevents_reconnection": {
+      "section": "state_predicate",
+      "key": "already_connected_prevents_reconnection"
+    },
+    "state_predicate:broken_device_not_activatable": {
+      "section": "state_predicate",
+      "key": "broken_device_not_activatable"
+    },
+    "state_predicate:component_not_directly_activatable": {
+      "section": "state_predicate",
+      "key": "component_not_directly_activatable"
+    },
+    "state_predicate:container_open_state": {
+      "section": "state_predicate",
+      "key": "container_open_state"
+    },
+    "state_predicate:object_position_on_inclined_plane": {
+      "section": "state_predicate",
+      "key": "object_position_on_inclined_plane"
+    },
+    "transition_schema:connect_components": {
+      "section": "transition_schema",
+      "key": "connect_components"
+    },
+    "transition_schema:focus_on_object": {
+      "section": "transition_schema",
+      "key": "focus_on_object"
+    },
+    "transition_schema:measure_temperature": {
+      "section": "transition_schema",
+      "key": "measure_temperature"
+    },
+    "transition_schema:mix_ingredients_produces_target": {
+      "section": "transition_schema",
+      "key": "mix_ingredients_produces_target"
+    },
+    "transition_schema:move_object_to_appliance": {
+      "section": "transition_schema",
+      "key": "move_object_to_appliance"
+    },
+    "transition_schema:move_object_to_container": {
+      "section": "transition_schema",
+      "key": "move_object_to_container"
+    },
+    "transition_schema:open_container": {
+      "section": "transition_schema",
+      "key": "open_container"
+    },
+    "transition_schema:pick_up_to_inventory": {
+      "section": "transition_schema",
+      "key": "pick_up_to_inventory"
+    },
+    "transition_schema:pour_transfers_contents": {
+      "section": "transition_schema",
+      "key": "pour_transfers_contents"
+    },
+    "transition_schema:seed_grows_after_watering_and_waiting": {
+      "section": "transition_schema",
+      "key": "seed_grows_after_watering_and_waiting"
+    },
+    "transition_schema:wait_causes_slide_down_plane": {
+      "section": "transition_schema",
+      "key": "wait_causes_slide_down_plane"
+    },
+    "workflow_template:focus_thermometer_then_substance": {
+      "section": "workflow_template",
+      "key": "focus_thermometer_then_substance"
+    },
+    "conditional_prerequisite:measured_temperature_selects_public_task_destination": {
+      "section": "conditional_prerequisite",
+      "key": "measured_temperature_selects_public_task_destination"
+    },
+    "recovery_policy:ambiguous_request_numbered_selection": {
+      "section": "recovery_policy",
+      "key": "ambiguous_request_numbered_selection"
+    },
+    "evidence_policy:1": {
+      "section": "evidence_policy",
+      "key": "1"
+    }
+  },
+  "policy_sha256": "64182f6b4d10ac4f34f9690b92bf7a98ed2ceff49466fe0a069537f82ac2ce83"
+}

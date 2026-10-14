@@ -1,0 +1,328 @@
+{
+  "metaop_to_skills": {
+    "M0001": [
+      "datasets/skillsets/scienceworld/SKILL.md"
+    ],
+    "M0002": [
+      "datasets/skillsets/scienceworld/SKILL.md"
+    ],
+    "M0003": [
+      "datasets/skillsets/scienceworld/SKILL.md"
+    ],
+    "M0004": [
+      "datasets/skillsets/scienceworld/SKILL.md"
+    ],
+    "M0005": [
+      "datasets/skillsets/scienceworld/SKILL.md"
+    ],
+    "M0006": [
+      "datasets/skillsets/scienceworld/SKILL.md"
+    ],
+    "M0007": [
+      "datasets/skillsets/scienceworld/SKILL.md"
+    ],
+    "M0008": [
+      "datasets/skillsets/scienceworld/SKILL.md"
+    ],
+    "M0009": [
+      "datasets/skillsets/scienceworld/SKILL.md"
+    ],
+    "M0010": [
+      "datasets/skillsets/scienceworld/SKILL.md"
+    ],
+    "M0011": [
+      "datasets/skillsets/scienceworld/SKILL.md"
+    ],
+    "M0012": [
+      "datasets/skillsets/scienceworld/SKILL.md"
+    ],
+    "M0013": [
+      "datasets/skillsets/scienceworld/SKILL.md"
+    ],
+    "M0014": [
+      "datasets/skillsets/scienceworld/SKILL.md"
+    ],
+    "M0015": [
+      "datasets/skillsets/scienceworld/SKILL.md"
+    ],
+    "M0016": [
+      "datasets/skillsets/scienceworld/SKILL.md"
+    ],
+    "M0017": [
+      "datasets/skillsets/scienceworld/SKILL.md"
+    ],
+    "M0018": [
+      "datasets/skillsets/scienceworld/SKILL.md"
+    ],
+    "M0019": [
+      "datasets/skillsets/scienceworld/SKILL.md"
+    ],
+    "M0020": [
+      "datasets/skillsets/scienceworld/SKILL.md"
+    ],
+    "M0021": [
+      "datasets/skillsets/scienceworld/SKILL.md"
+    ],
+    "M0022": [
+      "datasets/skillsets/scienceworld/SKILL.md"
+    ],
+    "M0023": [
+      "datasets/skillsets/scienceworld/SKILL.md"
+    ],
+    "M0024": [
+      "datasets/skillsets/scienceworld/SKILL.md"
+    ],
+    "M0025": [
+      "datasets/skillsets/scienceworld/SKILL.md"
+    ],
+    "M0026": [
+      "datasets/skillsets/scienceworld/SKILL.md"
+    ],
+    "M0027": [
+      "datasets/skillsets/scienceworld/SKILL.md"
+    ],
+    "M0028": [
+      "datasets/skillsets/scienceworld/SKILL.md"
+    ],
+    "M0029": [
+      "datasets/skillsets/scienceworld/SKILL.md"
+    ],
+    "M0030": [
+      "datasets/skillsets/scienceworld/SKILL.md"
+    ],
+    "M0031": [
+      "datasets/skillsets/scienceworld/SKILL.md"
+    ],
+    "M0032": [
+      "datasets/skillsets/scienceworld/SKILL.md"
+    ],
+    "M0033": [
+      "datasets/skillsets/scienceworld/SKILL.md"
+    ],
+    "M0034": [
+      "datasets/skillsets/scienceworld/SKILL.md"
+    ],
+    "M0035": [
+      "datasets/skillsets/scienceworld/SKILL.md"
+    ],
+    "M0036": [
+      "datasets/skillsets/scienceworld/SKILL.md"
+    ],
+    "M0037": [
+      "datasets/skillsets/scienceworld/SKILL.md"
+    ],
+    "M0038": [
+      "datasets/skillsets/scienceworld/SKILL.md"
+    ],
+    "M0039": [
+      "datasets/skillsets/scienceworld/SKILL.md"
+    ],
+    "M0040": [
+      "datasets/skillsets/scienceworld/SKILL.md"
+    ],
+    "M0041": [
+      "datasets/skillsets/scienceworld/SKILL.md"
+    ],
+    "M0042": [
+      "datasets/skillsets/scienceworld/SKILL.md"
+    ],
+    "M0043": [
+      "datasets/skillsets/scienceworld/SKILL.md"
+    ],
+    "M0044": [
+      "datasets/skillsets/scienceworld/SKILL.md"
+    ],
+    "M0045": [
+      "datasets/skillsets/scienceworld/SKILL.md"
+    ],
+    "M0046": [
+      "datasets/skillsets/scienceworld/SKILL.md"
+    ],
+    "M0047": [
+      "datasets/skillsets/scienceworld/SKILL.md"
+    ],
+    "M0048": [
+      "datasets/skillsets/scienceworld/SKILL.md"
+    ],
+    "M0049": [
+      "datasets/skillsets/scienceworld/SKILL.md"
+    ],
+    "M0050": [
+      "datasets/skillsets/scienceworld/SKILL.md"
+    ],
+    "M0051": [
+      "datasets/skillsets/scienceworld/SKILL.md"
+    ],
+    "M0052": [
+      "datasets/skillsets/scienceworld/SKILL.md"
+    ],
+    "M0053": [
+      "datasets/skillsets/scienceworld/SKILL.md"
+    ],
+    "M0054": [
+      "datasets/skillsets/scienceworld/SKILL.md"
+    ],
+    "M0055": [
+      "datasets/skillsets/scienceworld/SKILL.md"
+    ],
+    "M0056": [
+      "datasets/skillsets/scienceworld/SKILL.md"
+    ],
+    "M0057": [
+      "datasets/skillsets/scienceworld/SKILL.md"
+    ],
+    "M0058": [
+      "datasets/skillsets/scienceworld/SKILL.md"
+    ],
+    "M0059": [
+      "datasets/skillsets/scienceworld/SKILL.md"
+    ],
+    "M0060": [
+      "datasets/skillsets/scienceworld/SKILL.md"
+    ],
+    "M0061": [
+      "datasets/skillsets/scienceworld/SKILL.md"
+    ],
+    "M0062": [
+      "datasets/skillsets/scienceworld/SKILL.md"
+    ],
+    "M0063": [
+      "datasets/skillsets/scienceworld/SKILL.md"
+    ],
+    "M0064": [
+      "datasets/skillsets/scienceworld/SKILL.md"
+    ],
+    "M0065": [
+      "datasets/skillsets/scienceworld/SKILL.md"
+    ],
+    "M0066": [
+      "datasets/skillsets/scienceworld/SKILL.md"
+    ],
+    "M0067": [
+      "datasets/skillsets/scienceworld/SKILL.md"
+    ],
+    "M0068": [
+      "datasets/skillsets/scienceworld/SKILL.md"
+    ],
+    "M0069": [
+      "datasets/skillsets/scienceworld/SKILL.md"
+    ],
+    "M0070": [
+      "datasets/skillsets/scienceworld/SKILL.md"
+    ],
+    "M0071": [
+      "datasets/skillsets/scienceworld/SKILL.md"
+    ],
+    "M0072": [
+      "datasets/skillsets/scienceworld/SKILL.md"
+    ],
+    "M0073": [
+      "datasets/skillsets/scienceworld/SKILL.md"
+    ],
+    "M0074": [
+      "datasets/skillsets/scienceworld/SKILL.md"
+    ],
+    "M0075": [
+      "datasets/skillsets/scienceworld/SKILL.md"
+    ],
+    "M0076": [
+      "datasets/skillsets/scienceworld/SKILL.md"
+    ],
+    "M0077": [
+      "datasets/skillsets/scienceworld/SKILL.md"
+    ],
+    "M0078": [
+      "datasets/skillsets/scienceworld/SKILL.md"
+    ],
+    "M0079": [
+      "datasets/skillsets/scienceworld/SKILL.md"
+    ],
+    "M0080": [
+      "datasets/skillsets/scienceworld/SKILL.md"
+    ],
+    "M0081": [
+      "datasets/skillsets/scienceworld/SKILL.md"
+    ],
+    "M0082": [
+      "datasets/skillsets/scienceworld/SKILL.md"
+    ],
+    "M0083": [
+      "datasets/skillsets/scienceworld/SKILL.md"
+    ],
+    "M0084": [
+      "datasets/skillsets/scienceworld/SKILL.md"
+    ],
+    "M0085": [
+      "datasets/skillsets/scienceworld/SKILL.md"
+    ],
+    "M0086": [
+      "datasets/skillsets/scienceworld/SKILL.md"
+    ],
+    "M0087": [
+      "datasets/skillsets/scienceworld/SKILL.md"
+    ],
+    "M0088": [
+      "datasets/skillsets/scienceworld/SKILL.md"
+    ],
+    "M0089": [
+      "datasets/skillsets/scienceworld/SKILL.md"
+    ],
+    "M0090": [
+      "datasets/skillsets/scienceworld/SKILL.md"
+    ],
+    "M0091": [
+      "datasets/skillsets/scienceworld/SKILL.md"
+    ],
+    "M0092": [
+      "datasets/skillsets/scienceworld/SKILL.md"
+    ],
+    "M0093": [
+      "datasets/skillsets/scienceworld/SKILL.md"
+    ],
+    "M0094": [
+      "datasets/skillsets/scienceworld/SKILL.md"
+    ],
+    "M0095": [
+      "datasets/skillsets/scienceworld/SKILL.md"
+    ],
+    "M0096": [
+      "datasets/skillsets/scienceworld/SKILL.md"
+    ],
+    "M0097": [
+      "datasets/skillsets/scienceworld/SKILL.md"
+    ],
+    "M0098": [
+      "datasets/skillsets/scienceworld/SKILL.md"
+    ],
+    "M0099": [
+      "datasets/skillsets/scienceworld/SKILL.md"
+    ],
+    "M0100": [
+      "datasets/skillsets/scienceworld/SKILL.md"
+    ],
+    "M0101": [
+      "datasets/skillsets/scienceworld/SKILL.md"
+    ],
+    "M0102": [
+      "datasets/skillsets/scienceworld/SKILL.md"
+    ],
+    "M0103": [
+      "datasets/skillsets/scienceworld/SKILL.md"
+    ],
+    "M0104": [
+      "datasets/skillsets/scienceworld/SKILL.md"
+    ],
+    "M0105": [
+      "datasets/skillsets/scienceworld/SKILL.md"
+    ],
+    "M0106": [
+      "datasets/skillsets/scienceworld/SKILL.md"
+    ]
+  },
+  "skill_to_metaops": {
+    "datasets/skillsets/scienceworld/SKILL.md": [
+      "M0105",
+      "M0106"
+    ]
+  }
+}

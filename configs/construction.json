@@ -1,0 +1,85 @@
+{
+  "benchmarks": {
+    "alfworld": {
+      "benchmark": "alfworld",
+      "build_config": {
+        "agent_workers": 5,
+        "candidate_top_k": 8,
+        "embedding_model": "",
+        "llm_model": "deepseek-v4-flash",
+        "llm_seed": 9173,
+        "llm_temperature": 0.0,
+        "max_conflict_rounds_requested": 2,
+        "snippet_chars": 900,
+        "use_full_markdown": false
+      },
+      "agent_configuration": {
+        "agent1": true,
+        "agent2_compare": true,
+        "agent2_conflicts": true,
+        "agent2_filter": true,
+        "agent3": true,
+        "conflict_rounds": 2,
+        "explicit": true,
+        "mode": "full"
+      },
+      "skills_dir": "datasets/skillsets/alfworld",
+      "domain_ontology_path": "assets/alfworld/domain_ontology.json",
+      "output_dir": "assets/alfworld"
+    },
+    "webshop": {
+      "benchmark": "webshop",
+      "build_config": {
+        "agent_workers": 5,
+        "candidate_top_k": 8,
+        "embedding_model": "",
+        "llm_model": "deepseek-v4-flash",
+        "llm_seed": 9173,
+        "llm_temperature": 0.0,
+        "max_conflict_rounds_requested": 2,
+        "snippet_chars": 900,
+        "use_full_markdown": false
+      },
+      "agent_configuration": {
+        "agent1": true,
+        "agent2_compare": true,
+        "agent2_conflicts": true,
+        "agent2_filter": true,
+        "agent3": true,
+        "conflict_rounds": 2,
+        "explicit": true,
+        "mode": "full"
+      },
+      "skills_dir": "datasets/skillsets/webshop",
+      "domain_ontology_path": "assets/webshop/domain_ontology.json",
+      "output_dir": "assets/webshop"
+    },
+    "scienceworld": {
+      "benchmark": "scienceworld",
+      "build_config": {
+        "agent_workers": 5,
+        "candidate_top_k": 8,
+        "embedding_model": "",
+        "llm_model": "deepseek-v4-flash",
+        "llm_seed": 9173,
+        "llm_temperature": 0.0,
+        "max_conflict_rounds_requested": 2,
+        "snippet_chars": 900,
+        "use_full_markdown": false
+      },
+      "agent_configuration": {
+        "agent1": true,
+        "agent2_compare": true,
+        "agent2_conflicts": true,
+        "agent2_filter": true,
+        "agent3": true,
+        "conflict_rounds": 2,
+        "explicit": true,
+        "mode": "full"
+      },
+      "skills_dir": "datasets/skillsets/scienceworld",
+      "domain_ontology_path": "assets/scienceworld/domain_ontology.json",
+      "output_dir": "assets/scienceworld"
+    }
+  }
+}

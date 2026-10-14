@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "implementation_version": "unified_structure_v1",
+  "benchmark": "webshop",
+  "seed": 233,
+  "model": {
+    "action_validation_retries": 5,
+    "base_url_env": "BASE_URL",
+    "max_completion_tokens": 256,
+    "max_retries": 4,
+    "name": "deepseek-v4-flash",
+    "request_timeout_seconds": 90,
+    "temperature": 0.0,
+    "thinking": "disabled"
+  },
+  "embedding": {
+    "dimension": 3072,
+    "model": "text-embedding-3-large",
+    "provider": "openai",
+    "proxy_env": "GOS_OPENAI_PROXY_URL"
+  },
+  "environment": {
+    "seed": 233,
+    "history_turns": 2,
+    "human_goals": true,
+    "max_observation_chars": 14000,
+    "max_steps": 25,
+    "num_products": null,
+    "observation_mode": "text_rich",
+    "show_attrs": false
+  },
+  "runtime": {
+    "max_proposals": 25,
+    "max_environment_calls": 25,
+    "max_environment_ticks": null,
+    "max_episode_tokens": 0,
+    "max_output_tokens": 256,
+    "history_turns": 2,
+    "max_protocol_errors": 5
+  },
+  "retrieval": {
+    "top_k": 8,
+    "seed_top_k": 10,
+    "max_context_chars": 10000
+  },
+  "action": {
+    "syntax": "search[query] or click[exact visible control]",
+    "pattern": "(?:search|click)\\[[^\\]\\r\\n]+\\]",
+    "validate_clicks": true
+  },
+  "paths": {
+    "skills": "datasets/skillsets/webshop",
+    "testset": "datasets/testsets/webshop.json",
+    "assets": "assets/webshop",
+    "ontology": "assets/webshop/domain_ontology.json"
+  }
+}

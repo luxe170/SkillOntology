@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "implementation_version": "unified_structure_v1",
+  "benchmark": "scienceworld",
+  "seed": 20260738,
+  "model": {
+    "base_url": "https://api.deepseek.com",
+    "max_attempts": 6,
+    "max_completion_tokens": 4096,
+    "name": "deepseek-v4-flash",
+    "temperature": 0,
+    "thinking": "disabled",
+    "thinking_enabled": false,
+    "timeout_seconds": 120
+  },
+  "embedding": {
+    "dimension": 3072,
+    "model": "openai/text-embedding-3-large"
+  },
+  "environment": {
+    "seed": 20260738,
+    "max_steps": 100,
+    "max_ticks": 100,
+    "scienceworld_version": "1.2.3",
+    "simplification": "easy",
+    "stop_condition": "done_or_terminal_score"
+  },
+  "runtime": {
+    "max_proposals": 200,
+    "max_environment_calls": 100,
+    "max_environment_ticks": 100,
+    "max_episode_tokens": 0,
+    "max_output_tokens": 4096,
+    "history_turns": null,
+    "max_protocol_errors": 200
+  },
+  "retrieval": {
+    "top_k": 12,
+    "seed_top_k": 8,
+    "max_context_chars": 12000
+  },
+  "action": {
+    "syntax": "ScienceWorld public text commands",
+    "pattern": "(?:look around|inventory|open .+|close .+|activate .+|deactivate .+|connect .+|disconnect .+|use .+|examine .+|look at .+|read .+|move .+|pick up .+|pour .+|mix .+|teleport to .+|focus on .+|wait1?|[0-9]+)",
+    "validate_clicks": false
+  },
+  "paths": {
+    "skills": "datasets/skillsets/scienceworld",
+    "testset": "datasets/testsets/scienceworld.json",
+    "assets": "assets/scienceworld",
+    "ontology": "assets/scienceworld/domain_ontology.json"
+  }
+}

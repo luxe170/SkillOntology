@@ -1,0 +1,1370 @@
+{
+  "conditional_prerequisites": [
+    {
+      "condition": "When the public task specifies above/below temperature destinations and a public thermometer reading is observed, choose the destination matching that reading and task threshold.",
+      "decision_action": "move {object} to {task-specified box}",
+      "measurement_action": "use thermometer on {object}",
+      "name": "measured_temperature_selects_public_task_destination",
+      "support_count": 3,
+      "type": "public_task_branch_obligation"
+    }
+  ],
+  "domain": "scienceworld",
+  "evidence_policies": [
+    "Domain rules require literal public train evidence from at least two episodes; each MetaOp field requires independent literal Skill evidence."
+  ],
+  "object_roles": {
+    "block_as_test_object_on_inclined_plane": [
+      "A block is an object that can be moved onto an inclined plane to test friction."
+    ],
+    "inclined_plane_has_surface_material": [
+      "An inclined plane has a surface material that can be known or unknown."
+    ],
+    "polarized_component_has_anode_cathode": [
+      "A polarized electrical component has an anode and a cathode that can be connected to wires."
+    ],
+    "wire_has_two_terminals": [
+      "A wire is an electrical component with terminal 1 and terminal 2 that can be connected to other components."
+    ]
+  },
+  "operation_schemas": {
+    "action_aliases": {
+      "activate": "activate",
+      "connect": "connect",
+      "examine": "examine",
+      "focus on": "focus",
+      "move": "move",
+      "pick up": "pick",
+      "pour": "pour",
+      "teleport to": "teleport",
+      "use": "use"
+    }
+  },
+  "provenance": {
+    "abstraction_model": "deepseek-v4-flash",
+    "adapter_ontology_used": false,
+    "episode_hashes": [
+      "0067f21ebfff53232efd971e9cccec15f2061fb55680dae36d90f9f0de158747",
+      "077938f4bc9fe0a89172de53f3d97d546a6f0386a91dcbf6c366f7484ab6645d",
+      "0c25a140692c899f7f838b522b36a00a0ca0f355c528dd0801e27bc95c5651af",
+      "0d206adb4efce12e2f2c5b13d3d523b517f6bf1112dc32eaebe00359570bf5f1",
+      "0e35d16c2f754a77831df2c7afb5418496f7cc5124a368c1118298277b8c70fb",
+      "0e7603874e014e9bd2b2698b562f499b28b76dcd5d2f3892cc0a0681db29be78",
+      "0f15fab616d4ace6efd717c42fbbae268e58bece9756911acbbee44c9666da96",
+      "0f8bc04338052c74eb445b84494e48bddddcab3f803e1e8c2d8ab40d316f8f95",
+      "1123f76a3e181b728b3cab3f1ac16fe64c238a9cb1dcbfe1905faebf07f1b4f7",
+      "11ee41ac5e2f49e794a11983bc79ce976740af1de012b5040e7dbfe8af13788e",
+      "1231121abce9dda4cf2be6290c7b9f8f9d5953508f1378b69a66f41417cf3654",
+      "15b0bd6ed8d1b75f3e8628a584b22d9d4ef5c789d01d6a2b1ea88751ff4bbb0c",
+      "1665962880c543144a9f7d5cd590a9d2bcaf3d8848284816dba2650605493753",
+      "17440b54b45463e051314de3c9e7c6b648b7a81b9dfe91fd4b2c4ac916866a19",
+      "17f354166f2dd3895e82d70f4dfad54d51b952043943e7ecd1f411ab81e0383a",
+      "1ae6fc0ea8e04f94695e0480b9ef910ef01a59d0e8f67ba364d1c70b0e13cfe1",
+      "1b5db3e9f824616b4ee3da400c8e7ae9cd5c98475ddf162505d53c8f89f59d53",
+      "1cf1599bc57cde4648b45023cadca7737e4a20e1de806f2f5c1606942280202d",
+      "1d2260eb0fdfa057d29241155b2245f366169dbedb51ae1caf67990c3260526c",
+      "1d8243788aec6fed09510970752eeace5e55c7f117e01bdae8fad045919b0879",
+      "1e525ef021ed9e327f0bc112d4eea72e59ffc46e49dde73cd56c8629ed79c3a6",
+      "1eac613c205ce109d38ab02a62422dac22934a45dc6192676a7e19826849adeb",
+      "1fabc3f304e9545092d780297ded7d2694c4f1a60931404a1369edfcc699223d",
+      "20b24ea9f403b75e3d782eb576101187174843baf940d897f48e731327aa7778",
+      "2106467e3767c22514f0dc00e2c29cafefed61cc7a99dc7c51699c4c63d8cf55",
+      "222b25dc13f63c8f9f1fa13634ba3d7828a93aa1e96ca13c5ffc51270868ad73",
+      "23d54c836fd99bfaf254ce073b557072714ddefec052e121877775a21719a891",
+      "24de02f46352631ffd92ab07a90de287d61d5439c3a9271a65679c76a4aad48f",
+      "2599c51907b0c4962a3fabb1587903a7610dcc5dc53c00147cc43b76f9b6990d",
+      "2943d44116670de0d87d3897179dd0040a951ed170999c37d20d8ab7c844a4b6",
+      "2a75d3e147d975bd59536f6c681dba3d6e84aa85e99c65518ccb30ef04ff1524",
+      "2a7ddda344f7d78b7063c24e6c5da7c4ffb5e18f8e5c4d8a79f3e7da701a5570",
+      "2ac0f4ecb57b55524d2f4f1ca4e98eed49c485b29107e2ae468f6bb08bf22a4c",
+      "2bb507f8ac3424546c8959dc6a92b14193b4d434216eb092d81de8dd7296b72d",
+      "2c112ac08caadc2c72c92ca22f98441a894eaa7d0aba7c4f8eab5f941fc88d02",
+      "2dc63db302cb16a057955217180109dace268b50c25d67fd7da5991d41116faa",
+      "2f3e0b35b4d0465b85ebc79514c0a7d9a4b8f03c3fa66fd0b7ee0db8e877afb8",
+      "303e92312bf7180d6da25889d648a3521dbf83f3744c026c71625c75c2521495",
+      "31b814121c3af441e5675378e59f3ab9c3df9eff63953c7bc80a2b403b121147",
+      "31d1f9c6660a2bc835db56486913b95940cef8701f45336574ebcc13eb1a1adb",
+      "3255d7433c59dc2ee3fda5f1a2bc71eddee9262e6da32089a70da8fe14b8970c",
+      "330167ca5025401a6c029eee2f65bc6eab5f7f92cd6f7d887b5ea371e30846e0",
+      "3307ddc9660518b8d9b0d0fd33bc0b0fef19e1fd51662bb851eaf9c3787f9497",
+      "331861f6a401241a2d0a2a7bcd0db0169002bbe34857e84c5ff10c7874c01cc9",
+      "33605fa20d48a8c4fb5e28e051847668cab29d51b2db97ad76db81cd7ef848e2",
+      "33c5901660d066bd0b107aa337b8c68d78706ee008ef3fd21f1b820ffe355e2e",
+      "340a65dc531b9a0f0daafa4fe62e99b928e736ca983d5f1af12dc53a6a7c627e",
+      "34958f760991ef4372af1b8432c98e4ce7926413cd994ce158a205e993a3f350",
+      "3569336357fd68e5fe662c0eb68f8ecb98e085536a0fbf7d19fd71326a614985",
+      "357dd53b1e324f4a60389e991b1f5572bda3cfa872699f56115a50aaf8307a47",
+      "36f4cacd677a261d1024d9e1e9a11daf33e51462fc2977c582f879d1a767c57e",
+      "382c61e0be823b1df288ccc274a4e7c5ff219c6141122dda6e242ec6ea12b594",
+      "3830d90116f0a4101658b0cbe7a6403f79f8fedd55004998a716a8b9a6ff4daf",
+      "39a1cb4b0db2b56852fc6a009cff2974eaa9395f7b2e93b87205776c19ca211a",
+      "3a0cbbf09d316c82f3431583bba9e09c6290b2815aa2c1920fd53cd61c8724d6",
+      "3cb2806cf6ca7ef3f5d820e1bcb81ae8ce9882d8e2eb64356d13ff055c05479a",
+      "3ccc535f55568afa9b26f383c08f814c75cea6d6f88cad0ccd2b3399e1363614",
+      "3d89a9a31a02340a7e2277f94098eb5ba4e3143b5554f9b535cbe659a3dc6b27",
+      "3e88094ec83fd93399acf0706e054784d09d7220d7b7337d7ac5d1e719d65448",
+      "3fe69253c1b37a260200f555ccc34bf9dd972c44f504de0ec80f9a1e20a9c105",
+      "40dfc5284b2a51a430caf14e89c1dddc706cc1367bc64a4a31c517337f7d425f",
+      "40e57f62ea0d3f9ec796cde9f494f62f250d750aabc9a205d273b702e98dd365",
+      "40e6510f8ffbdebce6cb1d6fcbf36f97ffe9c5b4222fce78fa81e4245190cd03",
+      "41acc0e5beb3ec7619355d1a0d163f213d80dbd3e72e7de2829ff1c19e2e663f",
+      "421a934fd791af710ffd0c1c74e725b272180da9db88ae2f05c6aaede004ed6d",
+      "42ae7deb96f8392ac032d577cb883034e0b01dda0c11a78973601bcd34f54c7c",
+      "435f68e05291b4cc17ff88a44532d3c5fa7bd7fd1b52886d7ca020906f56fc44",
+      "4603d64e694caa74324032eed90e8346328623143c89554023795b20239fd795",
+      "4772bec7ad17e1f279af4b15f6ca0303eb70a01551e7bc867534e5c33e9da056",
+      "48f47280631b57f7fe9c81ffad46c2c022fffe72d18fd3d02490721ec7c727a8",
+      "492366551d6d073716dc6764984d557865a12a8263e2436ccb5c754f214c9135",
+      "4a32a26f6d33c2865c57adf88943dc401812e6504eb6efe20e7eb63ad608d1fd",
+      "4a5889cbc5280e09b2a16d99aabb9ce8dfd20953b195f93b648c4b3050552351",
+      "4bd6aac98b751a75e0ee2cf254fa494775a96b99cba7af96a764f98ce0fcbf1e",
+      "4c441c44d07862285ce68e51b16e305778f559f2cf3a82883f8e5357e2654597",
+      "4c80439624e259ab363778074ed909ab3fd44f15aa0554502335d0115b4ccc3c",
+      "4cc9cd6be417c8b4e1d829c2ea16c626e6d6ef28b2345cd3985fa5a12bb906ca",
+      "4d044cd51d9707041cda5fbdff74a6b1427dd60d84cc93fda967874198f4ae15",
+      "4de647d14597eca1392d9c83355ea5cfc9eaed499c063622326aa24e380d31f9",
+      "4f42a6fe4c49ac63b89c670f396c1c925578fb62414c6e7035f72c2d0d86bfc6",
+      "514c3f874572c59684f3662478501a45a2f63d07c96a1b97195dea77d16f84fb",
+      "51ae203f769046c508cf93e46135bfbbfdcd4991bc3f08558666f27df918bcbe",
+      "55de9a09ac0f368696198a4bb1ec1db008d94f6c74cf7f95e736eb4c9960b78c",
+      "56eb643d822e58d596b5f7b54640e92a41e91bef7b3c775c7e2ded4188a9f87d",
+      "57f0d7b3fd880a996486a3ebc97ef6ccad723f7cbd4b35f2ff368c3df66c18bd",
+      "5875a92c9833b33860a407e5e516d51b012b82a14193eca33580bdf95631a2a8",
+      "5a03ab083105568b950a500ba54a28778d507eebbc211a7a4c34260ef0ae187c",
+      "5c4372d7ee2f3dd0fcbac309e3b7919240ca8b56a38e64cee2fdb8e2d55138ca",
+      "5c8dc8f9019d51ee6a27ee4426ff1d395177564db7a9f75cf72c15831a6bbf4f",
+      "5dd3c8702c3cab7d203bcd95443fde72686badda00b447c5dd7c0bf6c508f0d5",
+      "5ed493e46031be8bc03df93f95bc4b7fd24c439ae70cea4103223840e1dfd813",
+      "627650e8e5f2ccb35ae7426ab51a484d3867a26a79911f819b5d72759a87568f",
+      "62f8d457af30e257b582b45d9e6f358890d78ca2429c9eca3b2a2f9243232724",
+      "635fa858b9e4e42d0ebc6f1956aead468babff0544ed7b69d3196d8004cd031f",
+      "65e66ed8a684bfea2cf280da7b8c324f4312e07c7f023d9c36ec0b388233439f",
+      "66444cd46a4b704eaca22f3eb90847ada669dc3b7794b66e5b10de0e8c9d1987",
+      "6718ce58c2e3d30dfeca72ec943ad99c57ac4d695040c066a5da9176bb99ff5b",
+      "6719bcd79f6037c3786629d19c4c3edbf0ebf59a6446169f8f967d19c8f0e39b",
+      "6869f7e33f76ef8f240f482dcbf935183c000ca386cb22eeda789dece0c37c8a",
+      "6bc800e3ed086755c65d58c8893abfb8506ab7e5017862c90195425b12dd3eb7",
+      "6c375467eebeb9256165358840a341dbe102c43328084bac248b45fdd2bf66b7",
+      "6efc05855d38f92b9d6f2d184a1500844469bcd53955c88628c35e80a0026065",
+      "6fd17d5aabf894dac0afc9436de326d172a3466aa11cbf0bacc0314cdcf3921f",
+      "74010682121b50007c946b7f3b16e6a04024918b288ec25b9497b09e13d1f31d",
+      "746fa444aec6431c01b5b831776ddf5649d134ae69204a07667dd7ae525f1990",
+      "757b0ecdf659abc03db08d72778b881f54c52581e48ebba5b8561da593396c7f",
+      "75871d5853dc5930ea8ad017d4d963b7d112ccdae9f60526b901d4306b7a8d4a",
+      "764a478f27e251b68e5aff79788a51e402fd67d496016ea55441dd31e9a78ac3",
+      "767b1cebace9fd41b79c8741f46ace127471bbbff4196b8158bff6ceb31e168c",
+      "77fdb472be569e38c7763fa6e87dd24518df20fa6376434cdf6a22fccfbf7746",
+      "781553893ffd3fa15dfd259d0a1f830462a29d7a932fd5a1ea008ec70453fbc2",
+      "782e7e72d436941349a4a731a3b117d83fc3baaff535049c8ec8b1a828a18dc6",
+      "79377333ed0bf28f2288d5f8fb64ce972d113ea08d6f5c61583537dcbfb3afd0",
+      "7ad50707461d1b3abbe4084ae4676a827e562a4ff0126d3794a8af9a77fd612c",
+      "7b8937a22f2dfa52cb7abf6c4b037ce60eb0c7a1ba411e76250c426bf00cd867",
+      "7dd276974bb40007130ddf7c4f53ae4d6d9a5b3d66481d325ef430736ed1cbf5",
+      "7e03f96cf9744fa2dda1dc45f1d88a84d13bfafd69c3eb6cb6edd051f5d3b7c0",
+      "7e237f948dcf988bb6a5afa88be7fa599f64d35aa37a2d9e340be6135bf10c7f",
+      "7e8e3c5e5a34fab80a8bb054e0468612e1ee1c1f2c128882d63a1316b13d1a96",
+      "7ed84fb43ab3dbd5c8fb4abcaab4e45e8cf41c3ebfad4e5a31cf5a6b94f9c472",
+      "7efe9e611986195b739ab366a636454f3a3be10404b796a558133c69a905b38c",
+      "85091fb5483a5cffd09ce90cb9cc553e4ca7a58a326f97e73b8fd600c9e18c36",
+      "850ac19d111daedc480cf6b5717408e7984573267c4753192b85b3235a0b34cf",
+      "8516e1834ba1c551d4ef586f321e27eb0b0f23c80524b77a3ab828b9ecaeb5dc",
+      "859a0facd16b90430f5cb4b136d6874abc3f90af3b5449becfd459dd1ee7c62a",
+      "86362259fb4387709efd843c3e8908748209a42e199582bd4b317578e53d20b9",
+      "86910eb00d34cc1e396d48ef7b77f6df62750cf9c13fd16d933b2a17c30c248b",
+      "87b630552b9a5c742144bf40161309f39ec5bf1df44238e8303dfe7df7f4a241",
+      "892e4bfb77dc89e970ddf69ad377b1c74491b6ba83465109c03415200438c20d",
+      "89f14582d3ad09a7bf94d80ad731f7445133175a998b4548f9ea65c1641bfcee",
+      "8a5ad5addc07acdfdb9885ce3f7bc0e88dc11bb1ab1da3a3cda208090cb4f28f",
+      "8b76371bfd6cd018906b67a29af18075123f821b6dd4f40fe8ed894c52efb28d",
+      "8bc716af4a237a4e7ed50e48108f2e35c1190e209f0a73e55ddd3429aa4af5f3",
+      "8cb213a1e1c3dd00e0d8263acbe86283aa5426532213defc69ec598b22165790",
+      "8e2d50d54d1a6d795e8aa17d1b4518e73095145392ebc746dcebafde2b283371",
+      "90ed2b68f6f07484db308b3ebdb951afafdb8424258668bd40b0c3b2f4ebbb6c",
+      "93e4acfa940c26f78d430de401f9d2c2c674d021577bb51acfc491ba89553a9a",
+      "94ced207c0de4120477803aa161287d3b03aa4f1b6b744ad1a04e140f11352d2",
+      "96b76f0ac2f92e53fe1c344587fb65d3db398a524cd4bcc97b4a8e135f4753c0",
+      "96fe96cbf5f59e454e5b0cc35a124344025a5d536de88b2cb9b569971387e693",
+      "975845f99c996b087774f6461c59974cc2f9a7e636bba1af46a1a9afdac8687f",
+      "9761041e2d325732956820837c395b2102571ac2122b1889065b8ddef3c04bec",
+      "97667f5da2ed6e6e0ab5b2e1321b75ba6c24f3fb2a8e78cf5b75ca9f2e013d2a",
+      "97812c7387115326f6a8117c78e6ec21775c4f8e94e8bf45187641a089fe8fd1",
+      "981341cd682385888fe534643207bf54214e498c9b56ad44b65d4aa806b3ec7a",
+      "992a9a5270e34a89a51d6404bd087dcd90e3bed3794d9e504a89541ead7238eb",
+      "9a26b6b504b882aa3c665851bc93547074cf6bf74a4c7b5f5cc2c84bf02be7bb",
+      "9ad8a7190cd3a2ea2eaae25ec3baa2acf510796b828c07961d75cbcbe34bc50e",
+      "9bb871b208a478bbd97564ee508a10020cdf9f84235336cf00637d196f697558",
+      "a0f4e05c6b2bc3021271ee83d87f39b906931b105fcc6884489365660666f737",
+      "a2a5bb2a87c1d3bf3649a42b180e900fc772a186f10ca647b0f035f90ed5307a",
+      "a41705d23c0e18b8b19a6ab810ce725182e6c827eba2ead70cbb2e466a1365f6",
+      "a49bf72f74c6305476a91ca5d162ad3bee9920b82f5ac5f51640c62932bb929f",
+      "a714af39a4bb0d5476e81087d2c0f6eb3fb78c394b2a34e416f77d17685488d2",
+      "a919a18e7b39547f9b202d008ed064af711cad120e4ff3bfe3541dd0766fa540",
+      "a98821326e7f973a3697263aae1b23aa5213b73b0f9c6d9cff6453acd2b9951b",
+      "ac21c8ff2aa65063e3a51e2f6112e26c915ed98e91509d6d53b68e98093f98cf",
+      "ae3c92b1126664222a5e93663e858d99983fc7b24038dc02f85f6b3acba32337",
+      "ae695efdbf3a71c150b7a51912117189a7de125b0e453d611406843e414fb718",
+      "ae8298fd11a185c737789e86108a4b0ecde99bf4a2a72eeba3d4fcd4ef163b19",
+      "afe8692d10bbd2d93a6248dabcd5ca9ec0d9eac855e8898e49caf6d6b4c0e958",
+      "b0539ece339d30f1e2c2068f1abb3f61ad2ab8ebdde21a40965535f58c8bdfc2",
+      "b13cda651674fab9f41441f592519555507897bd4c28d9d4829380a7f4f907c8",
+      "b140e9b2a70283664a608dc1598fa64d80bf569d2379dc4f9cf0a9ed10e9699b",
+      "b1683eede36beb41364eddb06427b08919a7ac591747ab5e1ca4c216c7717955",
+      "b18f0fd6f9815946d20b65fa5455755c8907229763facea61627733ee7a1708b",
+      "b221d5314a0505dcad0f78557a183b7a2d810b1ff8adf247501abd40dd14be49",
+      "b38b33f1e8676a163b774f77f6f29596d23abbc42187cc8d7fdef07076b6ad50",
+      "b497c3c590351e732abfdbc50e1210156de140fcd36ebc89ed22111799c2abbf",
+      "b677ac193484b19efd12b78273f46ac62d5ef3be8ab7eabc2dd1483f6162bc41",
+      "b67fbfd6fa48af5e19650febef0cf22aae8a580694020081acb0fe92f1bd165c",
+      "b706d699452cfd18e546e19b105d6da034f7661b95cc63be26f2735c283c5636",
+      "b8b5d9d7aac5334b258eee8a90ed9e8e0f1ba699a7f3317ebcf75034659ee229",
+      "b93b73f74739bdfe38922c7e8fdc011f6ceda395701c3a308c97db15d45edac3",
+      "b93ec97108ab9fe28edbb5ff3e131afc96562a8e7d165a3b8286b5a4a3faa49f",
+      "bd42452ef056f6fee43963fb0c9346b052ece1cbae5b331ee0f7c8f4aa4f8217",
+      "bd5ca83a27cc1f7bba4accf2a141e2901fc4237174397b4e7a64a900948db7c4",
+      "be5e822ac6d0fa437c6bf9be626f2b1a2eb097eb071ef26ffb84089e2f43e06e",
+      "be5fb88a26915313296e4bb6e5d2412263a2344232fda6551e0bc5cf27bcb686",
+      "c09cbe148e2edc0e3cdf57e2f2ce7cc7d11ea891b60d05594044bb1108157210",
+      "c2b604214a3645dd035196bad92e88ecb81245d8354e1ee242710708cd84baa7",
+      "c3680204b40d61a55db1af99c59dac5e8247ca88742335d880fb8f4a8fca9541",
+      "c43d5b611b0507e06fa34c9dcf50132ab56dbce70daf6ea1dc66e1cf3829beb2",
+      "c5b592e91e81730bca49a6f1fae94b0191db11a4c394f07b46e48f56f9fb8c5e",
+      "c63c9f513c7869e0f5f07c2c1fa79c56a080e8c37f72762f4fb9a1fb2a5186df",
+      "c6d422de7a3ff7cef6b01d636ea8abe1f4f3cf1d705b6603361af1c589b6f4e6",
+      "c74ad540127ebf2c6362e8fecddae513f3cacf522e81bc435fa4ddea9b48f50c",
+      "cba4115829f284b6787544a32ab5586e4fadf3daf031b5a88af91f4cffe426da",
+      "cc2e0ebbd01eef7928ed9de3fef72d04a48105c5d085b0e77d3d675a314dd838",
+      "cd69e4af1d1f5f18c5fc4a3effe6acf1a75627c3b8112714d6096e6aa3c754ba",
+      "cea1b66b4cabd4bff4e7e1eb13b78773aeac0b749bf5ed586e1124385f26a6ba",
+      "d0713571f5a2ef1f6df30f405799746a9580c58adbb94c6e5c369320a7e7c8b7",
+      "d2bd310133dd08baee464b670e6ac6b1c54191ce1f014c84a399522cafa78eb7",
+      "d37b6b666098d9764e500258226c1a5c1687d373782d347c528025752c310b7c",
+      "d44b860dbce80971514279661502c16bd66867fa21409a6783b10910e1a8e30f",
+      "da18b234098356b446af54a512e905e741241230607ae85e62a95495dec0a419",
+      "db7603291a63a8c23aa5607acf1eb4f3b49138e71a3963d2d60806822dab122f",
+      "dd11e926b7ff79ef345f993060b6443c4ae42eabb3255a5c86d459791fdc3041",
+      "de8e4991a47300e3a75598cf0881aa80bab5a66f1c32b772ba5a99b703b483c1",
+      "df774eeef39bf25a04c9d20b36ebfb4feb31edd28a6c21a5a5786e8500c9693c",
+      "e07dd475c4d6ade767e9fa2aa3a3497c0f01f798cce5dc63d2bced1a9b3b0682",
+      "e1231cff167a7a82fb68374e4a294c9301f7d3c3fd45df97abadae630cc69959",
+      "e1254943cab391d613355522387966df3efb44a399d90f42bcf5fe166d4ebdfd",
+      "e1728aae278bc43a18d047334aff3722a426e92402d7e3bcdeb711bf35fa5f7d",
+      "e41fb6b319ba8a0d59ab0befdbc689a076195c78755fc0e74f2fa8605386afbe",
+      "e490193a8b6a10f9c5df49230cb33a0fdfeac5f0f6f900d129cc0d7c3fa6b706",
+      "e5726b7fd0f86f0b3f7d1239f58813852bde87079adb0079bdbbfc974493af07",
+      "e7bf3776f340e826aa09afe7ba44eb1637ac33641e382ac1712ea052563ff70e",
+      "e9d71a21f1398b6093d047c80abe38e2c50bba03f0eaf20907fa590474c4c251",
+      "eafa55c084ac2301c50f3f4d653889978d6ca4824b284b70cdf0b45476759af9",
+      "ec534288db8bfd070f774646da47cab7d31a7c4e093642d2b25e9a4758a8c3ca",
+      "eccca496a54239cc6b7b2107f45574c7cbc33c35ff10224956b810efee228dcb",
+      "eec3838b528e7ef884eee290944ddb46713ec3b6d03d842309eb7b0b295a1c32",
+      "ef46f86be52fbbca39dfc936f4b6ff9fb18d96bc3c19570ecf5fa3b6e9b45ada",
+      "ef7d4f1d5b22fd19b7639fae24e67867b70041abcdf16599cd5cba49bad38663",
+      "f0ada668b0ebb88e8fbe2ec58c8067eb78e14b62db7b112c2cd153426f819a02",
+      "f227a57fb489f260e483be8b6cfb67e2509b023bb608a966476a76c06c9e8918",
+      "f260555a282e0f83672c3b7d77d862f8985c3100058bc3e76ce69efd9b884dea",
+      "f3a5b1ae407481b72510c3abac1d48b400c96c3332b471ee75b36d18ee7f166f",
+      "f47cd83a81b14d8ee71e7990f689f22b64a6eb66920d1fd0b9da298d64638cd9",
+      "f4d72589a9ac9b0e00f48b88aad1bff39036b5bf37454aea1c5af996604167d7",
+      "f65bdcf0eeaa9bec01a525d453e62e24937dcdae72b73aae8a0e4645f508ee5b",
+      "f6b546dc578c7fba42a6fd707f20e07468836620ff3c5be648bfd71b924c0e53",
+      "f7840407c3668387acfa639d2e2b977db9ba722e14e555c08bb9629188cc9911",
+      "f86677d6c9383a065673793c6d9b41e686f3f253ea6041496ee70ea2f1c25e4e",
+      "f8da0050c8de7659b49de169a2d717eefa6683b245ba26a2aa0e1db89b27fa3a",
+      "fabba596c1b2b14e491cbea68677e6b53d9b836504ab3061421f2b3d125d0807",
+      "fb32526b3165d0e62ee4a3d25fa203e497b4bb411a5295c170433916dea851ed",
+      "fb5346f32fc973ed17d01388c6a26ec89ae6b94faa4160d21bd5ef1d33a6b586",
+      "fbabb0e78d252e3f81405110e9d43ae67d622da0a1e77798bc4e752f87c2ce64",
+      "fca2ee922c9783266988a4e5cf9d9297c10fef60b4f1133a8b2fdd6fe14e57c4",
+      "ff5b2ffbc3f3eeb602afd2c51408c0769050d7059281768f372f33c39fc5755e"
+    ],
+    "excluded_split_sha256": {
+      "datasets/testsets/scienceworld.json": "b12da343093e139462acfd6bc9e862d43eb9e13f2c25317e3a8c41327c8ab367"
+    },
+    "frozen_before_online_test": true,
+    "generated_by": "shared_evidence_traced_train_induction_with_abstraction_v2",
+    "manual_rule_seeded": false,
+    "model": "deepseek-v4-flash",
+    "raw_domain_ontology_sha256": "1aec8076858e6f2985ce0e41bae80f295ff7e0b62a8e54493f935dadb3043ed0",
+    "semantic_review": {
+      "dropped_rule_count": 33,
+      "input_ontology_sha256": "0382c0a8ee832019c1386f3880efef5413e88860957be16e12415a3d392898a0",
+      "model": "deepseek-v4-flash",
+      "reviewed_rule_count": 64
+    },
+    "skill_facts_used": false,
+    "source_audit": {
+      "benchmark": "scienceworld",
+      "excluded_fields": [
+        "reward",
+        "score",
+        "success",
+        "model_thought",
+        "hidden_state",
+        "evaluator_state"
+      ],
+      "excluded_split_sha256": {
+        "datasets/testsets/scienceworld.json": "b12da343093e139462acfd6bc9e862d43eb9e13f2c25317e3a8c41327c8ab367"
+      },
+      "public_fields_used": [
+        "goal",
+        "executed_action",
+        "environment_feedback"
+      ],
+      "source_episode_count": 232,
+      "source_episodes_sha256": "7556746671ea219f818680b9d221fbe61b00480109883c715321a91219f725ba",
+      "source_split": "official_train",
+      "source_split_sha256": "6f3b82d5c7e4f28473eab4ee2561ea23ba359a013d0358095acae0c84d7dda67",
+      "train_evaluation_overlap": 0
+    },
+    "source_episode_count": 232,
+    "source_episodes_sha256": "7556746671ea219f818680b9d221fbe61b00480109883c715321a91219f725ba",
+    "source_split": "official_train",
+    "source_split_sha256": "6f3b82d5c7e4f28473eab4ee2561ea23ba359a013d0358095acae0c84d7dda67",
+    "test_time_update": false
+  },
+  "recovery_policies": [
+    {
+      "name": "ambiguous_request_numbered_selection",
+      "policy": "When a command is ambiguous because multiple objects match, the system prompts with numbered options; entering the number selects the intended action.",
+      "support_count": 26
+    }
+  ],
+  "rule_provenance": {
+    "action_alias:activate": {
+      "episode_hashes": [
+        "0d206adb4efce12e2f2c5b13d3d523b517f6bf1112dc32eaebe00359570bf5f1",
+        "1cf1599bc57cde4648b45023cadca7737e4a20e1de806f2f5c1606942280202d",
+        "1d2260eb0fdfa057d29241155b2245f366169dbedb51ae1caf67990c3260526c",
+        "3d89a9a31a02340a7e2277f94098eb5ba4e3143b5554f9b535cbe659a3dc6b27",
+        "48f47280631b57f7fe9c81ffad46c2c022fffe72d18fd3d02490721ec7c727a8",
+        "746fa444aec6431c01b5b831776ddf5649d134ae69204a07667dd7ae525f1990",
+        "782e7e72d436941349a4a731a3b117d83fc3baaff535049c8ec8b1a828a18dc6",
+        "b93ec97108ab9fe28edbb5ff3e131afc96562a8e7d165a3b8286b5a4a3faa49f"
+      ],
+      "source_kind": "public_train_interaction",
+      "source_rule_ids": [
+        "action_alias:inclined-plane-determine-angle:activate_stopwatch",
+        "action_alias:power-component-renewable-vs-nonrenewable-energy:activate_power_source",
+        "action_alias:power-component:activate_switch"
+      ],
+      "support_count": 8
+    },
+    "action_alias:connect": {
+      "episode_hashes": [
+        "0d206adb4efce12e2f2c5b13d3d523b517f6bf1112dc32eaebe00359570bf5f1",
+        "17440b54b45463e051314de3c9e7c6b648b7a81b9dfe91fd4b2c4ac916866a19",
+        "330167ca5025401a6c029eee2f65bc6eab5f7f92cd6f7d887b5ea371e30846e0",
+        "3d89a9a31a02340a7e2277f94098eb5ba4e3143b5554f9b535cbe659a3dc6b27",
+        "3fe69253c1b37a260200f555ccc34bf9dd972c44f504de0ec80f9a1e20a9c105",
+        "4d044cd51d9707041cda5fbdff74a6b1427dd60d84cc93fda967874198f4ae15",
+        "6bc800e3ed086755c65d58c8893abfb8506ab7e5017862c90195425b12dd3eb7",
+        "7e8e3c5e5a34fab80a8bb054e0468612e1ee1c1f2c128882d63a1316b13d1a96",
+        "981341cd682385888fe534643207bf54214e498c9b56ad44b65d4aa806b3ec7a",
+        "a919a18e7b39547f9b202d008ed064af711cad120e4ff3bfe3541dd0766fa540",
+        "cd69e4af1d1f5f18c5fc4a3effe6acf1a75627c3b8112714d6096e6aa3c754ba",
+        "d0713571f5a2ef1f6df30f405799746a9580c58adbb94c6e5c369320a7e7c8b7",
+        "f6b546dc578c7fba42a6fd707f20e07468836620ff3c5be648bfd71b924c0e53"
+      ],
+      "source_kind": "public_train_interaction",
+      "source_rule_ids": [
+        "action_alias:power-component-renewable-vs-nonrenewable-energy:connect_wire_terminal_to_component_terminal",
+        "action_alias:power-component:connect_wire_terminal_to_component_terminal",
+        "action_alias:test-conductivity-of-unknown-substances:connect_terminals"
+      ],
+      "support_count": 13
+    },
+    "action_alias:examine": {
+      "episode_hashes": [
+        "0e35d16c2f754a77831df2c7afb5418496f7cc5124a368c1118298277b8c70fb",
+        "6719bcd79f6037c3786629d19c4c3edbf0ebf59a6446169f8f967d19c8f0e39b",
+        "892e4bfb77dc89e970ddf69ad377b1c74491b6ba83465109c03415200438c20d",
+        "a2a5bb2a87c1d3bf3649a42b180e900fc772a186f10ca647b0f035f90ed5307a",
+        "b1683eede36beb41364eddb06427b08919a7ac591747ab5e1ca4c216c7717955",
+        "b221d5314a0505dcad0f78557a183b7a2d810b1ff8adf247501abd40dd14be49",
+        "df774eeef39bf25a04c9d20b36ebfb4feb31edd28a6c21a5a5786e8500c9693c",
+        "fb5346f32fc973ed17d01388c6a26ec89ae6b94faa4160d21bd5ef1d33a6b586",
+        "ff5b2ffbc3f3eeb602afd2c51408c0769050d7059281768f372f33c39fc5755e"
+      ],
+      "source_kind": "public_train_interaction",
+      "source_rule_ids": [
+        "action_alias:inclined-plane-determine-angle:examine_inclined_plane",
+        "action_alias:lifespan-longest-lived:examine_animal",
+        "action_alias:lifespan-shortest-lived:examine_animal",
+        "action_alias:use-thermometer:examine_book_shelf"
+      ],
+      "support_count": 9
+    },
+    "action_alias:focus_on": {
+      "episode_hashes": [
+        "0f15fab616d4ace6efd717c42fbbae268e58bece9756911acbbee44c9666da96",
+        "1123f76a3e181b728b3cab3f1ac16fe64c238a9cb1dcbfe1905faebf07f1b4f7",
+        "2599c51907b0c4962a3fabb1587903a7610dcc5dc53c00147cc43b76f9b6990d",
+        "2943d44116670de0d87d3897179dd0040a951ed170999c37d20d8ab7c844a4b6",
+        "2a75d3e147d975bd59536f6c681dba3d6e84aa85e99c65518ccb30ef04ff1524",
+        "2ac0f4ecb57b55524d2f4f1ca4e98eed49c485b29107e2ae468f6bb08bf22a4c",
+        "31b814121c3af441e5675378e59f3ab9c3df9eff63953c7bc80a2b403b121147",
+        "3255d7433c59dc2ee3fda5f1a2bc71eddee9262e6da32089a70da8fe14b8970c",
+        "340a65dc531b9a0f0daafa4fe62e99b928e736ca983d5f1af12dc53a6a7c627e",
+        "3830d90116f0a4101658b0cbe7a6403f79f8fedd55004998a716a8b9a6ff4daf",
+        "40e57f62ea0d3f9ec796cde9f494f62f250d750aabc9a205d273b702e98dd365",
+        "4603d64e694caa74324032eed90e8346328623143c89554023795b20239fd795",
+        "4a5889cbc5280e09b2a16d99aabb9ce8dfd20953b195f93b648c4b3050552351",
+        "514c3f874572c59684f3662478501a45a2f63d07c96a1b97195dea77d16f84fb",
+        "51ae203f769046c508cf93e46135bfbbfdcd4991bc3f08558666f27df918bcbe",
+        "55de9a09ac0f368696198a4bb1ec1db008d94f6c74cf7f95e736eb4c9960b78c",
+        "5dd3c8702c3cab7d203bcd95443fde72686badda00b447c5dd7c0bf6c508f0d5",
+        "5ed493e46031be8bc03df93f95bc4b7fd24c439ae70cea4103223840e1dfd813",
+        "62f8d457af30e257b582b45d9e6f358890d78ca2429c9eca3b2a2f9243232724",
+        "746fa444aec6431c01b5b831776ddf5649d134ae69204a07667dd7ae525f1990",
+        "79377333ed0bf28f2288d5f8fb64ce972d113ea08d6f5c61583537dcbfb3afd0",
+        "7efe9e611986195b739ab366a636454f3a3be10404b796a558133c69a905b38c",
+        "85091fb5483a5cffd09ce90cb9cc553e4ca7a58a326f97e73b8fd600c9e18c36",
+        "859a0facd16b90430f5cb4b136d6874abc3f90af3b5449becfd459dd1ee7c62a",
+        "87b630552b9a5c742144bf40161309f39ec5bf1df44238e8303dfe7df7f4a241",
+        "892e4bfb77dc89e970ddf69ad377b1c74491b6ba83465109c03415200438c20d",
+        "8a5ad5addc07acdfdb9885ce3f7bc0e88dc11bb1ab1da3a3cda208090cb4f28f",
+        "8b76371bfd6cd018906b67a29af18075123f821b6dd4f40fe8ed894c52efb28d",
+        "8bc716af4a237a4e7ed50e48108f2e35c1190e209f0a73e55ddd3429aa4af5f3",
+        "9761041e2d325732956820837c395b2102571ac2122b1889065b8ddef3c04bec",
+        "9ad8a7190cd3a2ea2eaae25ec3baa2acf510796b828c07961d75cbcbe34bc50e",
+        "a2a5bb2a87c1d3bf3649a42b180e900fc772a186f10ca647b0f035f90ed5307a",
+        "a49bf72f74c6305476a91ca5d162ad3bee9920b82f5ac5f51640c62932bb929f",
+        "b0539ece339d30f1e2c2068f1abb3f61ad2ab8ebdde21a40965535f58c8bdfc2",
+        "b13cda651674fab9f41441f592519555507897bd4c28d9d4829380a7f4f907c8",
+        "b140e9b2a70283664a608dc1598fa64d80bf569d2379dc4f9cf0a9ed10e9699b",
+        "b1683eede36beb41364eddb06427b08919a7ac591747ab5e1ca4c216c7717955",
+        "b18f0fd6f9815946d20b65fa5455755c8907229763facea61627733ee7a1708b",
+        "bd5ca83a27cc1f7bba4accf2a141e2901fc4237174397b4e7a64a900948db7c4",
+        "df774eeef39bf25a04c9d20b36ebfb4feb31edd28a6c21a5a5786e8500c9693c",
+        "e7bf3776f340e826aa09afe7ba44eb1637ac33641e382ac1712ea052563ff70e",
+        "e9d71a21f1398b6093d047c80abe38e2c50bba03f0eaf20907fa590474c4c251",
+        "f47cd83a81b14d8ee71e7990f689f22b64a6eb66920d1fd0b9da298d64638cd9"
+      ],
+      "source_kind": "public_train_interaction",
+      "source_rule_ids": [
+        "action_alias:change-the-state-of-matter-of:focus_on_substance",
+        "action_alias:find-animal:focus_action",
+        "action_alias:find-living-thing:focus_on_object",
+        "action_alias:freeze:focus_on_substance",
+        "action_alias:grow-plant:focus_on_seed_ambiguous",
+        "action_alias:inclined-plane-determine-angle:focus_on_inclined_plane",
+        "action_alias:lifespan-longest-lived-then-shortest-lived:focus_on_animal",
+        "action_alias:lifespan-shortest-lived:focus_on_animal",
+        "action_alias:measure-melting-point-known-substance:focus_on_substance",
+        "action_alias:measure-melting-point-known-substance:focus_on_thermometer",
+        "action_alias:melt:focus_on_substance",
+        "action_alias:use-thermometer:focus_on_thermometer",
+        "action_alias:use-thermometer:focus_on_unknown_substance_b"
+      ],
+      "support_count": 43
+    },
+    "action_alias:move": {
+      "episode_hashes": [
+        "2a7ddda344f7d78b7063c24e6c5da7c4ffb5e18f8e5c4d8a79f3e7da701a5570",
+        "36f4cacd677a261d1024d9e1e9a11daf33e51462fc2977c582f879d1a767c57e",
+        "40e57f62ea0d3f9ec796cde9f494f62f250d750aabc9a205d273b702e98dd365",
+        "4772bec7ad17e1f279af4b15f6ca0303eb70a01551e7bc867534e5c33e9da056",
+        "48f47280631b57f7fe9c81ffad46c2c022fffe72d18fd3d02490721ec7c727a8",
+        "4c441c44d07862285ce68e51b16e305778f559f2cf3a82883f8e5357e2654597",
+        "4c80439624e259ab363778074ed909ab3fd44f15aa0554502335d0115b4ccc3c",
+        "5a03ab083105568b950a500ba54a28778d507eebbc211a7a4c34260ef0ae187c",
+        "6869f7e33f76ef8f240f482dcbf935183c000ca386cb22eeda789dece0c37c8a",
+        "6efc05855d38f92b9d6f2d184a1500844469bcd53955c88628c35e80a0026065",
+        "6fd17d5aabf894dac0afc9436de326d172a3466aa11cbf0bacc0314cdcf3921f",
+        "746fa444aec6431c01b5b831776ddf5649d134ae69204a07667dd7ae525f1990",
+        "757b0ecdf659abc03db08d72778b881f54c52581e48ebba5b8561da593396c7f",
+        "767b1cebace9fd41b79c8741f46ace127471bbbff4196b8158bff6ceb31e168c",
+        "781553893ffd3fa15dfd259d0a1f830462a29d7a932fd5a1ea008ec70453fbc2",
+        "7dd276974bb40007130ddf7c4f53ae4d6d9a5b3d66481d325ef430736ed1cbf5",
+        "975845f99c996b087774f6461c59974cc2f9a7e636bba1af46a1a9afdac8687f",
+        "a714af39a4bb0d5476e81087d2c0f6eb3fb78c394b2a34e416f77d17685488d2",
+        "ac21c8ff2aa65063e3a51e2f6112e26c915ed98e91509d6d53b68e98093f98cf",
+        "e1254943cab391d613355522387966df3efb44a399d90f42bcf5fe166d4ebdfd",
+        "eafa55c084ac2301c50f3f4d653889978d6ca4824b284b70cdf0b45476759af9",
+        "f4d72589a9ac9b0e00f48b88aad1bff39036b5bf37454aea1c5af996604167d7",
+        "fabba596c1b2b14e491cbea68677e6b53d9b836504ab3061421f2b3d125d0807",
+        "fca2ee922c9783266988a4e5cf9d9297c10fef60b4f1133a8b2fdd6fe14e57c4"
+      ],
+      "source_kind": "public_train_interaction",
+      "source_rule_ids": [
+        "action_alias:chemistry-mix:move_to_container",
+        "action_alias:freeze:move_to_container",
+        "action_alias:inclined-plane-determine-angle:move_block_to_inclined_plane",
+        "action_alias:inclined-plane-friction-named-surfaces:move_block_to_plane",
+        "action_alias:inclined-plane-friction-unnamed-surfaces:move_object_to_inclined_plane"
+      ],
+      "support_count": 24
+    },
+    "action_alias:pick_up": {
+      "episode_hashes": [
+        "1231121abce9dda4cf2be6290c7b9f8f9d5953508f1378b69a66f41417cf3654",
+        "1665962880c543144a9f7d5cd590a9d2bcaf3d8848284816dba2650605493753",
+        "2bb507f8ac3424546c8959dc6a92b14193b4d434216eb092d81de8dd7296b72d",
+        "41acc0e5beb3ec7619355d1a0d163f213d80dbd3e72e7de2829ff1c19e2e663f",
+        "492366551d6d073716dc6764984d557865a12a8263e2436ccb5c754f214c9135",
+        "4cc9cd6be417c8b4e1d829c2ea16c626e6d6ef28b2345cd3985fa5a12bb906ca",
+        "6718ce58c2e3d30dfeca72ec943ad99c57ac4d695040c066a5da9176bb99ff5b",
+        "7ed84fb43ab3dbd5c8fb4abcaab4e45e8cf41c3ebfad4e5a31cf5a6b94f9c472",
+        "850ac19d111daedc480cf6b5717408e7984573267c4753192b85b3235a0b34cf",
+        "b140e9b2a70283664a608dc1598fa64d80bf569d2379dc4f9cf0a9ed10e9699b",
+        "b67fbfd6fa48af5e19650febef0cf22aae8a580694020081acb0fe92f1bd165c",
+        "b93b73f74739bdfe38922c7e8fdc011f6ceda395701c3a308c97db15d45edac3",
+        "d37b6b666098d9764e500258226c1a5c1687d373782d347c528025752c310b7c",
+        "e9d71a21f1398b6093d047c80abe38e2c50bba03f0eaf20907fa590474c4c251",
+        "eec3838b528e7ef884eee290944ddb46713ec3b6d03d842309eb7b0b295a1c32",
+        "f6b546dc578c7fba42a6fd707f20e07468836620ff3c5be648bfd71b924c0e53"
+      ],
+      "source_kind": "public_train_interaction",
+      "source_rule_ids": [
+        "action_alias:find-animal:pick_up_animal",
+        "action_alias:find-living-thing:pick_up_moves_to_inventory",
+        "action_alias:grow-fruit:pick_up_ambiguous_with_multiple_seeds",
+        "action_alias:grow-plant:pick_up_seed_ambiguous",
+        "action_alias:power-component:pick_up_moves_to_inventory",
+        "action_alias:test-conductivity-of-unknown-substances:pick_up_to_inventory"
+      ],
+      "support_count": 16
+    },
+    "action_alias:pour": {
+      "episode_hashes": [
+        "eccca496a54239cc6b7b2107f45574c7cbc33c35ff10224956b810efee228dcb",
+        "f8da0050c8de7659b49de169a2d717eefa6683b245ba26a2aa0e1db89b27fa3a"
+      ],
+      "source_kind": "public_train_interaction",
+      "source_rule_ids": [
+        "action_alias:chemistry-mix-paint-tertiary-color:pour_paint_by_color_name"
+      ],
+      "support_count": 2
+    },
+    "action_alias:teleport_to": {
+      "episode_hashes": [
+        "11ee41ac5e2f49e794a11983bc79ce976740af1de012b5040e7dbfe8af13788e",
+        "1d8243788aec6fed09510970752eeace5e55c7f117e01bdae8fad045919b0879",
+        "1e525ef021ed9e327f0bc112d4eea72e59ffc46e49dde73cd56c8629ed79c3a6",
+        "23d54c836fd99bfaf254ce073b557072714ddefec052e121877775a21719a891",
+        "3307ddc9660518b8d9b0d0fd33bc0b0fef19e1fd51662bb851eaf9c3787f9497",
+        "33605fa20d48a8c4fb5e28e051847668cab29d51b2db97ad76db81cd7ef848e2",
+        "34958f760991ef4372af1b8432c98e4ce7926413cd994ce158a205e993a3f350",
+        "3569336357fd68e5fe662c0eb68f8ecb98e085536a0fbf7d19fd71326a614985",
+        "357dd53b1e324f4a60389e991b1f5572bda3cfa872699f56115a50aaf8307a47",
+        "39a1cb4b0db2b56852fc6a009cff2974eaa9395f7b2e93b87205776c19ca211a",
+        "3a0cbbf09d316c82f3431583bba9e09c6290b2815aa2c1920fd53cd61c8724d6",
+        "3e88094ec83fd93399acf0706e054784d09d7220d7b7337d7ac5d1e719d65448",
+        "40dfc5284b2a51a430caf14e89c1dddc706cc1367bc64a4a31c517337f7d425f",
+        "4de647d14597eca1392d9c83355ea5cfc9eaed499c063622326aa24e380d31f9",
+        "56eb643d822e58d596b5f7b54640e92a41e91bef7b3c775c7e2ded4188a9f87d",
+        "74010682121b50007c946b7f3b16e6a04024918b288ec25b9497b09e13d1f31d",
+        "764a478f27e251b68e5aff79788a51e402fd67d496016ea55441dd31e9a78ac3",
+        "7e237f948dcf988bb6a5afa88be7fa599f64d35aa37a2d9e340be6135bf10c7f",
+        "859a0facd16b90430f5cb4b136d6874abc3f90af3b5449becfd459dd1ee7c62a",
+        "87b630552b9a5c742144bf40161309f39ec5bf1df44238e8303dfe7df7f4a241",
+        "8cb213a1e1c3dd00e0d8263acbe86283aa5426532213defc69ec598b22165790",
+        "97812c7387115326f6a8117c78e6ec21775c4f8e94e8bf45187641a089fe8fd1",
+        "992a9a5270e34a89a51d6404bd087dcd90e3bed3794d9e504a89541ead7238eb",
+        "ae8298fd11a185c737789e86108a4b0ecde99bf4a2a72eeba3d4fcd4ef163b19",
+        "b140e9b2a70283664a608dc1598fa64d80bf569d2379dc4f9cf0a9ed10e9699b",
+        "b1683eede36beb41364eddb06427b08919a7ac591747ab5e1ca4c216c7717955",
+        "b677ac193484b19efd12b78273f46ac62d5ef3be8ab7eabc2dd1483f6162bc41",
+        "be5e822ac6d0fa437c6bf9be626f2b1a2eb097eb071ef26ffb84089e2f43e06e",
+        "be5fb88a26915313296e4bb6e5d2412263a2344232fda6551e0bc5cf27bcb686",
+        "c74ad540127ebf2c6362e8fecddae513f3cacf522e81bc435fa4ddea9b48f50c",
+        "cea1b66b4cabd4bff4e7e1eb13b78773aeac0b749bf5ed586e1124385f26a6ba",
+        "db7603291a63a8c23aa5607acf1eb4f3b49138e71a3963d2d60806822dab122f",
+        "df774eeef39bf25a04c9d20b36ebfb4feb31edd28a6c21a5a5786e8500c9693c",
+        "e07dd475c4d6ade767e9fa2aa3a3497c0f01f798cce5dc63d2bced1a9b3b0682",
+        "e1231cff167a7a82fb68374e4a294c9301f7d3c3fd45df97abadae630cc69959",
+        "e490193a8b6a10f9c5df49230cb33a0fdfeac5f0f6f900d129cc0d7c3fa6b706",
+        "ef7d4f1d5b22fd19b7639fae24e67867b70041abcdf16599cd5cba49bad38663",
+        "f7840407c3668387acfa639d2e2b977db9ba722e14e555c08bb9629188cc9911"
+      ],
+      "source_kind": "public_train_interaction",
+      "source_rule_ids": [
+        "action_alias:chemistry-mix-paint-secondary-color:teleport_action",
+        "action_alias:find-animal:teleport_to_room",
+        "action_alias:find-living-thing:teleport_to_room",
+        "action_alias:find-non-living-thing:teleport_to_location",
+        "action_alias:find-plant:teleport_to_room",
+        "action_alias:identify-life-stages-1:teleport_to_room",
+        "action_alias:identify-life-stages-2:teleport_to_outside",
+        "action_alias:inclined-plane-determine-angle:teleport_to_workshop",
+        "action_alias:lifespan-longest-lived-then-shortest-lived:teleport_to_outside",
+        "action_alias:lifespan-longest-lived:teleport_to_outside",
+        "action_alias:lifespan-shortest-lived:teleport_to_outside"
+      ],
+      "support_count": 38
+    },
+    "action_alias:use": {
+      "episode_hashes": [
+        "077938f4bc9fe0a89172de53f3d97d546a6f0386a91dcbf6c366f7484ab6645d",
+        "3cb2806cf6ca7ef3f5d820e1bcb81ae8ce9882d8e2eb64356d13ff055c05479a",
+        "8516e1834ba1c551d4ef586f321e27eb0b0f23c80524b77a3ab828b9ecaeb5dc",
+        "8e2d50d54d1a6d795e8aa17d1b4518e73095145392ebc746dcebafde2b283371",
+        "94ced207c0de4120477803aa161287d3b03aa4f1b6b744ad1a04e140f11352d2",
+        "b497c3c590351e732abfdbc50e1210156de140fcd36ebc89ed22111799c2abbf",
+        "c63c9f513c7869e0f5f07c2c1fa79c56a080e8c37f72762f4fb9a1fb2a5186df",
+        "fb32526b3165d0e62ee4a3d25fa203e497b4bb411a5295c170433916dea851ed"
+      ],
+      "source_kind": "public_train_interaction",
+      "source_rule_ids": [
+        "action_alias:measure-melting-point-unknown-substance:use_thermometer_on_substance"
+      ],
+      "support_count": 8
+    },
+    "conditional_prerequisite:measured_temperature_selects_public_task_destination": {
+      "source_episodes_sha256": "7556746671ea219f818680b9d221fbe61b00480109883c715321a91219f725ba",
+      "source_kind": "public_train_interaction",
+      "support_count": 3,
+      "task_family": "use-thermometer",
+      "task_keys": [
+        "hiskill_train::use-thermometer::52",
+        "train_extension::use-thermometer::199",
+        "train_extension::use-thermometer::81"
+      ]
+    },
+    "object_role:block_as_test_object_on_inclined_plane": {
+      "episode_hashes": [
+        "36f4cacd677a261d1024d9e1e9a11daf33e51462fc2977c582f879d1a767c57e",
+        "4c80439624e259ab363778074ed909ab3fd44f15aa0554502335d0115b4ccc3c",
+        "757b0ecdf659abc03db08d72778b881f54c52581e48ebba5b8561da593396c7f",
+        "eafa55c084ac2301c50f3f4d653889978d6ca4824b284b70cdf0b45476759af9",
+        "ec534288db8bfd070f774646da47cab7d31a7c4e093642d2b25e9a4758a8c3ca",
+        "fabba596c1b2b14e491cbea68677e6b53d9b836504ab3061421f2b3d125d0807",
+        "fca2ee922c9783266988a4e5cf9d9297c10fef60b4f1133a8b2fdd6fe14e57c4"
+      ],
+      "source_kind": "public_train_interaction",
+      "source_rule_ids": [
+        "object_role:inclined-plane-friction-named-surfaces:block_as_test_object"
+      ],
+      "support_count": 7
+    },
+    "object_role:inclined_plane_has_surface_material": {
+      "episode_hashes": [
+        "36f4cacd677a261d1024d9e1e9a11daf33e51462fc2977c582f879d1a767c57e",
+        "6fd17d5aabf894dac0afc9436de326d172a3466aa11cbf0bacc0314cdcf3921f",
+        "757b0ecdf659abc03db08d72778b881f54c52581e48ebba5b8561da593396c7f",
+        "767b1cebace9fd41b79c8741f46ace127471bbbff4196b8158bff6ceb31e168c",
+        "7dd276974bb40007130ddf7c4f53ae4d6d9a5b3d66481d325ef430736ed1cbf5",
+        "93e4acfa940c26f78d430de401f9d2c2c674d021577bb51acfc491ba89553a9a",
+        "ac21c8ff2aa65063e3a51e2f6112e26c915ed98e91509d6d53b68e98093f98cf",
+        "eafa55c084ac2301c50f3f4d653889978d6ca4824b284b70cdf0b45476759af9",
+        "ec534288db8bfd070f774646da47cab7d31a7c4e093642d2b25e9a4758a8c3ca",
+        "fabba596c1b2b14e491cbea68677e6b53d9b836504ab3061421f2b3d125d0807",
+        "fca2ee922c9783266988a4e5cf9d9297c10fef60b4f1133a8b2fdd6fe14e57c4"
+      ],
+      "source_kind": "public_train_interaction",
+      "source_rule_ids": [
+        "object_role:inclined-plane-friction-named-surfaces:inclined_plane_surface_material",
+        "object_role:inclined-plane-friction-unnamed-surfaces:inclined_plane_with_unknown_material_surface"
+      ],
+      "support_count": 11
+    },
+    "object_role:polarized_component_has_anode_cathode": {
+      "episode_hashes": [
+        "17440b54b45463e051314de3c9e7c6b648b7a81b9dfe91fd4b2c4ac916866a19",
+        "1cf1599bc57cde4648b45023cadca7737e4a20e1de806f2f5c1606942280202d",
+        "330167ca5025401a6c029eee2f65bc6eab5f7f92cd6f7d887b5ea371e30846e0",
+        "3d89a9a31a02340a7e2277f94098eb5ba4e3143b5554f9b535cbe659a3dc6b27",
+        "4d044cd51d9707041cda5fbdff74a6b1427dd60d84cc93fda967874198f4ae15",
+        "57f0d7b3fd880a996486a3ebc97ef6ccad723f7cbd4b35f2ff368c3df66c18bd",
+        "782e7e72d436941349a4a731a3b117d83fc3baaff535049c8ec8b1a828a18dc6",
+        "7e8e3c5e5a34fab80a8bb054e0468612e1ee1c1f2c128882d63a1316b13d1a96",
+        "a919a18e7b39547f9b202d008ed064af711cad120e4ff3bfe3541dd0766fa540",
+        "d0713571f5a2ef1f6df30f405799746a9580c58adbb94c6e5c369320a7e7c8b7",
+        "f6b546dc578c7fba42a6fd707f20e07468836620ff3c5be648bfd71b924c0e53"
+      ],
+      "source_kind": "public_train_interaction",
+      "source_rule_ids": [
+        "object_role:power-component-renewable-vs-nonrenewable-energy:polarized_components_have_anode_and_cathode",
+        "object_role:power-component:polarized_component_has_anode_cathode"
+      ],
+      "support_count": 11
+    },
+    "object_role:wire_has_two_terminals": {
+      "episode_hashes": [
+        "330167ca5025401a6c029eee2f65bc6eab5f7f92cd6f7d887b5ea371e30846e0",
+        "782e7e72d436941349a4a731a3b117d83fc3baaff535049c8ec8b1a828a18dc6"
+      ],
+      "source_kind": "public_train_interaction",
+      "source_rule_ids": [
+        "object_role:power-component:wire_has_two_terminals"
+      ],
+      "support_count": 2
+    },
+    "recovery_policy:ambiguous_request_numbered_selection": {
+      "episode_hashes": [
+        "11ee41ac5e2f49e794a11983bc79ce976740af1de012b5040e7dbfe8af13788e",
+        "1665962880c543144a9f7d5cd590a9d2bcaf3d8848284816dba2650605493753",
+        "222b25dc13f63c8f9f1fa13634ba3d7828a93aa1e96ca13c5ffc51270868ad73",
+        "24de02f46352631ffd92ab07a90de287d61d5439c3a9271a65679c76a4aad48f",
+        "2c112ac08caadc2c72c92ca22f98441a894eaa7d0aba7c4f8eab5f941fc88d02",
+        "3fe69253c1b37a260200f555ccc34bf9dd972c44f504de0ec80f9a1e20a9c105",
+        "40dfc5284b2a51a430caf14e89c1dddc706cc1367bc64a4a31c517337f7d425f",
+        "41acc0e5beb3ec7619355d1a0d163f213d80dbd3e72e7de2829ff1c19e2e663f",
+        "4f42a6fe4c49ac63b89c670f396c1c925578fb62414c6e7035f72c2d0d86bfc6",
+        "51ae203f769046c508cf93e46135bfbbfdcd4991bc3f08558666f27df918bcbe",
+        "6bc800e3ed086755c65d58c8893abfb8506ab7e5017862c90195425b12dd3eb7",
+        "7e03f96cf9744fa2dda1dc45f1d88a84d13bfafd69c3eb6cb6edd051f5d3b7c0",
+        "96b76f0ac2f92e53fe1c344587fb65d3db398a524cd4bcc97b4a8e135f4753c0",
+        "97667f5da2ed6e6e0ab5b2e1321b75ba6c24f3fb2a8e78cf5b75ca9f2e013d2a",
+        "981341cd682385888fe534643207bf54214e498c9b56ad44b65d4aa806b3ec7a",
+        "a41705d23c0e18b8b19a6ab810ce725182e6c827eba2ead70cbb2e466a1365f6",
+        "b706d699452cfd18e546e19b105d6da034f7661b95cc63be26f2735c283c5636",
+        "c74ad540127ebf2c6362e8fecddae513f3cacf522e81bc435fa4ddea9b48f50c",
+        "cd69e4af1d1f5f18c5fc4a3effe6acf1a75627c3b8112714d6096e6aa3c754ba",
+        "d2bd310133dd08baee464b670e6ac6b1c54191ce1f014c84a399522cafa78eb7",
+        "d37b6b666098d9764e500258226c1a5c1687d373782d347c528025752c310b7c",
+        "d44b860dbce80971514279661502c16bd66867fa21409a6783b10910e1a8e30f",
+        "e41fb6b319ba8a0d59ab0befdbc689a076195c78755fc0e74f2fa8605386afbe",
+        "ef46f86be52fbbca39dfc936f4b6ff9fb18d96bc3c19570ecf5fa3b6e9b45ada",
+        "f7840407c3668387acfa639d2e2b977db9ba722e14e555c08bb9629188cc9911",
+        "f8da0050c8de7659b49de169a2d717eefa6683b245ba26a2aa0e1db89b27fa3a"
+      ],
+      "source_kind": "public_train_interaction",
+      "source_rule_ids": [
+        "recovery:change-the-state-of-matter-of:ambiguous_action_resolution",
+        "recovery:chemistry-mix-paint-secondary-color:ambiguous_action_numbered_options",
+        "recovery:chemistry-mix-paint-tertiary-color:ambiguous_request_requires_numeric_selection",
+        "recovery:find-animal:ambiguous_action_disambiguation",
+        "recovery:grow-fruit:ambiguous_request_resolved_by_number",
+        "recovery:melt:ambiguous_action_numbered",
+        "recovery:mendelian-genetics-known-plant:ambiguous_action_disambiguation",
+        "recovery:test-conductivity-of-unknown-substances:ambiguous_examine_light_bulb",
+        "recovery:test-conductivity-of-unknown-substances:ambiguous_pick_up_light_bulb"
+      ],
+      "support_count": 26
+    },
+    "state_predicate:already_connected_prevents_reconnection": {
+      "episode_hashes": [
+        "a919a18e7b39547f9b202d008ed064af711cad120e4ff3bfe3541dd0766fa540",
+        "f6b546dc578c7fba42a6fd707f20e07468836620ff3c5be648bfd71b924c0e53"
+      ],
+      "source_kind": "public_train_interaction",
+      "source_rule_ids": [
+        "state_predicate:power-component:already_connected_prevents_reconnection"
+      ],
+      "support_count": 2
+    },
+    "state_predicate:broken_device_not_activatable": {
+      "episode_hashes": [
+        "382c61e0be823b1df288ccc274a4e7c5ff219c6141122dda6e242ec6ea12b594",
+        "40e6510f8ffbdebce6cb1d6fcbf36f97ffe9c5b4222fce78fa81e4245190cd03",
+        "5dd3c8702c3cab7d203bcd95443fde72686badda00b447c5dd7c0bf6c508f0d5",
+        "9761041e2d325732956820837c395b2102571ac2122b1889065b8ddef3c04bec",
+        "c09cbe148e2edc0e3cdf57e2f2ce7cc7d11ea891b60d05594044bb1108157210",
+        "d2bd310133dd08baee464b670e6ac6b1c54191ce1f014c84a399522cafa78eb7",
+        "fbabb0e78d252e3f81405110e9d43ae67d622da0a1e77798bc4e752f87c2ce64"
+      ],
+      "source_kind": "public_train_interaction",
+      "source_rule_ids": [
+        "state_predicate:boil:stove_broken",
+        "state_predicate:change-the-state-of-matter-of:stove_broken",
+        "state_predicate:melt:stove_broken"
+      ],
+      "support_count": 7
+    },
+    "state_predicate:component_not_directly_activatable": {
+      "episode_hashes": [
+        "0d206adb4efce12e2f2c5b13d3d523b517f6bf1112dc32eaebe00359570bf5f1",
+        "3fe69253c1b37a260200f555ccc34bf9dd972c44f504de0ec80f9a1e20a9c105",
+        "41acc0e5beb3ec7619355d1a0d163f213d80dbd3e72e7de2829ff1c19e2e663f",
+        "4cc9cd6be417c8b4e1d829c2ea16c626e6d6ef28b2345cd3985fa5a12bb906ca",
+        "6bc800e3ed086755c65d58c8893abfb8506ab7e5017862c90195425b12dd3eb7",
+        "981341cd682385888fe534643207bf54214e498c9b56ad44b65d4aa806b3ec7a",
+        "b93ec97108ab9fe28edbb5ff3e131afc96562a8e7d165a3b8286b5a4a3faa49f"
+      ],
+      "source_kind": "public_train_interaction",
+      "source_rule_ids": [
+        "state_predicate:power-component-renewable-vs-nonrenewable-energy:light_bulbs_not_directly_activatable",
+        "state_predicate:test-conductivity-of-unknown-substances:battery_not_activatable",
+        "state_predicate:test-conductivity-of-unknown-substances:light_bulb_not_activatable"
+      ],
+      "support_count": 7
+    },
+    "state_predicate:container_open_state": {
+      "episode_hashes": [
+        "11ee41ac5e2f49e794a11983bc79ce976740af1de012b5040e7dbfe8af13788e",
+        "40dfc5284b2a51a430caf14e89c1dddc706cc1367bc64a4a31c517337f7d425f",
+        "6719bcd79f6037c3786629d19c4c3edbf0ebf59a6446169f8f967d19c8f0e39b",
+        "a0f4e05c6b2bc3021271ee83d87f39b906931b105fcc6884489365660666f737"
+      ],
+      "source_kind": "public_train_interaction",
+      "source_rule_ids": [
+        "state_predicate:find-animal:container_open_state",
+        "state_predicate:use-thermometer:drawer_open_state"
+      ],
+      "support_count": 4
+    },
+    "state_predicate:object_position_on_inclined_plane": {
+      "episode_hashes": [
+        "36f4cacd677a261d1024d9e1e9a11daf33e51462fc2977c582f879d1a767c57e",
+        "40e57f62ea0d3f9ec796cde9f494f62f250d750aabc9a205d273b702e98dd365",
+        "4772bec7ad17e1f279af4b15f6ca0303eb70a01551e7bc867534e5c33e9da056",
+        "4c80439624e259ab363778074ed909ab3fd44f15aa0554502335d0115b4ccc3c",
+        "5a03ab083105568b950a500ba54a28778d507eebbc211a7a4c34260ef0ae187c",
+        "757b0ecdf659abc03db08d72778b881f54c52581e48ebba5b8561da593396c7f",
+        "767b1cebace9fd41b79c8741f46ace127471bbbff4196b8158bff6ceb31e168c",
+        "781553893ffd3fa15dfd259d0a1f830462a29d7a932fd5a1ea008ec70453fbc2",
+        "7dd276974bb40007130ddf7c4f53ae4d6d9a5b3d66481d325ef430736ed1cbf5",
+        "eafa55c084ac2301c50f3f4d653889978d6ca4824b284b70cdf0b45476759af9",
+        "ec534288db8bfd070f774646da47cab7d31a7c4e093642d2b25e9a4758a8c3ca",
+        "fca2ee922c9783266988a4e5cf9d9297c10fef60b4f1133a8b2fdd6fe14e57c4"
+      ],
+      "source_kind": "public_train_interaction",
+      "source_rule_ids": [
+        "state_predicate:inclined-plane-determine-angle:block_position_on_plane",
+        "state_predicate:inclined-plane-friction-named-surfaces:block_position_on_plane",
+        "state_predicate:inclined-plane-friction-unnamed-surfaces:object_position_percentage_down_plane"
+      ],
+      "support_count": 12
+    },
+    "transition_schema:connect_components": {
+      "episode_hashes": [
+        "3fe69253c1b37a260200f555ccc34bf9dd972c44f504de0ec80f9a1e20a9c105",
+        "4cc9cd6be417c8b4e1d829c2ea16c626e6d6ef28b2345cd3985fa5a12bb906ca",
+        "6bc800e3ed086755c65d58c8893abfb8506ab7e5017862c90195425b12dd3eb7",
+        "981341cd682385888fe534643207bf54214e498c9b56ad44b65d4aa806b3ec7a"
+      ],
+      "source_kind": "public_train_interaction",
+      "source_rule_ids": [
+        "transition:test-conductivity-of-unknown-substances:connect_components"
+      ],
+      "support_count": 4
+    },
+    "transition_schema:focus_on_object": {
+      "episode_hashes": [
+        "34958f760991ef4372af1b8432c98e4ce7926413cd994ce158a205e993a3f350",
+        "421a934fd791af710ffd0c1c74e725b272180da9db88ae2f05c6aaede004ed6d",
+        "56eb643d822e58d596b5f7b54640e92a41e91bef7b3c775c7e2ded4188a9f87d",
+        "c6d422de7a3ff7cef6b01d636ea8abe1f4f3cf1d705b6603361af1c589b6f4e6",
+        "e490193a8b6a10f9c5df49230cb33a0fdfeac5f0f6f900d129cc0d7c3fa6b706",
+        "ff5b2ffbc3f3eeb602afd2c51408c0769050d7059281768f372f33c39fc5755e"
+      ],
+      "source_kind": "public_train_interaction",
+      "source_rule_ids": [
+        "transition:lifespan-longest-lived:focus_on_object"
+      ],
+      "support_count": 6
+    },
+    "transition_schema:measure_temperature": {
+      "episode_hashes": [
+        "33c5901660d066bd0b107aa337b8c68d78706ee008ef3fd21f1b820ffe355e2e",
+        "3cb2806cf6ca7ef3f5d820e1bcb81ae8ce9882d8e2eb64356d13ff055c05479a",
+        "6c375467eebeb9256165358840a341dbe102c43328084bac248b45fdd2bf66b7",
+        "8516e1834ba1c551d4ef586f321e27eb0b0f23c80524b77a3ab828b9ecaeb5dc",
+        "8e2d50d54d1a6d795e8aa17d1b4518e73095145392ebc746dcebafde2b283371",
+        "94ced207c0de4120477803aa161287d3b03aa4f1b6b744ad1a04e140f11352d2",
+        "9a26b6b504b882aa3c665851bc93547074cf6bf74a4c7b5f5cc2c84bf02be7bb",
+        "b497c3c590351e732abfdbc50e1210156de140fcd36ebc89ed22111799c2abbf",
+        "c63c9f513c7869e0f5f07c2c1fa79c56a080e8c37f72762f4fb9a1fb2a5186df",
+        "f65bdcf0eeaa9bec01a525d453e62e24937dcdae72b73aae8a0e4645f508ee5b",
+        "fb32526b3165d0e62ee4a3d25fa203e497b4bb411a5295c170433916dea851ed"
+      ],
+      "source_kind": "public_train_interaction",
+      "source_rule_ids": [
+        "transition:measure-melting-point-unknown-substance:thermometer_measures_temperature",
+        "transition:use-thermometer:temperature_measurement"
+      ],
+      "support_count": 11
+    },
+    "transition_schema:mix_ingredients_produces_target": {
+      "episode_hashes": [
+        "4c441c44d07862285ce68e51b16e305778f559f2cf3a82883f8e5357e2654597",
+        "65e66ed8a684bfea2cf280da7b8c324f4312e07c7f023d9c36ec0b388233439f",
+        "6869f7e33f76ef8f240f482dcbf935183c000ca386cb22eeda789dece0c37c8a",
+        "90ed2b68f6f07484db308b3ebdb951afafdb8424258668bd40b0c3b2f4ebbb6c",
+        "97667f5da2ed6e6e0ab5b2e1321b75ba6c24f3fb2a8e78cf5b75ca9f2e013d2a",
+        "e1254943cab391d613355522387966df3efb44a399d90f42bcf5fe166d4ebdfd"
+      ],
+      "source_kind": "public_train_interaction",
+      "source_rule_ids": [
+        "transition:chemistry-mix-paint-secondary-color:blue_yellow_mix_green",
+        "transition:chemistry-mix:mixing_ingredients_produces_target"
+      ],
+      "support_count": 6
+    },
+    "transition_schema:move_object_to_appliance": {
+      "episode_hashes": [
+        "2943d44116670de0d87d3897179dd0040a951ed170999c37d20d8ab7c844a4b6",
+        "5dd3c8702c3cab7d203bcd95443fde72686badda00b447c5dd7c0bf6c508f0d5",
+        "9761041e2d325732956820837c395b2102571ac2122b1889065b8ddef3c04bec",
+        "b18f0fd6f9815946d20b65fa5455755c8907229763facea61627733ee7a1708b",
+        "c5b592e91e81730bca49a6f1fae94b0191db11a4c394f07b46e48f56f9fb8c5e"
+      ],
+      "source_kind": "public_train_interaction",
+      "source_rule_ids": [
+        "transition:change-the-state-of-matter-of:move_object_to_appliance"
+      ],
+      "support_count": 5
+    },
+    "transition_schema:move_object_to_container": {
+      "episode_hashes": [
+        "0067f21ebfff53232efd971e9cccec15f2061fb55680dae36d90f9f0de158747",
+        "1e525ef021ed9e327f0bc112d4eea72e59ffc46e49dde73cd56c8629ed79c3a6",
+        "3e88094ec83fd93399acf0706e054784d09d7220d7b7337d7ac5d1e719d65448",
+        "6718ce58c2e3d30dfeca72ec943ad99c57ac4d695040c066a5da9176bb99ff5b",
+        "77fdb472be569e38c7763fa6e87dd24518df20fa6376434cdf6a22fccfbf7746",
+        "7e237f948dcf988bb6a5afa88be7fa599f64d35aa37a2d9e340be6135bf10c7f",
+        "850ac19d111daedc480cf6b5717408e7984573267c4753192b85b3235a0b34cf",
+        "992a9a5270e34a89a51d6404bd087dcd90e3bed3794d9e504a89541ead7238eb",
+        "9bb871b208a478bbd97564ee508a10020cdf9f84235336cf00637d196f697558",
+        "b38b33f1e8676a163b774f77f6f29596d23abbc42187cc8d7fdef07076b6ad50",
+        "be5e822ac6d0fa437c6bf9be626f2b1a2eb097eb071ef26ffb84089e2f43e06e",
+        "be5fb88a26915313296e4bb6e5d2412263a2344232fda6551e0bc5cf27bcb686",
+        "c2b604214a3645dd035196bad92e88ecb81245d8354e1ee242710708cd84baa7",
+        "cc2e0ebbd01eef7928ed9de3fef72d04a48105c5d085b0e77d3d675a314dd838",
+        "e1231cff167a7a82fb68374e4a294c9301f7d3c3fd45df97abadae630cc69959"
+      ],
+      "source_kind": "public_train_interaction",
+      "source_rule_ids": [
+        "transition:find-non-living-thing:move_object_to_container",
+        "transition:find-plant:move_to_container",
+        "transition:grow-fruit:move_seed_to_flower_pot",
+        "transition:grow-plant:move_seed_to_flower_pot"
+      ],
+      "support_count": 15
+    },
+    "transition_schema:open_container": {
+      "episode_hashes": [
+        "492366551d6d073716dc6764984d557865a12a8263e2436ccb5c754f214c9135",
+        "6efc05855d38f92b9d6f2d184a1500844469bcd53955c88628c35e80a0026065",
+        "8cb213a1e1c3dd00e0d8263acbe86283aa5426532213defc69ec598b22165790",
+        "975845f99c996b087774f6461c59974cc2f9a7e636bba1af46a1a9afdac8687f",
+        "ae3c92b1126664222a5e93663e858d99983fc7b24038dc02f85f6b3acba32337",
+        "b677ac193484b19efd12b78273f46ac62d5ef3be8ab7eabc2dd1483f6162bc41",
+        "c43d5b611b0507e06fa34c9dcf50132ab56dbce70daf6ea1dc66e1cf3829beb2",
+        "db7603291a63a8c23aa5607acf1eb4f3b49138e71a3963d2d60806822dab122f",
+        "e07dd475c4d6ade767e9fa2aa3a3497c0f01f798cce5dc63d2bced1a9b3b0682",
+        "fb5346f32fc973ed17d01388c6a26ec89ae6b94faa4160d21bd5ef1d33a6b586"
+      ],
+      "source_kind": "public_train_interaction",
+      "source_rule_ids": [
+        "transition:find-animal:open_bee_hive",
+        "transition:freeze:open_freezer",
+        "transition:identify-life-stages-1:open_container_changes_state",
+        "transition:use-thermometer:open_closet"
+      ],
+      "support_count": 10
+    },
+    "transition_schema:pick_up_to_inventory": {
+      "episode_hashes": [
+        "0067f21ebfff53232efd971e9cccec15f2061fb55680dae36d90f9f0de158747",
+        "15b0bd6ed8d1b75f3e8628a584b22d9d4ef5c789d01d6a2b1ea88751ff4bbb0c",
+        "2943d44116670de0d87d3897179dd0040a951ed170999c37d20d8ab7c844a4b6",
+        "4603d64e694caa74324032eed90e8346328623143c89554023795b20239fd795",
+        "5dd3c8702c3cab7d203bcd95443fde72686badda00b447c5dd7c0bf6c508f0d5",
+        "77fdb472be569e38c7763fa6e87dd24518df20fa6376434cdf6a22fccfbf7746",
+        "7e237f948dcf988bb6a5afa88be7fa599f64d35aa37a2d9e340be6135bf10c7f",
+        "85091fb5483a5cffd09ce90cb9cc553e4ca7a58a326f97e73b8fd600c9e18c36",
+        "a98821326e7f973a3697263aae1b23aa5213b73b0f9c6d9cff6453acd2b9951b",
+        "b18f0fd6f9815946d20b65fa5455755c8907229763facea61627733ee7a1708b",
+        "be5e822ac6d0fa437c6bf9be626f2b1a2eb097eb071ef26ffb84089e2f43e06e",
+        "c2b604214a3645dd035196bad92e88ecb81245d8354e1ee242710708cd84baa7",
+        "c5b592e91e81730bca49a6f1fae94b0191db11a4c394f07b46e48f56f9fb8c5e",
+        "cc2e0ebbd01eef7928ed9de3fef72d04a48105c5d085b0e77d3d675a314dd838"
+      ],
+      "source_kind": "public_train_interaction",
+      "source_rule_ids": [
+        "transition:change-the-state-of-matter-of:pick_up_moves_to_inventory",
+        "transition:find-plant:pick_up_to_inventory",
+        "transition:grow-plant:move_seed_to_inventory",
+        "transition:melt:pick_up_to_inventory"
+      ],
+      "support_count": 14
+    },
+    "transition_schema:pour_transfers_contents": {
+      "episode_hashes": [
+        "6718ce58c2e3d30dfeca72ec943ad99c57ac4d695040c066a5da9176bb99ff5b",
+        "850ac19d111daedc480cf6b5717408e7984573267c4753192b85b3235a0b34cf",
+        "90ed2b68f6f07484db308b3ebdb951afafdb8424258668bd40b0c3b2f4ebbb6c",
+        "97667f5da2ed6e6e0ab5b2e1321b75ba6c24f3fb2a8e78cf5b75ca9f2e013d2a"
+      ],
+      "source_kind": "public_train_interaction",
+      "source_rule_ids": [
+        "transition:chemistry-mix-paint-secondary-color:pour_transfers_contents",
+        "transition:grow-fruit:pour_water_into_flower_pot"
+      ],
+      "support_count": 4
+    },
+    "transition_schema:seed_grows_after_watering_and_waiting": {
+      "episode_hashes": [
+        "1231121abce9dda4cf2be6290c7b9f8f9d5953508f1378b69a66f41417cf3654",
+        "1ae6fc0ea8e04f94695e0480b9ef910ef01a59d0e8f67ba364d1c70b0e13cfe1",
+        "20b24ea9f403b75e3d782eb576101187174843baf940d897f48e731327aa7778",
+        "2dc63db302cb16a057955217180109dace268b50c25d67fd7da5991d41116faa",
+        "4bd6aac98b751a75e0ee2cf254fa494775a96b99cba7af96a764f98ce0fcbf1e",
+        "5875a92c9833b33860a407e5e516d51b012b82a14193eca33580bdf95631a2a8",
+        "62f8d457af30e257b582b45d9e6f358890d78ca2429c9eca3b2a2f9243232724",
+        "635fa858b9e4e42d0ebc6f1956aead468babff0544ed7b69d3196d8004cd031f",
+        "6718ce58c2e3d30dfeca72ec943ad99c57ac4d695040c066a5da9176bb99ff5b",
+        "96b76f0ac2f92e53fe1c344587fb65d3db398a524cd4bcc97b4a8e135f4753c0",
+        "a41705d23c0e18b8b19a6ab810ce725182e6c827eba2ead70cbb2e466a1365f6",
+        "ae695efdbf3a71c150b7a51912117189a7de125b0e453d611406843e414fb718",
+        "b38b33f1e8676a163b774f77f6f29596d23abbc42187cc8d7fdef07076b6ad50",
+        "d37b6b666098d9764e500258226c1a5c1687d373782d347c528025752c310b7c",
+        "f86677d6c9383a065673793c6d9b41e686f3f253ea6041496ee70ea2f1c25e4e"
+      ],
+      "source_kind": "public_train_interaction",
+      "source_rule_ids": [
+        "transition:grow-fruit:seed_grows_after_watering_and_waiting",
+        "transition:grow-plant:seed_to_seedling",
+        "transition:mendelian-genetics-known-plant:seed_to_plant_growth",
+        "transition:mendelian-genetics-unknown-plant:seed_to_plant_growth"
+      ],
+      "support_count": 15
+    },
+    "transition_schema:wait_causes_slide_down_plane": {
+      "episode_hashes": [
+        "36f4cacd677a261d1024d9e1e9a11daf33e51462fc2977c582f879d1a767c57e",
+        "40e57f62ea0d3f9ec796cde9f494f62f250d750aabc9a205d273b702e98dd365",
+        "4772bec7ad17e1f279af4b15f6ca0303eb70a01551e7bc867534e5c33e9da056",
+        "5a03ab083105568b950a500ba54a28778d507eebbc211a7a4c34260ef0ae187c",
+        "6fd17d5aabf894dac0afc9436de326d172a3466aa11cbf0bacc0314cdcf3921f",
+        "767b1cebace9fd41b79c8741f46ace127471bbbff4196b8158bff6ceb31e168c",
+        "781553893ffd3fa15dfd259d0a1f830462a29d7a932fd5a1ea008ec70453fbc2",
+        "ac21c8ff2aa65063e3a51e2f6112e26c915ed98e91509d6d53b68e98093f98cf",
+        "ec534288db8bfd070f774646da47cab7d31a7c4e093642d2b25e9a4758a8c3ca"
+      ],
+      "source_kind": "public_train_interaction",
+      "source_rule_ids": [
+        "transition:inclined-plane-determine-angle:block_slides_down_plane",
+        "transition:inclined-plane-friction-named-surfaces:block_slides_down_during_wait",
+        "transition:inclined-plane-friction-unnamed-surfaces:wait_causes_object_to_slide_down_plane"
+      ],
+      "support_count": 9
+    },
+    "workflow_template:focus_thermometer_then_substance": {
+      "episode_hashes": [
+        "0c25a140692c899f7f838b522b36a00a0ca0f355c528dd0801e27bc95c5651af",
+        "0e7603874e014e9bd2b2698b562f499b28b76dcd5d2f3892cc0a0681db29be78",
+        "2599c51907b0c4962a3fabb1587903a7610dcc5dc53c00147cc43b76f9b6990d",
+        "2ac0f4ecb57b55524d2f4f1ca4e98eed49c485b29107e2ae468f6bb08bf22a4c",
+        "340a65dc531b9a0f0daafa4fe62e99b928e736ca983d5f1af12dc53a6a7c627e",
+        "3cb2806cf6ca7ef3f5d820e1bcb81ae8ce9882d8e2eb64356d13ff055c05479a",
+        "75871d5853dc5930ea8ad017d4d963b7d112ccdae9f60526b901d4306b7a8d4a",
+        "8516e1834ba1c551d4ef586f321e27eb0b0f23c80524b77a3ab828b9ecaeb5dc",
+        "8b76371bfd6cd018906b67a29af18075123f821b6dd4f40fe8ed894c52efb28d",
+        "8e2d50d54d1a6d795e8aa17d1b4518e73095145392ebc746dcebafde2b283371",
+        "94ced207c0de4120477803aa161287d3b03aa4f1b6b744ad1a04e140f11352d2",
+        "b8b5d9d7aac5334b258eee8a90ed9e8e0f1ba699a7f3317ebcf75034659ee229",
+        "fb32526b3165d0e62ee4a3d25fa203e497b4bb411a5295c170433916dea851ed"
+      ],
+      "source_kind": "public_train_interaction",
+      "source_rule_ids": [
+        "workflow:measure-melting-point-known-substance:focus_thermometer_then_substance",
+        "workflow:measure-melting-point-unknown-substance:focus_thermometer_then_substance"
+      ],
+      "support_count": 13
+    }
+  },
+  "schema_version": 1,
+  "state_predicates": {
+    "already_connected_prevents_reconnection": [
+      "Attempting to connect an already connected terminal fails with a message that it must be disconnected first."
+    ],
+    "broken_device_not_activatable": [
+      "A device that is broken cannot be activated or deactivated; attempts to do so fail with a message that it is broken."
+    ],
+    "component_not_directly_activatable": [
+      "A component that is not directly activatable cannot be activated; attempts to activate it fail with a message that it is not something that can be activated."
+    ],
+    "container_open_state": [
+      "After opening a container, the feedback explicitly states that the container is now open; subsequent attempts to open it yield that it is already open."
+    ],
+    "object_position_on_inclined_plane": [
+      "An object on an inclined plane has a position described as a percentage down the plane or at the top of the plane."
+    ]
+  },
+  "task_family_profiles": {
+    "boil": {
+      "rule_ids": [
+        "state_predicate:broken_device_not_activatable"
+      ],
+      "source_episode_count": 7
+    },
+    "change-the-state-of-matter-of": {
+      "rule_ids": [
+        "state_predicate:broken_device_not_activatable",
+        "action_alias:focus_on",
+        "transition_schema:pick_up_to_inventory",
+        "transition_schema:move_object_to_appliance",
+        "recovery_policy:ambiguous_request_numbered_selection"
+      ],
+      "source_episode_count": 7
+    },
+    "chemistry-mix": {
+      "rule_ids": [
+        "action_alias:move",
+        "transition_schema:mix_ingredients_produces_target"
+      ],
+      "source_episode_count": 11
+    },
+    "chemistry-mix-paint-secondary-color": {
+      "rule_ids": [
+        "action_alias:teleport_to",
+        "transition_schema:pour_transfers_contents",
+        "transition_schema:mix_ingredients_produces_target",
+        "recovery_policy:ambiguous_request_numbered_selection"
+      ],
+      "source_episode_count": 7
+    },
+    "chemistry-mix-paint-tertiary-color": {
+      "rule_ids": [
+        "action_alias:pour",
+        "recovery_policy:ambiguous_request_numbered_selection"
+      ],
+      "source_episode_count": 6
+    },
+    "find-animal": {
+      "rule_ids": [
+        "state_predicate:container_open_state",
+        "action_alias:focus_on",
+        "action_alias:teleport_to",
+        "action_alias:pick_up",
+        "transition_schema:open_container",
+        "recovery_policy:ambiguous_request_numbered_selection"
+      ],
+      "source_episode_count": 7
+    },
+    "find-living-thing": {
+      "rule_ids": [
+        "action_alias:focus_on",
+        "action_alias:teleport_to",
+        "action_alias:pick_up"
+      ],
+      "source_episode_count": 7
+    },
+    "find-non-living-thing": {
+      "rule_ids": [
+        "action_alias:teleport_to",
+        "transition_schema:move_object_to_container"
+      ],
+      "source_episode_count": 7
+    },
+    "find-plant": {
+      "rule_ids": [
+        "action_alias:teleport_to",
+        "transition_schema:pick_up_to_inventory",
+        "transition_schema:move_object_to_container"
+      ],
+      "source_episode_count": 6
+    },
+    "freeze": {
+      "rule_ids": [
+        "action_alias:focus_on",
+        "action_alias:move",
+        "transition_schema:open_container"
+      ],
+      "source_episode_count": 7
+    },
+    "grow-fruit": {
+      "rule_ids": [
+        "action_alias:pick_up",
+        "transition_schema:move_object_to_container",
+        "transition_schema:pour_transfers_contents",
+        "transition_schema:seed_grows_after_watering_and_waiting",
+        "recovery_policy:ambiguous_request_numbered_selection"
+      ],
+      "source_episode_count": 6
+    },
+    "grow-plant": {
+      "rule_ids": [
+        "action_alias:focus_on",
+        "action_alias:pick_up",
+        "transition_schema:pick_up_to_inventory",
+        "transition_schema:move_object_to_container",
+        "transition_schema:seed_grows_after_watering_and_waiting"
+      ],
+      "source_episode_count": 11
+    },
+    "identify-life-stages-1": {
+      "rule_ids": [
+        "action_alias:teleport_to",
+        "transition_schema:open_container"
+      ],
+      "source_episode_count": 6
+    },
+    "identify-life-stages-2": {
+      "rule_ids": [
+        "action_alias:teleport_to"
+      ],
+      "source_episode_count": 4
+    },
+    "inclined-plane-determine-angle": {
+      "rule_ids": [
+        "state_predicate:object_position_on_inclined_plane",
+        "action_alias:focus_on",
+        "action_alias:teleport_to",
+        "action_alias:move",
+        "action_alias:activate",
+        "action_alias:examine",
+        "transition_schema:wait_causes_slide_down_plane"
+      ],
+      "source_episode_count": 7
+    },
+    "inclined-plane-friction-named-surfaces": {
+      "rule_ids": [
+        "object_role:inclined_plane_has_surface_material",
+        "object_role:block_as_test_object_on_inclined_plane",
+        "state_predicate:object_position_on_inclined_plane",
+        "action_alias:move",
+        "transition_schema:wait_causes_slide_down_plane"
+      ],
+      "source_episode_count": 7
+    },
+    "inclined-plane-friction-unnamed-surfaces": {
+      "rule_ids": [
+        "object_role:inclined_plane_has_surface_material",
+        "state_predicate:object_position_on_inclined_plane",
+        "action_alias:move",
+        "transition_schema:wait_causes_slide_down_plane"
+      ],
+      "source_episode_count": 7
+    },
+    "lifespan-longest-lived": {
+      "rule_ids": [
+        "action_alias:teleport_to",
+        "action_alias:examine",
+        "transition_schema:focus_on_object"
+      ],
+      "source_episode_count": 7
+    },
+    "lifespan-longest-lived-then-shortest-lived": {
+      "rule_ids": [
+        "action_alias:focus_on",
+        "action_alias:teleport_to"
+      ],
+      "source_episode_count": 7
+    },
+    "lifespan-shortest-lived": {
+      "rule_ids": [
+        "action_alias:focus_on",
+        "action_alias:teleport_to",
+        "action_alias:examine"
+      ],
+      "source_episode_count": 7
+    },
+    "measure-melting-point-known-substance": {
+      "rule_ids": [
+        "action_alias:focus_on",
+        "workflow_template:focus_thermometer_then_substance"
+      ],
+      "source_episode_count": 10
+    },
+    "measure-melting-point-unknown-substance": {
+      "rule_ids": [
+        "action_alias:use",
+        "transition_schema:measure_temperature",
+        "workflow_template:focus_thermometer_then_substance"
+      ],
+      "source_episode_count": 11
+    },
+    "melt": {
+      "rule_ids": [
+        "state_predicate:broken_device_not_activatable",
+        "action_alias:focus_on",
+        "transition_schema:pick_up_to_inventory",
+        "recovery_policy:ambiguous_request_numbered_selection"
+      ],
+      "source_episode_count": 7
+    },
+    "mendelian-genetics-known-plant": {
+      "rule_ids": [
+        "transition_schema:seed_grows_after_watering_and_waiting",
+        "recovery_policy:ambiguous_request_numbered_selection"
+      ],
+      "source_episode_count": 7
+    },
+    "mendelian-genetics-unknown-plant": {
+      "rule_ids": [
+        "transition_schema:seed_grows_after_watering_and_waiting"
+      ],
+      "source_episode_count": 7
+    },
+    "power-component": {
+      "rule_ids": [
+        "object_role:polarized_component_has_anode_cathode",
+        "object_role:wire_has_two_terminals",
+        "state_predicate:already_connected_prevents_reconnection",
+        "action_alias:pick_up",
+        "action_alias:activate",
+        "action_alias:connect"
+      ],
+      "source_episode_count": 10
+    },
+    "power-component-renewable-vs-nonrenewable-energy": {
+      "rule_ids": [
+        "object_role:polarized_component_has_anode_cathode",
+        "state_predicate:component_not_directly_activatable",
+        "action_alias:activate",
+        "action_alias:connect"
+      ],
+      "source_episode_count": 7
+    },
+    "test-conductivity": {
+      "rule_ids": [],
+      "source_episode_count": 7
+    },
+    "test-conductivity-of-unknown-substances": {
+      "rule_ids": [
+        "state_predicate:component_not_directly_activatable",
+        "action_alias:pick_up",
+        "action_alias:connect",
+        "transition_schema:connect_components",
+        "recovery_policy:ambiguous_request_numbered_selection"
+      ],
+      "source_episode_count": 7
+    },
+    "use-thermometer": {
+      "rule_ids": [
+        "state_predicate:container_open_state",
+        "action_alias:focus_on",
+        "action_alias:examine",
+        "transition_schema:open_container",
+        "transition_schema:measure_temperature",
+        "conditional_prerequisite:measured_temperature_selects_public_task_destination"
+      ],
+      "source_episode_count": 18
+    }
+  },
+  "transition_schemas": {
+    "connect_components": [
+      "Connecting two components updates their connection state."
+    ],
+    "focus_on_object": [
+      "Focusing on an object produces feedback confirming the focus."
+    ],
+    "measure_temperature": [
+      "Using a thermometer on a substance yields a temperature reading."
+    ],
+    "mix_ingredients_produces_target": [
+      "Mixing the required ingredients in a container produces the target substance."
+    ],
+    "move_object_to_appliance": [
+      "Moving an object to an appliance places it on or in that appliance."
+    ],
+    "move_object_to_container": [
+      "Moving an object to a container places the object inside that container."
+    ],
+    "open_container": [
+      "Opening a closed container changes its state to open."
+    ],
+    "pick_up_to_inventory": [
+      "Picking up an object moves it to the inventory."
+    ],
+    "pour_transfers_contents": [
+      "Pouring the contents of one container into another transfers the contents."
+    ],
+    "seed_grows_after_watering_and_waiting": [
+      "After planting a seed in a flower pot and pouring water, waiting results in a plant in a later growth stage."
+    ],
+    "wait_causes_slide_down_plane": [
+      "Waiting after placing an object on an inclined plane causes the object to slide further down the plane."
+    ]
+  },
+  "workflow_templates": {
+    "focus_thermometer_then_substance": [
+      "focus",
+      "focus"
+    ]
+  }
+}

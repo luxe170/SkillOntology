@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "implementation_version": "unified_structure_v1",
+  "benchmark": "alfworld",
+  "seed": 233,
+  "model": {
+    "name": "deepseek-v4-flash",
+    "base_url": "https://api.deepseek.com",
+    "temperature": 0.0,
+    "thinking": "disabled",
+    "max_completion_tokens": 512,
+    "request_timeout_seconds": 90,
+    "max_infrastructure_retries": 4
+  },
+  "embedding": {
+    "model": "text-embedding-3-large",
+    "dimension": 3072,
+    "provider": "openai",
+    "base_url_env": "GOS_OPENAI_PROXY_URL"
+  },
+  "environment": {
+    "seed": 233,
+    "random_seed": 233,
+    "max_steps": 50,
+    "history_turns": 6
+  },
+  "runtime": {
+    "max_proposals": 50,
+    "max_environment_calls": 50,
+    "max_environment_ticks": null,
+    "max_episode_tokens": 300000,
+    "max_output_tokens": 512,
+    "history_turns": 6,
+    "max_protocol_errors": 3
+  },
+  "retrieval": {
+    "top_k": 8,
+    "seed_top_k": 8,
+    "max_context_chars": 7000
+  },
+  "action": {
+    "syntax": "ALFWorld numbered-object text commands",
+    "pattern": "(?:look|inventory|go to .+|open .+|close .+|take .+ from .+|move .+ to .+|put .+ in/on .+|clean .+ with .+|heat .+ with .+|cool .+ with .+|use .+)",
+    "validate_clicks": false
+  },
+  "paths": {
+    "skills": "datasets/skillsets/alfworld",
+    "testset": "datasets/testsets/alfworld.json",
+    "assets": "assets/alfworld",
+    "ontology": "assets/alfworld/domain_ontology.json"
+  }
+}
