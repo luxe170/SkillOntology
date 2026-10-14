@@ -20,34 +20,7 @@ The framework has three main components:
 
 ## Framework
 
-```text
-Public training interactions
-            |
-            v
-     Domain Ontology ---> Extraction Policy
-                                  |
-Skill documents ------------------+
-                                  v
-                  Extractor / Verifier / Adjudicator
-                                  |
-                                  v
-                        Global MetaOp Graph
-                                  |
-Task + initial public observation |
-            |                     |
-            +----------+----------+
-                       v
-              Retrieval and compilation
-                       |
-                       v
-           Task-conditioned MetaOp Graph
-                       |
-                       v
-               Procedural guidance
-                       |
-                       v
-          LLM actions <--> Benchmark environment
-```
+![SkillOntology framework: ontology-guided MetaOp induction, ontology-guided retrieval, and task-conditioned inference](assets/figures/framework.png)
 
 ## Repository Structure
 
@@ -71,6 +44,7 @@ SkillOntology/
 │   ├── skillsets/
 │   └── testsets/
 ├── assets/
+│   ├── figures/
 │   ├── alfworld/
 │   ├── webshop/
 │   └── scienceworld/
@@ -136,7 +110,7 @@ export WEBSHOP_REPO="<webshop-checkout-directory>"
 
 ### Model Configuration
 
-The supplied configurations use `deepseek-v4-flash` for chat and `text-embedding-3-large` with 3,072 dimensions for embeddings.
+The supplied configurations use text-embedding-3-large` with 3,072 dimensions for embeddings.
 
 Set the API credentials in your shell:
 
@@ -145,10 +119,6 @@ export SKILLONTOLOGY_CHAT_API_KEY="<chat-api-key>"
 export OPENAI_API_KEY="<embedding-api-key>"
 export BASE_URL="https://api.deepseek.com"
 ```
-
-`BASE_URL` supplies the WebShop chat endpoint. The ALFWorld and ScienceWorld configurations already contain this endpoint. A common endpoint override can be supplied through `SKILLONTOLOGY_CHAT_BASE_URL`.
-
-Model names and generation parameters are configured in `configs/<benchmark>.json`. Query embeddings must use the same model and dimension as the prebuilt vector index.
 
 ## Quick Start
 
@@ -160,19 +130,13 @@ python -m skillontology check --config configs/webshop.json
 python -m skillontology check --config configs/scienceworld.json
 ```
 
-Each command reports the task count, MetaOp count, and embedding dimension. These checks load the local assets without requesting model completions or running environment episodes.
-
 ### Run an Evaluation Task
 
-After preparing the environment and API credentials, run a task from the corresponding manifest:
-
-```bash
+```bas
 python -m skillontology run --config configs/alfworld.json --task-index 0
 PYTHONHASHSEED=0 python -m skillontology run --config configs/webshop.json --task-index 0
 python -m skillontology run --config configs/scienceworld.json --task-index 0
 ```
-
-`--task-index` is a zero-based position in the manifest's `records` array. Each invocation runs one episode and prints its task identity, success, score, stop reason, action-proposal count, environment-call count, and recorded chat-token usage as JSON. Running episodes makes chat and query-embedding API requests.
 
 ### Build a MetaOp Workspace
 
@@ -183,9 +147,6 @@ python -m skillontology build --config configs/alfworld.json --output build/alfw
 python -m skillontology build --config configs/webshop.json --output build/webshop --agent-mode full
 python -m skillontology build --config configs/scienceworld.json --output build/scienceworld --agent-mode full
 ```
-
-The `full` mode enables extraction, verification, and adjudication and makes model API requests. Outputs are written to the directory specified by `--output`. The run commands above use the supplied prebuilt assets.
-
 ## Command-Line Arguments
 
 | Argument | Command | Description |
@@ -209,12 +170,6 @@ The `full` mode enables extraction, verification, and adjudication and makes mod
 | Episode chat-token cap | 300,000 | No cap | No cap |
 | Configured retrieval budget `top_k` | 8 | 8 | 12 |
 | Run seed | 233 | 233 | 20260738 |
-
-ScienceWorld counts unparseable proposals toward the proposal budget without making an environment call. In the configuration files, `max_episode_tokens: 0` means no episode chat-token cap, and `history_turns: null` retains the full interaction history.
-
-## Release Status
-
-This README documents the current code package and its available commands. Alignment of the shared task compiler and environment-specific checks with the experimental pipeline is ongoing. Experimental results are reported in the accompanying [paper](SkillOntology.pdf).
 
 ## Acknowledgments
 
